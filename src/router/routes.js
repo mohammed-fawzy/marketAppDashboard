@@ -33,6 +33,8 @@ const LeafletMapsPage = resolve => { require.ensure(['../components/maps/leaflet
 
 //Pages
 const Login = resolve => { require.ensure(['../pages/login/Login.vue'], ()=>{ resolve(require('../pages/login/Login.vue')); }); };
+const Managers = resolve => { require.ensure(['../pages/managers.vue'], ()=>{ resolve(require('../pages/managers.vue')); }); };
+const Clients = resolve => { require.ensure(['../pages/clients.vue'], ()=>{ resolve(require('../pages/clients.vue')); }); };
 const Register = resolve => { require.ensure(['../pages/register/Register.vue'], ()=>{ resolve(require('../pages/register/Register.vue')); }); };
 const Page404 = resolve => { require.ensure(['../pages/Page404.vue'], ()=>{ resolve(require('../pages/Page404.vue')); }); };
 const Page500 = resolve => { require.ensure(['../pages/Page500.vue'], ()=>{ resolve(require('../pages/Page500.vue')); }); };
@@ -43,12 +45,31 @@ export const routes = [
         path : '',
         name: 'home',
         components:{
-            default: Dashboard
+            default: Login
         }
     },
     {   path : '/dashboard',
+        name:'dashboard',
         components:{
             default: Dashboard
+        }
+    },
+    {
+        path: '/auth/managers',
+        component: Managers,
+        name: 'managers',
+        meta: {
+            default: false,
+            title: 'managers'
+        }
+    },
+    {
+        path: '/auth/clients',
+        component: Clients,
+        name: 'clients',
+        meta: {
+            default: false,
+            title: 'clients'
         }
     },
 

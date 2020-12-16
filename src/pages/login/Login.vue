@@ -1,28 +1,28 @@
 <template>
 <div class="auth-layout">
   <div class="main row">
-    <div class="login">
+    <div class="auth-content login col-md-6">
 
       <card header-text="Welcome !">
         <div class="card-body card-block">
-          <form method="post" action="/auth/login" name="login">
+          <form @submit.prevent="handleSubmit()">
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                <input type="email" id="email" name="email" placeholder="Email" class="form-control" required>
               </div>
             </div>
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
               </div>
             </div>
             <div class="form-actions form-group">
                 <button type="submit" class="btn btn-success btn-md">Log In</button>
-                <button type="submit" class="btn btn-primary btn-md float-right">
+                <!-- <button type="submit" class="btn btn-primary btn-md float-right">
                   <router-link class='link text-light float-right' :to="{name: 'Register'}">Create Account</router-link>
-                </button>
+                </button> -->
             </div>
           </form>
         </div>
@@ -39,7 +39,13 @@
 
 <script>
 export default {
-  name: 'Login'
+  name: 'Login',
+  methods: {
+    handleSubmit(){
+      console.log('login')
+      this.$router.push({name: "dashboard"});
+    }
+  },
 }
 </script>
 

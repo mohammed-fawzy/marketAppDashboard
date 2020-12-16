@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <auth-layout v-if="isAuth"></auth-layout>
-      <div class="admin-container" v-else>
-        <Sidebar :navItems="nav"/>
+    <!-- <auth-layout v-if="isAuth"></auth-layout> -->
+      <div class="admin-container">
+        <Sidebar v-if="name != 'login'" :navItems="nav"/>
         <div id="right-panel" class="right-panel">
-          <Header/>
-          <div class="content pb-0">
+          <Header v-if="name != 'login'" />
+          <div :class="{'content pb-0': name != 'login'}">
               <transition enter-active-class="animated fadeIn">
                 <router-view></router-view>
               </transition>
@@ -22,15 +22,20 @@ import Sidebar from './components/Sidebar.vue'
 import AuthLayout from './layouts/AuthLayout.vue';
 
 export default {
+  components: {
+    AuthLayout,
+    Header,
+    Sidebar
+  },
   data () {
     return {
       nav: nav.items
     }
   },
-  components: {
-    AuthLayout,
-    Header,
-    Sidebar
+  beforeCreate () {
+    if (1 == 1) {
+      this.$router.push({ name: 'login' })
+    }
   },
   computed: {
     name(){
