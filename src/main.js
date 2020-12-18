@@ -6,6 +6,9 @@ import store from './store'
 import VueRouter from 'vue-router';
 import { routes } from './router/routes';
 import { index } from './components/index';
+import VueLazyload from 'vue-lazyload'
+ 
+Vue.use(VueLazyload)
 Vue.use(VueAxios, axios)
 // Router
 Vue.use(VueRouter);

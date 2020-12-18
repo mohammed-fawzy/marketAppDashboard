@@ -35,6 +35,13 @@ const LeafletMapsPage = resolve => { require.ensure(['../components/maps/leaflet
 const Login = resolve => { require.ensure(['../pages/login/Login.vue'], ()=>{ resolve(require('../pages/login/Login.vue')); }); };
 const Managers = resolve => { require.ensure(['../pages/managers.vue'], ()=>{ resolve(require('../pages/managers.vue')); }); };
 const Clients = resolve => { require.ensure(['../pages/clients.vue'], ()=>{ resolve(require('../pages/clients.vue')); }); };
+const MainSections = resolve => { require.ensure(['../pages/main-sections.vue'], ()=>{ resolve(require('../pages/main-sections.vue')); }); };
+const Subsection = resolve => { require.ensure(['../pages/subsection.vue'], ()=>{ resolve(require('../pages/subsection.vue')); }); };
+const Products = resolve => { require.ensure(['../pages/products.vue'], ()=>{ resolve(require('../pages/products.vue')); }); };
+const Orders = resolve => { require.ensure(['../pages/orders.vue'], ()=>{ resolve(require('../pages/orders.vue')); }); };
+const Messages = resolve => { require.ensure(['../pages/messages.vue'], ()=>{ resolve(require('../pages/messages.vue')); }); };
+
+
 const Register = resolve => { require.ensure(['../pages/register/Register.vue'], ()=>{ resolve(require('../pages/register/Register.vue')); }); };
 const Page404 = resolve => { require.ensure(['../pages/Page404.vue'], ()=>{ resolve(require('../pages/Page404.vue')); }); };
 const Page500 = resolve => { require.ensure(['../pages/Page500.vue'], ()=>{ resolve(require('../pages/Page500.vue')); }); };
@@ -72,6 +79,53 @@ export const routes = [
             title: 'clients'
         }
     },
+    {
+        path: '/auth/main-sections',
+        component: MainSections,
+        name: 'main-sections',
+        meta: {
+            default: false,
+            title: 'main-sections'
+        }
+    },
+    {
+        path: '/auth/subsection',
+        component: Subsection,
+        name: 'subsection',
+        meta: {
+            default: false,
+            title: 'subsection'
+        }
+    },
+    {
+        path: '/auth/products',
+        component: Products,
+        name: 'products',
+        meta: {
+            default: false,
+            title: 'products'
+        }
+    },
+    {
+        path: '/auth/orders',
+        component: Orders,
+        name: 'orders',
+        meta: {
+            default: false,
+            title: 'orders'
+        }
+    },
+
+    {
+        path: '/auth/messages',
+        component: Messages,
+        name: 'messages',
+        meta: {
+            default: false,
+            title: 'messages'
+        }
+    },
+
 
     // // UI Components
     { path : '/components/buttons', name: 'buttons', component: Buttons },

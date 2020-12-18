@@ -45,7 +45,17 @@
                                         <div class="row form-group">
                                              <div class="col col-md-3"><label for="file-input" class=" form-control-label">Photo</label></div>
                                              <div class="col-12 col-md-9">
-                                                  <input type="file" ref="file" id="file-input" name="file-input" class="form-control-file" v-on:change="handleFileUpload()">
+                                                  <div class="row">
+                                                       <div class="col-6">
+                                                            <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handleFileUpload()" accept="image/*">
+                                                            <label class="custom-file-label" for="customFile">Choose photo</label>
+                                                       </div>
+                                                       <div class="col-6">
+                                                            <div class="image-preview" v-if="imageData.length > 0">
+                                                                 <img class="preview" :src="imageData">
+                                                            </div>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </div>
                                    <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
@@ -70,6 +80,7 @@ export default {
                password:null,
           },
           file:'',
+          imageData: "",
           confirmPassword:null
      }
   },
@@ -87,6 +98,22 @@ export default {
           console.log(response)
      })
     },
+    handleFileUpload: function() {
+         this.file = this.$refs.file.files[0];
+          // Ensure that you have a file before attempting to read it
+          if (this.$refs.file && this.$refs.file.files[0]) {
+               // create a new FileReader to read this image and convert to base64 format
+               var reader = new FileReader();
+               // Define a callback function to run, when FileReader finishes its job
+               reader.onload = (e) => {
+               // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
+               // Read image as base64 and set to imageData
+               this.imageData = e.target.result;
+               }
+               // Start the reader job - read file as a data url (base64 format)
+               reader.readAsDataURL(this.$refs.file.files[0]);
+          }
+     },
     validate: function() {
          if (this.client.password && this.confirmPassword) {
               return this.client.password == this.confirmPassword ?  true : false;
@@ -95,9 +122,19 @@ export default {
               return true;
          }
     },
-    handleFileUpload(){
-        this.file = this.$refs.file.files[0];
-     }
   },
 }
 </script>
+
+<style lang="scss">
+     img.preview {
+          background-color: white;
+          border: 1px solid #DDD;
+          height: 200px;
+          width: auto;
+          border-radius: 5px;
+     }
+     .custom-file-label{
+          left: 14px;
+     }
+</style>

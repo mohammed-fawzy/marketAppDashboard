@@ -11,6 +11,30 @@ export default {
       url: '/auth/clients',
       icon: 'fa fa-sign-in'
     },
+    {
+      name:'Main Sections',
+      url: '/auth/main-sections',
+      icon: 'fa fa-sign-in'
+    },
+    {
+      name:'Subsection',
+      url: '/auth/subsection',
+      icon: 'fa fa-sign-in'
+    },
+    {
+      name:'Products',
+      url: '/auth/products',
+      icon: 'fa fa-sign-in'
+    },
+    {
+      name:'Orders',
+      url: '/auth/orders',
+      icon: 'fa fa-sign-in'
+    },{
+      name:'Messages',
+      url: '/auth/messages',
+      icon: 'fa fa-sign-in'
+    },
     // {
     //   name: 'Dashboard',
     //   url: '/dashboard',
@@ -76,15 +100,15 @@ export default {
     //   url: '/components/tables',
     //   icon: 'fa fa-table'
     // },
-    {
-      name: 'Forms',
-      url: '/components/basic-form',
-      icon: 'fa fa-pencil-square-o',
-      badge: {
-        variant: 'warning',
-        text: 'NEW'
-      }
-    },
+    // {
+    //   name: 'Forms',
+    //   url: '/components/basic-form',
+    //   icon: 'fa fa-pencil-square-o',
+    //   badge: {
+    //     variant: 'warning',
+    //     text: 'NEW'
+    //   }
+    // },
     // {
     //   name: 'Chart JS',
     //   url: '/components/chartjs',
@@ -122,33 +146,33 @@ export default {
     //   title: true,
     //   name: 'Extras'
     // },
-    {
-      name: 'Pages',
-      url: '/auth',
-      icon: 'fa fa-paperclip',
-      children: [
-        {
-          name: 'Login',
-          url: '/auth/login',
-          icon: 'fa fa-sign-in'
-        },
-        {
-          name: 'Register',
-          url: '/auth/register',
-          icon: 'fa fa-sign-in'
-        },
-        {
-          name: 'Error 404',
-          url: '/auth/Page404',
-          icon: 'fa fa-paper-plane'
-        },
-        {
-          name: 'Error 500',
-          url: '/auth/Page500',
-          icon: 'fa fa-paper-plane'
-        }
-      ]
-    },
+    // {
+    //   name: 'Pages',
+    //   url: '/auth',
+    //   icon: 'fa fa-paperclip',
+    //   children: [
+    //     {
+    //       name: 'Login',
+    //       url: '/auth/login',
+    //       icon: 'fa fa-sign-in'
+    //     },
+    //     {
+    //       name: 'Register',
+    //       url: '/auth/register',
+    //       icon: 'fa fa-sign-in'
+    //     },
+    //     {
+    //       name: 'Error 404',
+    //       url: '/auth/Page404',
+    //       icon: 'fa fa-paper-plane'
+    //     },
+    //     {
+    //       name: 'Error 500',
+    //       url: '/auth/Page500',
+    //       icon: 'fa fa-paper-plane'
+    //     }
+    //   ]
+    // },
     // {
     //   name: 'Documentation',
     //   url: 'https://docs.vuejsadmin.com/docs/arbano-vue-js-admin/',
