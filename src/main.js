@@ -10,6 +10,9 @@ import VueLazyload from 'vue-lazyload'
  
 Vue.use(VueLazyload)
 Vue.use(VueAxios, axios)
+import setupAxiosConfig from "./config/axios";
+// setupAxiosConfig();
+
 // Router
 Vue.use(VueRouter);
 const router = new VueRouter({
@@ -18,6 +21,32 @@ const router = new VueRouter({
     scrollBehavior: () => ({ y: 0 }),
     mode: 'hash'
 });
+
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(record => record.meta.requiresAuth)) {
+    if (store.getters.isAuthenticated) {
+      next()
+      return
+    }
+    next('/login')
+  } else {
+    next()
+  }
+})
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.guest)) {
+    if (store.getters.isAuthenticated) {
+      next("/dashboard");
+      return;
+    }
+    next();
+  } else {
+    next();
+  }
+});
+
+
+
 
 new Vue({
   el: '#app',

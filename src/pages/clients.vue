@@ -84,6 +84,12 @@ export default {
           confirmPassword:null
      }
   },
+  created(){
+     this.axios.get('api/admin/users/7'
+      ).then((response) => {
+          console.log('client 7',response)
+     })
+  },
   methods: {
     handleSubmit(){
      let formData = new FormData();

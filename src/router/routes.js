@@ -1,5 +1,7 @@
 // Dynamic Loading Modules
-
+import Vue from "vue";
+import VueRouter from "vue-router";
+Vue.use(VueRouter);
 // Views
 const Dashboard = resolve => { require.ensure(['../views/Dashboard.vue'], ()=>{ resolve(require('../views/Dashboard.vue')); }); };
 
@@ -53,12 +55,15 @@ export const routes = [
         name: 'home',
         components:{
             default: Login
-        }
+        },
     },
     {   path : '/dashboard',
         name:'dashboard',
         components:{
             default: Dashboard
+        },
+        meta:{
+            requiresAuth: true,
         }
     },
     {
@@ -67,7 +72,8 @@ export const routes = [
         name: 'managers',
         meta: {
             default: false,
-            title: 'managers'
+            title: 'managers',
+            requiresAuth: true,
         }
     },
     {
@@ -76,7 +82,8 @@ export const routes = [
         name: 'clients',
         meta: {
             default: false,
-            title: 'clients'
+            title: 'clients',
+            requiresAuth: true,
         }
     },
     {
@@ -85,7 +92,8 @@ export const routes = [
         name: 'main-sections',
         meta: {
             default: false,
-            title: 'main-sections'
+            title: 'main-sections',
+            requiresAuth: true,
         }
     },
     {
@@ -94,7 +102,8 @@ export const routes = [
         name: 'subsection',
         meta: {
             default: false,
-            title: 'subsection'
+            title: 'subsection',
+            requiresAuth: true,
         }
     },
     {
@@ -103,7 +112,8 @@ export const routes = [
         name: 'products',
         meta: {
             default: false,
-            title: 'products'
+            title: 'products',
+            requiresAuth: true,
         }
     },
     {
@@ -112,7 +122,8 @@ export const routes = [
         name: 'orders',
         meta: {
             default: false,
-            title: 'orders'
+            title: 'orders',
+            requiresAuth: true,
         }
     },
 
@@ -122,7 +133,8 @@ export const routes = [
         name: 'messages',
         meta: {
             default: false,
-            title: 'messages'
+            title: 'messages',
+            requiresAuth: true,
         }
     },
 
@@ -196,7 +208,8 @@ export const routes = [
                 name: 'login',
                 meta: {
                     default: false,
-                    title: 'Login'
+                    title: 'Login',
+                    guest: true
                 }
             },
             {
@@ -224,3 +237,4 @@ export const routes = [
     // 404 redirect to home
     { path: '*', redirect: { name: 'Page404', component: Page404 }  }
 ];
+

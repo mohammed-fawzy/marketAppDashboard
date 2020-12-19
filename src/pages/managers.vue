@@ -36,7 +36,7 @@
                                         <div class="row form-group">
                                              <div class="col col-md-3"><label for="confirm-password-input" class=" form-control-label">Password</label></div>
                                              <div class="col-12 col-md-9">
-                                                  <input v-on:blur="validate" v-model="confirmPassword" type="password" id="confirm-password-input" name="confirm-password-input" placeholder="Confirm Password" class="form-control" required>
+                                                  <input v-on:blur="validate" v-model="manger.password_confirmation" type="password" id="confirm-password-input" name="confirm-password-input" placeholder="Confirm Password" class="form-control" required>
                                                   <div class="alert alert-danger mt-2" role="alert" v-if="!validate()">
                                                        Passwords don't match. Please enter both fields again.
                                                   </div>
@@ -62,19 +62,21 @@ export default {
                email:'',
                phone:'',
                password:null,
+               password_confirmation:null
           },
-          confirmPassword:null
      }
   },
   methods: {
     handleSubmit(){
-      this.axios.get('https://jsonplaceholder.typicode.com/todos/1').then((response) => {
+
+      this.axios.post('api/admin/admins',this.manger,
+      ).then((response) => {
           console.log(response)
      })
     },
     validate: function() {
-         if (this.manger.password && this.confirmPassword) {
-              return this.manger.password == this.confirmPassword ?  true : false;
+         if (this.manger.password && this.manger.password_confirmation) {
+              return this.manger.password == this.manger.password_confirmation ?  true : false;
          }
          else{
               return true;

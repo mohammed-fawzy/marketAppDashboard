@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-sm-7">
 
-                        <div class="header-left" :class="{'open': isSearch, '': !isSearch }">
+                        <!-- <div class="header-left" :class="{'open': isSearch, '': !isSearch }">
                             <button
                                 class="search-trigger"
                                 @click="searchClick"
@@ -108,12 +108,12 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="col-sm-5">
                         <div class="user-area dropdown float-right">
-                            <a href="#"
+                            <!-- <a href="#"
                                 class="dropdown-toggle"
                                 data-toggle="dropdown"
                                 aria-haspopup="true"
@@ -122,9 +122,10 @@
                                 @click="handleClick"
                             >
                                 <img class="user-avatar rounded-circle" src="../images/admin.jpg" alt="User Avatar">
-                            </a>
+                            </a> -->
+                            <a class="nav-link" href="#" @click="logOut"><i class="fa fa-power -off"></i>Logout</a>
 
-                            <div
+                            <!-- <div
                                 class="user-menu dropdown-menu"
                                 :class="{'show': isActive, '': !isActive }"
                                 @click="handleClick"
@@ -136,12 +137,12 @@
                                 <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
 
                                 <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
-                            </div>
+                            </div> -->
                         </div>
 
 
 
-                        <div class="language-select dropdown" id="language-select">
+                        <!-- <div class="language-select dropdown" id="language-select">
                             <a 
                                 class="dropdown-toggle" 
                                 href="#" 
@@ -175,7 +176,7 @@
                                     <i class="flag-icon flag-icon-it"></i>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -199,31 +200,10 @@
       }
     },
     methods: {
-        toggle(e){
-            //this.isOpen = !this.isOpen
-            e.target.parentElement.classList.toggle('close')
-        },
-        handleClick(e){
-            this.isActive = !this.isActive;
-            // if(e.target.className == "noclass"){
-            //     e.target.className = "link active";
-            // } else{
-            //     e.target.className = "noclass";
-            // }
-        },
-        searchClick (e) {
-          this.isSearch = !this.isSearch;
-        },
-        handleMessage (e) {
-          this.isMessage = !this.isMessage;
-        },
-        handleNotification (e) {
-          this.isNotification = !this.isNotification;
-        },
-        handleFlag (e) {
-          this.isFlag = !this.isFlag;
+        async logOut(){
+            await this.$store.dispatch('LogOut')
+            this.$router.push({ name: 'login' })
         }
-
       }
     }
 </script>

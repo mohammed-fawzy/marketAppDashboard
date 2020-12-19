@@ -10,6 +10,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^24.0.0",
+    "@ckeditor/ckeditor5-vue": "^2.0.1",
     "amcharts3": "^3.21.12",
     "ammap3": "^3.21.12",
     "animate.css": "^3.6.1",
@@ -31,7 +33,8 @@
     "vue-chartjs": "^3.2.1",
     "vue-router": "^3.0.1",
     "vue-upload-multiple-image": "^1.1.6",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^4.0.0-beta.1"
   },
   "browserslist": [
     "> 1%",

@@ -9,22 +9,20 @@
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                <input type="email" id="email" name="email" placeholder="Email" class="form-control" required>
+                <input type="email" v-model="admin.email" id="email" name="email" placeholder="Email" class="form-control" required>
               </div>
             </div>
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                <input type="password" v-model="admin.password" id="password" name="password" placeholder="Password" class="form-control" required>
               </div>
             </div>
             <div class="form-actions form-group">
                 <button type="submit" class="btn btn-success btn-md">Log In</button>
-                <!-- <button type="submit" class="btn btn-primary btn-md float-right">
-                  <router-link class='link text-light float-right' :to="{name: 'Register'}">Create Account</router-link>
-                </button> -->
             </div>
           </form>
+          <div v-if="errorMessage" class="basix-alert alert with-close alert-danger">Username or Password is incorrect</div>
         </div>
       </card>
 
@@ -40,11 +38,30 @@
 <script>
 export default {
   name: 'Login',
+   data () {
+     return {
+        admin:{
+          email:null,
+          password:null,
+        },
+        errorMessage:false
+     }
+  },
   methods: {
-    handleSubmit(){
-      console.log('login')
-      this.$router.push({name: "dashboard"});
-    }
+      async handleSubmit() {
+        try {
+          await this.$store.dispatch('LogIn', this.admin)
+          if (this.$store.getters["isAuthenticated"])  {
+            this.$router.push({name: "dashboard"});
+          }
+          else{
+            this.errorMessage = true;
+          }
+        } 
+        catch (error) {
+          
+        }
+      }
   },
 }
 </script>
