@@ -47,7 +47,7 @@
                                              <div class="col-12 col-md-9">
                                                   <div class="row">
                                                        <div class="col-6">
-                                                            <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handleFileUpload()" accept="image/*">
+                                                            <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handleFileUpload" accept="image/*">
                                                             <label class="custom-file-label" for="customFile">Choose photo</label>
                                                        </div>
                                                        <div class="col-6">
@@ -60,6 +60,12 @@
                                         </div>
                                    <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
                                    </form>
+                                   <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
+                                        <span class="badge badge-pill badge-success">Success</span>
+                                        Data Added Successfully
+                                   </basix-alert>
+
+                                   <span>{{errorMessage}}</span>
                               </div>
                              
                          </div>
@@ -78,46 +84,65 @@ export default {
                email:'',
                phone:'',
                password:null,
+               image:''
           },
           file:'',
           imageData: "",
-          confirmPassword:null
+          confirmPassword:null,
+          errorMessage:'',
+          dataAdedd:false,
+          formData:null
      }
-  },
-  created(){
-     this.axios.get('api/admin/users/7'
-      ).then((response) => {
-          console.log('client 7',response)
-     })
   },
   methods: {
     handleSubmit(){
-     let formData = new FormData();
-     //  Add the form data we need to submit
-     formData.append('image', this.file, this.file.name);
-     let rawData = JSON.stringify(this.client);
-     formData.append('client', rawData)
-     this.axios.post('https://jsonplaceholder.typicode.com/todos/1',
-          formData,
-          {headers: {'Content-Type': 'multipart/form-data'}}
+          let formData = new FormData();
+          formData.set('name', this.client.name);
+          formData.set('email', this.client.email);
+          formData.set('password', this.client.password);
+          formData.set('phone', this.client.phone);
+          formData.set('image', this.file);
+          this.formData = formData;
+          const config = {
+               headers: {
+               "Content-Type": "multipart/form-data"
+               }
+          };
+    
+     this.axios.post('api/admin/users', this.formData, config,
       ).then((response) => {
-          console.log(response)
+           if(response.status == 200){
+               if (response.data.status == true) {
+                this.dataAdedd = true;
+                    let self = this;
+                    setTimeout(
+                    function() {
+                         self.reset();
+                    }, 2000);
+               } 
+               else{
+                    response.data.msg = this.errorMessage
+               }
+          }
+          console.log(response.data)
      })
     },
     handleFileUpload: function() {
+         let self = this;
          this.file = this.$refs.file.files[0];
           // Ensure that you have a file before attempting to read it
           if (this.$refs.file && this.$refs.file.files[0]) {
+               
                // create a new FileReader to read this image and convert to base64 format
                var reader = new FileReader();
                // Define a callback function to run, when FileReader finishes its job
                reader.onload = (e) => {
                // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
                // Read image as base64 and set to imageData
-               this.imageData = e.target.result;
+               self.imageData = e.target.result;
                }
                // Start the reader job - read file as a data url (base64 format)
-               reader.readAsDataURL(this.$refs.file.files[0]);
+               reader.readAsDataURL(self.$refs.file.files[0]);
           }
      },
     validate: function() {
@@ -128,6 +153,20 @@ export default {
               return true;
          }
     },
+    reset(){
+          this.client = {
+               name:'',
+               email:'',
+               phone:'',
+               password:null,
+               image:''
+          }
+          file =''
+          imageData = ""
+          confirmPassword = null
+          errorMessage = false
+          this.dataAdedd = false;
+    }
   },
 }
 </script>

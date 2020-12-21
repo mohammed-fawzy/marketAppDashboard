@@ -26,6 +26,26 @@
                                              <div class="col-12 col-md-9"><textarea v-model="product.description" name="description-input" id="description-input" rows="9" placeholder="Description..." class="form-control"></textarea></div>
                                         </div>
                                         <div class="row form-group">
+                                             <div class="col col-md-3"><label class=" form-control-label">Select Sub section</label></div>
+                                             <div class="col-12 col-md-9">
+                                                  <div class="row">
+                                                       <div class="col-12 col-md-6">
+                                                            <select name="select" id="select" class="form-control" v-model="category_id" @change="selectMainSection">
+                                                                 <option value="0">Please select main section</option>
+                                                                 <option v-for="cat in categories" :value="cat.id" :key="cat.id">{{cat.name}}</option>
+                                                            </select>
+                                                       </div>
+                                                       <div class="col-12 col-md-6">
+                                                            <select name="select" id="select" class="form-control" v-model="product.subCategoriesId"
+                                                            :disabled="!subCategories.sub_categories">
+                                                                 <option v-for="cat in subCategories.sub_categories" :value="cat.id" :key="cat.id">{{cat.name}}</option>
+                                                            </select>
+                                                       </div>
+
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row form-group">
                                              <div class="col col-md-3"><label class=" form-control-label">Temperature tracking available ?</label></div>
                                              <div class="col col-md-9">
                                                   <div class="form-check">
@@ -104,13 +124,20 @@ export default {
           product:{
                name:'',
                price:'',
-               temperature:null
+               temperature:null,
+               subCategoriesId:null
           },
+          categories:[],
+          category_id:null,
+          subCategories:[],
           temperature:false,
           images:[],
           file:'',
           imageData: "",
      }
+  },
+     mounted(){
+     this.getCategory();
   },
   methods: {
     handleSubmit(){
@@ -156,6 +183,24 @@ export default {
           done()
           } else {
           }
+    },
+     getCategory(){
+          this.axios.get('api/admin/categories').then((response) => {
+               if(response.status == 200){
+                    if (response.data.status == true) {
+                         this.categories = response.data.data
+                    } 
+               }
+          })
+    },
+    selectMainSection(){
+         this.axios.get(`api/admin/categories/${this.category_id}`).then((response) => {
+               if(response.status == 200){
+                    if (response.data.status == true) {
+                         this.subCategories = response.data.data
+                    } 
+               }
+          })
     },
     validate: function() {
          if (this.client.password && this.confirmPassword) {

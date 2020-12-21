@@ -44,6 +44,12 @@
                                         </div>
                                    <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
                                    </form>
+                                   <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
+                                        <span class="badge badge-pill badge-success">Success</span>
+                                        Data Added Successfully
+                                   </basix-alert>
+
+                                   <span>{{errorMeg}}</span>
                               </div>
                              
                          </div>
@@ -64,15 +70,31 @@ export default {
                password:null,
                password_confirmation:null
           },
+          dataAdedd:false,
+          errorMeg:""
      }
   },
   methods: {
     handleSubmit(){
-
-      this.axios.post('api/admin/admins',this.manger,
-      ).then((response) => {
-          console.log(response)
-     })
+         if (this.manger.name && this.manger.email && this.manger.phone && this.manger.password && this.manger.password_confirmation) {
+              console.log('post')
+              this.axios.post('api/admin/admins',this.manger,
+              ).then((response) => {
+                  if(response.status == 200){
+                    if (response.data.status == true) {
+                         this.dataAdedd = true;
+                         let self = this;
+                         setTimeout(
+                         function() {
+                              self.reset();
+                         }, 2000);
+                    } 
+                    else{
+                         response.data.msg = this.errorMeg
+                    }
+                  }
+             })
+         }
     },
     validate: function() {
          if (this.manger.password && this.manger.password_confirmation) {
@@ -81,6 +103,16 @@ export default {
          else{
               return true;
          }
+    },
+    reset(){
+          this.manger = {
+               name:'',
+               email:'',
+               phone:'',
+               password:null,
+               password_confirmation:null
+          }
+          this.dataAdedd = false;
     }
   },
 }
