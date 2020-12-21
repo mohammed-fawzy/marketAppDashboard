@@ -10,6 +10,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^24.0.0",
+    "@ckeditor/ckeditor5-vue2": "^1.0.5",
     "amcharts3": "^3.21.12",
     "ammap3": "^3.21.12",
     "animate.css": "^3.6.1",

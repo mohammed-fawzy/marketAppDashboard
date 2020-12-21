@@ -7,7 +7,9 @@ import VueRouter from 'vue-router';
 import { routes } from './router/routes';
 import { index } from './components/index';
 import VueLazyload from 'vue-lazyload'
- 
+import CKEditor from '@ckeditor/ckeditor5-vue2';
+
+Vue.use( CKEditor );
 Vue.use(VueLazyload)
 Vue.use(VueAxios, axios)
 import setupAxiosConfig from "./config/axios";

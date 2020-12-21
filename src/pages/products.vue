@@ -23,7 +23,11 @@
                                         </div>
                                          <div class="row form-group">
                                              <div class="col col-md-3"><label for="description-input" class=" form-control-label">Product description</label></div>
-                                             <div class="col-12 col-md-9"><textarea v-model="product.description" name="description-input" id="description-input" rows="9" placeholder="Description..." class="form-control"></textarea></div>
+                                             <!-- <div class="col-12 col-md-9"><textarea v-model="product.description" name="description-input" id="description-input" rows="9" placeholder="Description..." class="form-control"></textarea></div> -->
+                                             <div class="col-12 col-md-9">
+                                                  <ckeditor :editor="editor" v-model="product.info" :config="editorConfig"></ckeditor>
+                                             </div>
+
                                         </div>
                                         <div class="row form-group">
                                              <div class="col col-md-3"><label class=" form-control-label">Select Sub section</label></div>
@@ -36,7 +40,7 @@
                                                             </select>
                                                        </div>
                                                        <div class="col-12 col-md-6">
-                                                            <select name="select" id="select" class="form-control" v-model="product.subCategoriesId"
+                                                            <select name="select" id="select" class="form-control" v-model="product.sub_category_id"
                                                             :disabled="!subCategories.sub_categories">
                                                                  <option v-for="cat in subCategories.sub_categories" :value="cat.id" :key="cat.id">{{cat.name}}</option>
                                                             </select>
@@ -97,7 +101,7 @@
                                                        browseText="Choose photo"
                                                        @upload-success="uploadImageSuccess"
                                                        @before-remove="beforeRemove"
-                                                       :data-images="images"
+                                                       :data-images="product.images"
                                                        
                                                   ></vue-upload-multiple-image>
                                              </div>
@@ -115,25 +119,36 @@
 
 <script>
 import VueUploadMultipleImage from 'vue-upload-multiple-image';
+import CKEditor from '@ckeditor/ckeditor5-vue2';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 export default {
      components: {
-          VueUploadMultipleImage,
+          VueUploadMultipleImage, ckeditor: CKEditor.component
      },
      data () {
      return {
           product:{
                name:'',
                price:'',
+               info:'',
+               sub_category_id:null,
                temperature:null,
-               subCategoriesId:null
+               images:[],
+               min:null,
+               max:null
           },
           categories:[],
           category_id:null,
           subCategories:[],
           temperature:false,
-          images:[],
           file:'',
           imageData: "",
+          editor: ClassicEditor,
+          editorData: '<p>Content of the editor.</p>',
+          editorConfig: {
+              
+          }
      }
   },
      mounted(){
@@ -141,14 +156,19 @@ export default {
   },
   methods: {
     handleSubmit(){
-     let formData = new FormData();
-     //  Add the form data we need to submit
-     formData.append('image', this.file, this.file.name);
-     let rawData = JSON.stringify(this.client);
-     formData.append('client', rawData)
-     this.axios.post('https://jsonplaceholder.typicode.com/todos/1',
-          formData,
-          {headers: {'Content-Type': 'multipart/form-data'}}
+      let formData = new FormData();
+          formData.set('name', this.product.name);
+          formData.set('price', this.product.price);
+          formData.set('info', this.product.info);
+          formData.set('sub_category_id', this.product.sub_category_id);
+          formData.set('image', this.file);
+          this.formData = formData;
+          const config = {
+               headers: {
+               "Content-Type": "multipart/form-data"
+               }
+          };
+     this.axios.post('api/admin/products', this.formData, config
       ).then((response) => {
           console.log(response)
      })
@@ -227,5 +247,8 @@ export default {
      }
      .image-bottom-left .image-primary + span {
           display: none
+     }
+     .ck-file-dialog-button{
+          display: none;
      }
 </style>

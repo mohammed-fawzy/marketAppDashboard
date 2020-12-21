@@ -161,10 +161,10 @@ export default {
                password:null,
                image:''
           }
-          file =''
-          imageData = ""
-          confirmPassword = null
-          errorMessage = false
+          this.file =''
+          this.imageData = ""
+          this.confirmPassword = null
+          this.errorMessage = false
           this.dataAdedd = false;
     }
   },
