@@ -29,7 +29,7 @@
             </div>
             <div class="auth-wallpaper col-md-6 hidden-md-down">
                 <div class="oblique"></div>
-                <router-link class="basix-home" :to="{path: '/'}"><img src="../images/logo.png" alt="Logo"></router-link>
+                <router-link class="basix-home" :to="{path: '/'}"><img src="../images/logo.svg" class="imgLogo" alt="Logo"></router-link>
             </div>
         </div>
     </section>
@@ -76,5 +76,10 @@
       }
     }
 
+  }
+  .imgLogo{
+      background: #fff;
+      border-radius: 5px;
+      padding: 3px;
   }
 </style>

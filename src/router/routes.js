@@ -52,7 +52,7 @@ const Page500 = resolve => { require.ensure(['../pages/Page500.vue'], ()=>{ reso
 export const routes = [
     {
         path : '',
-        name: 'home',
+        name: 'login',
         components:{
             default: Login
         },

@@ -8,7 +8,8 @@ import { routes } from './router/routes';
 import { index } from './components/index';
 import VueLazyload from 'vue-lazyload'
 import CKEditor from '@ckeditor/ckeditor5-vue2';
-
+import Paginate from 'vuejs-paginate'
+Vue.component('paginate', Paginate)
 Vue.use( CKEditor );
 Vue.use(VueLazyload)
 Vue.use(VueAxios, axios)

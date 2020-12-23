@@ -2,9 +2,10 @@
   <div id="app">
     <!-- <auth-layout v-if="isAuth"></auth-layout> -->
       <div class="admin-container">
-        <Sidebar v-if="name != 'login'" :navItems="nav"/>
+        <Sidebar v-if="name != 'login' && name != 'Page404'" :navItems="nav"/>
+        <!-- {{name != 'login' && name != 'Page404'}} {{name}} -->
         <div id="right-panel" class="right-panel">
-          <Header v-if="name != 'login'" />
+          <Header v-if="name != 'login' && name != 'Page404'" />
           <div :class="{'content pb-0': name != 'login'}">
               <transition enter-active-class="animated fadeIn">
                 <router-view></router-view>

@@ -14,7 +14,7 @@
             <i class="fa fa-bars"></i>
         </button>
         <router-link to="/" class="navbar-brand" exact>
-            <img src="../../images/logo.png" alt="Logo">
+            <img src="../../images/logo.svg" alt="Logo">
         </router-link>
 
         <router-link to="/" class="navbar-brand hidden">
@@ -65,6 +65,11 @@ export default {
         .navbar-brand{
             justify-content: flex-start;
             padding-left:10%;
+            img{
+                background: #fff;
+                border-radius: 5px;
+                padding: 3px;
+            }
         }
     }
 

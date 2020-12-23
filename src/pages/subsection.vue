@@ -65,6 +65,7 @@ export default {
   },
   methods: {
    handleSubmit(){
+     if (this.subSection.name && this.subSection.category_id) {
       this.axios.post('api/admin/sub-categories',this.subSection).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
@@ -82,6 +83,7 @@ export default {
           console.log(response)
       
      })
+     }
     },
     getCategory(){
           this.axios.get('api/admin/categories').then((response) => {

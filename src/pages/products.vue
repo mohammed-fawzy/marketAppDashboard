@@ -16,9 +16,21 @@
                                              </div>
                                         </div>
                                         <div class="row form-group">
-                                             <div class="col col-md-3"><label for="price-input" class=" form-control-label">Product price</label></div>
-                                             <div class="col-12 col-md-9">
-                                                  <input v-model="product.price" type="text" id="price-input" name="price-input" placeholder="Enter price" class="form-control" required>
+                                             <div class="col-6">
+                                                  <div class="row">
+                                                       <div class="col col-md-6"><label for="price-input" class=" form-control-label">Product price</label></div>
+                                                       <div class="col-12 col-md-6">
+                                                            <input v-model="product.price" type="text" id="price-input" name="price-input" placeholder="Enter price" class="form-control" required>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="col-6">
+                                                  <div class="row">
+                                                       <div class="col col-md-3"><label for="price-input" class=" form-control-label">Discount</label></div>
+                                                       <div class="col-12 col-md-9">
+                                                            <input v-model="product.discount" type="text" id="price-input" name="price-input" placeholder="Enter discount" class="form-control" required>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </div>
                                          <div class="row form-group">
@@ -41,7 +53,7 @@
                                                        </div>
                                                        <div class="col-12 col-md-6">
                                                             <select name="select" id="select" class="form-control" v-model="product.sub_category_id"
-                                                            :disabled="!subCategories.sub_categories">
+                                                                 :disabled="!subCategories.sub_categories.length">
                                                                  <option v-for="cat in subCategories.sub_categories" :value="cat.id" :key="cat.id">{{cat.name}}</option>
                                                             </select>
                                                        </div>
@@ -66,10 +78,10 @@
                                              <div class="col-12 col-md-6">
                                                   <div class="row">
                                                        <div class="col-6">
-                                                            <input v-model="product.temperatureMin" type="text" id="text-input" name="text-input" placeholder="Temperature Min" class="form-control" required>
+                                                            <input v-model="product.min" type="text" id="text-input" name="text-input" placeholder="Temperature Min" class="form-control" required>
                                                        </div>
                                                        <div class="col-6">
-                                                            <input v-model="product.temperatureMax" type="text" id="text-input" name="text-input" placeholder="Temperature Max" class="form-control" required>
+                                                            <input v-model="product.max" type="text" id="text-input" name="text-input" placeholder="Temperature Max" class="form-control" required>
                                                        </div>
                                                   </div>
                                              </div>
@@ -108,6 +120,12 @@
                                         </div>
                                    <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
                                    </form>
+                                    <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
+                                        <span class="badge badge-pill badge-success">Success</span>
+                                        Data Added Successfully
+                                   </basix-alert>
+
+                                   <span>{{errorMessage}}</span>
                               </div>
                              
                          </div>
@@ -135,15 +153,21 @@ export default {
                sub_category_id:null,
                temperature:null,
                images:[],
+               discount:'',
                min:null,
                max:null
           },
           categories:[],
           category_id:null,
-          subCategories:[],
+          subCategories:{
+               sub_categories:[]
+          },
           temperature:false,
+          imagesFile:[],
           file:'',
           imageData: "",
+          errorMessage:'',
+          dataAdedd:false,
           editor: ClassicEditor,
           editorData: '<p>Content of the editor.</p>',
           editorConfig: {
@@ -155,13 +179,28 @@ export default {
      this.getCategory();
   },
   methods: {
-    handleSubmit(){
+     handleSubmit(){
+         if (this.product.name && this.product.price && this.product.discount && this.product.info) {
+    
       let formData = new FormData();
           formData.set('name', this.product.name);
           formData.set('price', this.product.price);
+          formData.set('discount', this.product.discount);
+          formData.set('min', this.product.min);
+          formData.set('max', this.product.max);
           formData.set('info', this.product.info);
           formData.set('sub_category_id', this.product.sub_category_id);
           formData.set('image', this.file);
+          // formData.set('images', [this.file]);
+          
+          for (var i = 0; i < this.imagesFile.length; i++) {
+               formData.append('images[]', this.imagesFile [i]);
+          }
+          // formData.set('images', [this.file]);
+          // for (var i = 0; i < this.imagesFile.length; i++) {
+          //      console.log()
+          //      formData.append('images', this.imagesFile[i].get('images'));
+          // }
           this.formData = formData;
           const config = {
                headers: {
@@ -170,8 +209,23 @@ export default {
           };
      this.axios.post('api/admin/products', this.formData, config
       ).then((response) => {
-          console.log(response)
+         if(response.status == 200){
+               if (response.data.status == true) {
+                this.dataAdedd = true;
+                    let self = this;
+                    setTimeout(
+                    function() {
+                         self.reset();
+                    }, 2000);
+               } 
+               else{
+                    response.data.msg = this.errorMessage
+               }
+          }
+          console.log(response.data)
      })
+     }
+
     },
     handlePoductImgUpload: function() {
          this.file = this.$refs.file.files[0];
@@ -190,7 +244,16 @@ export default {
           }
      },
      uploadImageSuccess(formData, index, fileList) {
-          console.log('data', formData, index, fileList)
+          console.log('formData', formData)
+          console.log('formData', formData.values())
+          console.log('index', index)
+          console.log('fileList', fileList)
+          // Display the values
+          for (var value of formData.values()) {
+               this.imagesFile.push(value)
+          }
+          
+          // this.imagesFile = [...];
           // Upload image api
           // axios.post('http://your-url-upload', formData).then(response => {
           //   console.log(response)

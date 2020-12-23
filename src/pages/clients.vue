@@ -96,6 +96,8 @@ export default {
   },
   methods: {
     handleSubmit(){
+         if (this.client.name && this.client.email && this.client.password && this.client.info && this.client.file) {
+    
           let formData = new FormData();
           formData.set('name', this.client.name);
           formData.set('email', this.client.email);
@@ -126,6 +128,7 @@ export default {
           }
           console.log(response.data)
      })
+     }
     },
     handleFileUpload: function() {
          let self = this;

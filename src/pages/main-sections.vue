@@ -45,6 +45,7 @@ export default {
   },
   methods: {
     handleSubmit(){
+     if (this.mainSection.name) {
       this.axios.post('api/admin/categories',this.mainSection).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
@@ -62,6 +63,7 @@ export default {
           console.log(response)
       
      })
+     }
     },
     reset(){
      this.mainSection = {
