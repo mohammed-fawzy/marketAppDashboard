@@ -125,7 +125,9 @@
                                         Data Added Successfully
                                    </basix-alert>
 
-                                   <span>{{errorMessage}}</span>
+                                   <basix-alert v-if="errorMessage" type="danger" :withCloseBtn="true" class="col-12 col-md-6 mx-auto mt-4 text-center">
+                                        <span class="badge badge-pill badge-danger">{{errorMessage}}</span>
+                                   </basix-alert>
                               </div>
                              
                          </div>
@@ -186,8 +188,10 @@ export default {
           formData.set('name', this.product.name);
           formData.set('price', this.product.price);
           formData.set('discount', this.product.discount);
-          formData.set('min', this.product.min);
-          formData.set('max', this.product.max);
+          if (this.temperature) {
+               formData.set('min', this.product.min);
+               formData.set('max', this.product.max);
+          }
           formData.set('info', this.product.info);
           formData.set('sub_category_id', this.product.sub_category_id);
           formData.set('image', this.file);
@@ -219,7 +223,7 @@ export default {
                     }, 2000);
                } 
                else{
-                    response.data.msg = this.errorMessage
+                    this.errorMessage = response.data.msg ;
                }
           }
           console.log(response.data)
@@ -293,6 +297,25 @@ export default {
               return true;
          }
     },
+    reset(){
+          this.product = {
+               name:'',
+               price:'',
+               info:'',
+               sub_category_id:null,
+               temperature:null,
+               images:[],
+               discount:'',
+               min:null,
+               max:null
+          }
+          this.category_id = null;
+          this.temperature = false
+          this.imagesFile = []
+          this.file = ''
+          this.imageData = ""
+          this.errorMessage = ''
+    }
   },
 }
 </script>

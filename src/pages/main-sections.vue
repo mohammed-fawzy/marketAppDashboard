@@ -22,7 +22,9 @@
                                         Data Added Successfully
                                    </basix-alert>
 
-                                   <span>{{errorMeg}}</span>
+                                   <basix-alert v-if="errorMeg" type="danger" :withCloseBtn="true" class="col-12 col-md-6 mx-auto mt-4 text-center">
+                                        <span class="badge badge-pill badge-danger">{{errorMeg}}</span>
+                                   </basix-alert>
                               </div>
                              
                          </div>
@@ -57,7 +59,7 @@ export default {
                     }, 2000);
                } 
                else{
-                    response.data.msg = this.errorMeg
+                    this.errorMeg = response.data.msg 
                }
            }
           console.log(response)

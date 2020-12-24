@@ -65,7 +65,9 @@
                                         Data Added Successfully
                                    </basix-alert>
 
-                                   <span>{{errorMessage}}</span>
+                                   <basix-alert v-if="errorMessage" type="danger" :withCloseBtn="true" class="col-12 col-md-6 mx-auto mt-4 text-center">
+                                        <span class="badge badge-pill badge-danger">{{errorMessage}}</span>
+                                   </basix-alert>
                               </div>
                              
                          </div>
@@ -96,8 +98,7 @@ export default {
   },
   methods: {
     handleSubmit(){
-         if (this.client.name && this.client.email && this.client.password && this.client.info && this.client.file) {
-    
+         if (this.client.name && this.client.email && this.client.password && this.file) {
           let formData = new FormData();
           formData.set('name', this.client.name);
           formData.set('email', this.client.email);
@@ -115,7 +116,7 @@ export default {
       ).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
-                this.dataAdedd = true;
+                    this.dataAdedd = true;
                     let self = this;
                     setTimeout(
                     function() {
@@ -123,7 +124,7 @@ export default {
                     }, 2000);
                } 
                else{
-                    response.data.msg = this.errorMessage
+                    this.errorMessage = response.data.msg 
                }
           }
           console.log(response.data)
