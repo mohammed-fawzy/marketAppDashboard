@@ -7,35 +7,42 @@
                          <div class="table-responsive">
                          <table class="table table-striped first-td-padding">
                          <thead>
-                         <tr>
-                              <td>Name</td>
-                              <td>Subject</td>
-                              <td>Message</td>
-                         </tr>
+                              <tr>
+                                   <td>Name</td>
+                                   <td>Email</td>
+                                   <td>Phone</td>
+                                   <td>Date</td>
+                                   <td>Message</td>
+                              </tr>
                          </thead>
                          <tbody>
-                         <tr>
-                              <td>Matthew McCormick</td>
-                              <td>matthew30@mail.ol</td>
-                              <td>Vancouver</td>
-                         </tr>
-                         <tr>
-                              <td>Nancy Bo</td>
-                              <td>nancy@boonweb.com</td>
-                              <td>Washington</td>
-                         </tr>
-                         <tr>
-                              <td>Frederiko Lopez</td>
-                              <td>fr.lopez@webmail.sp</td>
-                              <td>Barcelona</td>
-                         </tr>
-                         <tr>
-                              <td>Stanley Hummer</td>
-                              <td>mr_winner_2999@gmail.cb</td>
-                              <td>Manchester</td>
-                         </tr>
+                              <tr v-for="message in messsages.items" :key="message.id">
+                                   <td>{{message.name}}</td>
+                                   <td>{{message.email}}</td>
+                                   <td>{{message.phone}}</td>
+                                   <td>{{message.created_at}}</td>
+                                   <td>{{message.message}}</td>
+                              </tr>
                          </tbody>
                          </table>
+                              <nav class="mt-4" v-if="messsages.paginate.total_pages > 1">
+                                   <paginate
+                                        :page-count="messsages.paginate.total_pages"
+                                        :margin-pages="2"
+                                        :click-handler="handlePgnation"
+                                        :prev-text="'Prev'"
+                                        :next-text="'Next'"
+                                        :container-class="'pagination justify-content-center'"
+                                        active-class="active"
+                                        :page-class="'page-item'"
+                                        :page-link-class="'page-link'"
+                                        :prev-class="'page-item'"
+                                        :prev-link-class="'page-link'"
+                                        :next-link-class="'page-link'"
+                                        :next-class="'page-item'"
+                                        >
+                                   </paginate>
+                              </nav>
                          </div>
                     </card>
                     </div>
@@ -49,55 +56,29 @@
 export default {
      data () {
      return {
-          client:{
-               name:'',
-               email:'',
-               phone:'',
-               password:null,
-          },
-          file:'',
-          imageData: "",
-          confirmPassword:null
+         messsages:{},
+         pageNum:1
      }
   },
+   mounted(){
+     this.loadMessages()
+   },
   methods: {
-    handleSubmit(){
-     let formData = new FormData();
-     //  Add the form data we need to submit
-     formData.append('image', this.file, this.file.name);
-     let rawData = JSON.stringify(this.client);
-     formData.append('client', rawData)
-     this.axios.post('https://jsonplaceholder.typicode.com/todos/1',
-          formData,
-          {headers: {'Content-Type': 'multipart/form-data'}}
-      ).then((response) => {
-          console.log(response)
-     })
-    },
-    handleFileUpload: function() {
-         this.file = this.$refs.file.files[0];
-          // Ensure that you have a file before attempting to read it
-          if (this.$refs.file && this.$refs.file.files[0]) {
-               // create a new FileReader to read this image and convert to base64 format
-               var reader = new FileReader();
-               // Define a callback function to run, when FileReader finishes its job
-               reader.onload = (e) => {
-               // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
-               // Read image as base64 and set to imageData
-               this.imageData = e.target.result;
-               }
-               // Start the reader job - read file as a data url (base64 format)
-               reader.readAsDataURL(this.$refs.file.files[0]);
-          }
+      loadMessages() {
+          //   pageNum = pageNum ? pageNum : '';
+            this.axios.get(`api/admin/contacts`,
+            ).then((response) => {
+                 if(response.status == 200){
+                    if (response.data.status == true) {
+                         this.messsages = response.data.data
+                    } 
+                 }
+            })
      },
-    validate: function() {
-         if (this.client.password && this.confirmPassword) {
-              return this.client.password == this.confirmPassword ?  true : false;
-         }
-         else{
-              return true;
-         }
-    },
+     handlePgnation(pageNum){
+          this.pageNum = pageNum;
+          this.loadMessages();
+     }
   },
 }
 </script>
