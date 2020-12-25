@@ -25,9 +25,9 @@
                               </tr>
                          </tbody>
                          </table>
-                              <nav class="mt-4" v-if="messsages.paginate.total_pages > 1">
+                              <nav class="mt-4" v-if="total_pages > 1">
                                    <paginate
-                                        :page-count="messsages.paginate.total_pages"
+                                        :page-count="total_pages"
                                         :margin-pages="2"
                                         :click-handler="handlePgnation"
                                         :prev-text="'Prev'"
@@ -57,7 +57,8 @@ export default {
      data () {
      return {
          messsages:{},
-         pageNum:1
+         pageNum:1,
+         total_pages:null,
      }
   },
    mounted(){
@@ -71,6 +72,7 @@ export default {
                  if(response.status == 200){
                     if (response.data.status == true) {
                          this.messsages = response.data.data
+                         this.total_pages =response.data.data.paginate.total_pages
                     } 
                  }
             })
