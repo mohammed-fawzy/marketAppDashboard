@@ -1381,10 +1381,10 @@ header .form-inline {
         background: transparent; }
 
 .header-menu .col-sm-5 .dropdown {
-  line-height: 5;
+  line-height: 2;
   margin-top: 0 !important; }
   .header-menu .col-sm-5 .dropdown .dropdown-toggle {
-    line-height: 5; }
+    line-height: 3; }
 
 .dropdown-menu {
   border-radius: 0;

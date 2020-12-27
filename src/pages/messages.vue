@@ -66,7 +66,6 @@ export default {
    },
   methods: {
       loadMessages() {
-          //   pageNum = pageNum ? pageNum : '';
             this.axios.get(`api/admin/contacts`,
             ).then((response) => {
                  if(response.status == 200){

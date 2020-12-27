@@ -56,6 +56,9 @@ export const routes = [
         components:{
             default: Login
         },
+        meta:{
+            guest: true
+        }
     },
     {   path : '/dashboard',
         name:'dashboard',
