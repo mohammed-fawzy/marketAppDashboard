@@ -8,6 +8,7 @@
                          <table class="table table-striped first-td-padding border-table">
                          <thead>
                               <tr>
+                                   <td>ID</td>
                                    <td>Name</td>
                                    <td>Email</td>
                                    <td>Phone</td>
@@ -17,6 +18,7 @@
                          </thead>
                          <tbody>
                               <tr v-for="message in messsages.items" :key="message.id">
+                                   <td>{{message.id}}</td>
                                    <td>{{message.name}}</td>
                                    <td>{{message.email}}</td>
                                    <td>{{message.phone}}</td>

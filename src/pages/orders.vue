@@ -8,6 +8,7 @@
                          <table class="table table-striped first-td-padding border-table">
                          <thead>
                          <tr>
+                              <td>ID</td>
                               <td>Change status</td>
                               <td>Address </td>
                               <td>Total </td>
@@ -20,6 +21,7 @@
                          </thead>
                          <tbody>
                          <tr v-for="order in orders.items" :key="order.id">
+                              <td>{{order.id}}</td>
                               <td>
                                    <select name="select" id="select" class="form-control" @change="updataOrderStatus(order.id, order.status)" v-model="order.status">
                                         <option disabled value="null" selected>Change status</option>
