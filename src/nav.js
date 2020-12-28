@@ -4,36 +4,36 @@ export default {
     {
       name:'Managers',
       url: '/auth/managers',
-      icon: 'fa fa-sign-in'
+      icon: 'fa fa-pencil-square-o',
     },
     {
       name:'Clients',
       url: '/auth/clients',
-      icon: 'fa fa-sign-in'
+      icon: 'fa fa-pencil-square-o',
     },
     {
       name:'Main Sections',
       url: '/auth/main-sections',
-      icon: 'fa fa-sign-in'
+      icon: 'fa fa-pencil-square-o',
     },
     {
       name:'Subsection',
       url: '/auth/subsection',
-      icon: 'fa fa-sign-in'
+      icon: 'fa fa-pencil-square-o',
     },
     {
       name:'Products',
       url: '/auth/products',
-      icon: 'fa fa-sign-in'
+      icon: 'fa fa-pencil-square-o',
     },
     {
       name:'Orders',
       url: '/auth/orders',
-      icon: 'fa fa-sign-in'
+      icon: 'fa fa-pencil-square-o',
     },{
       name:'Messages',
       url: '/auth/messages',
-      icon: 'fa fa-sign-in'
+      icon: 'fa fa-pencil-square-o',
     },
     // {
     //   name: 'Dashboard',

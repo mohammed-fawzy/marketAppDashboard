@@ -67,7 +67,7 @@
                                                        <div class="col-12 col-md-9">
                                                             <div class="row">
                                                                  <div class="col-6">
-                                                                      <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handleFileUpload" accept="image/*">
+                                                                      <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handleFileUpload" accept="image/*" required>
                                                                       <label class="custom-file-label" for="customFile">Choose photo</label>
                                                                  </div>
                                                                  <div class="col-6">
@@ -94,7 +94,7 @@
                              
                          </div>
 
-                         <div class="card">
+                         <div class="card" v-if="clients.items.length">
                               <div class="card-header">
                                    <strong>All clients</strong> 
                               </div>
@@ -155,7 +155,9 @@ export default {
      components:{EditModal},
      data () {
      return {
-          clients:{},
+          clients:{
+               items:[]
+          },
           client:{
                name:'',
                email:'',
@@ -207,6 +209,7 @@ export default {
      },
     handleSubmit(){
          if (this.client.name && this.client.email && this.client.password && this.file) {
+          this.errorMessage = "";
           let formData = new FormData();
           formData.set('name', this.client.name);
           formData.set('email', this.client.email);

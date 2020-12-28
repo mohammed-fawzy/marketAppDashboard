@@ -123,7 +123,7 @@
                             >
                                 <img class="user-avatar rounded-circle" src="../images/admin.jpg" alt="User Avatar">
                             </a> -->
-                            <a class="nav-link" href="#" @click="logOut"><i class="fa fa-power -off"></i>Logout</a>
+                            <a class="nav-link" href="#" @click="logOut"><i class="fa fa-power -off"></i>Logout <i class="menu-icon fa fa-sign-in"></i></a>
 
                             <!-- <div
                                 class="user-menu dropdown-menu"
@@ -212,4 +212,8 @@
     header .form-inline .search-form button{
         cursor: pointer;
     }
+    .header-menu .col-sm-5 .dropdown {
+        line-height: 2;
+    }
+
 </style>

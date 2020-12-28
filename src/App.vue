@@ -34,7 +34,7 @@ export default {
     }
   },
   beforeCreate () {
-    this.$router.push({ name: 'login' })
+    // this.$router.push({ name: 'login' })
   },
   computed: {
     name(){

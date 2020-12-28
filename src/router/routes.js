@@ -205,16 +205,16 @@ export const routes = [
         name: 'auth',
         component: { render (c) { return c('router-view') }},
         children:[
-            {
-                path: '/auth/login',
-                component: Login,
-                name: 'login',
-                meta: {
-                    default: false,
-                    title: 'Login',
-                    guest: true
-                }
-            },
+            // {
+            //     path: '/auth/login',
+            //     component: Login,
+            //     name: 'login',
+            //     meta: {
+            //         default: false,
+            //         title: 'Login',
+            //         guest: true
+            //     }
+            // },
             {
                 path: '/auth/register',
                 component: Register,

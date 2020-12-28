@@ -91,7 +91,7 @@
                                              <div class="col-12 col-md-9">
                                                   <div class="row">
                                                        <div class="col-6">
-                                                            <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handlePoductImgUpload()" accept="image/*">
+                                                            <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handlePoductImgUpload()" accept="image/*" required>
                                                             <label class="custom-file-label" for="customFile">Choose photo</label>
                                                        </div>
                                                        <div class="col-6">
@@ -131,23 +131,94 @@
                               </div>
                              
                          </div>
+
+                         <div class="card" v-if="products.items.length">
+                              <div class="card-header">
+                                   <strong>All Products</strong> 
+                              </div>
+                              <div class="card-body card-block">
+                                   <table class="table table-striped first-td-padding border-table">
+                                        <thead>
+                                             <tr>
+                                                  <td>Id</td>
+                                                  <td>Name</td>
+                                                  <td>Price</td>
+                                                  <td>Discount</td>
+                                                  <td>Info</td>
+                                                  <td>Image</td>
+                                                  <td>Sensor</td>
+                                                  <td>Sub category</td>
+                                                  <td>Edit</td>
+                                                  <td>Delete</td>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr v-for="product in products.items" :key="product.id">
+                                                  <td>{{product.id}}</td>
+                                                  <td>{{product.name}}</td>
+                                                  <td>{{product.price}}</td>
+                                                  <td>{{product.discount}}</td>
+                                                  <td v-html="product.info"></td>
+                                                  <td><img src="product.image"></td>
+                                                  <td v-if="product.sensor"> Min: {{product.sensor.min}}<br>Max: {{product.sensor.max}}</td>
+                                                  <td v-else> No sensor</td>
+                                                  <td>
+                                                       <!-- <select name="select" id="select" class="form-control" v-if="product.sub_category">
+                                                            <option v-for="cat in product.sub_category" :value="cat.id" :key="cat.id">{{cat.name}}</option>
+                                                       </select> -->
+                                                       {{product.sub_category.name}}
+                                                  </td>
+
+                                                  <td @click="showEditModal(product.id)"><button type="button" class="btn btn-info">Edit</button></td>
+                                                  <td @click="deleteItem(product.id)"><button type="button" class="btn btn-danger">Delete</button></td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                                     <nav class="mt-4" v-if="total_pages > 1" ref="reference">
+                                        <paginate
+                                             :page-count="total_pages"
+                                             :margin-pages="2"
+                                             :click-handler="handlePgnation"
+                                             :prev-text="'Prev'"
+                                             :next-text="'Next'"
+                                             :container-class="'pagination justify-content-center'"
+                                             active-class="active"
+                                             :page-class="'page-item'"
+                                             :page-link-class="'page-link'"
+                                             :prev-class="'page-item'"
+                                             :prev-link-class="'page-link'"
+                                             :next-link-class="'page-link'"
+                                             :next-class="'page-item'"
+                                             >
+                                        </paginate>
+                                   </nav>
+                              </div>
+                         </div>
+
                     </div>
                </div>
           </div>
+          <EditModal @closeModalEvent="closeEditModal" :productId="productId" v-if="showModal" :key="showModal"/>
      </section>
 </template>
 
 <script>
+import EditModal from './models/editProduct'
 import VueUploadMultipleImage from 'vue-upload-multiple-image';
 import CKEditor from '@ckeditor/ckeditor5-vue2';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default {
      components: {
-          VueUploadMultipleImage, ckeditor: CKEditor.component
+          VueUploadMultipleImage, ckeditor: CKEditor.component, EditModal
      },
      data () {
      return {
+          products:{
+               items:[]
+          },
+          pageNum:1,
+          total_pages:null,
           product:{
                name:'',
                price:'',
@@ -159,6 +230,8 @@ export default {
                min:null,
                max:null
           },
+          showModal:false,
+          productId:null,
           categories:[],
           category_id:null,
           subCategories:{
@@ -178,13 +251,39 @@ export default {
      }
   },
      mounted(){
+     this.loadAllData();
      this.getCategory();
   },
   methods: {
+     loadAllData() {
+          this.axios.get(`api/admin/products?page=${this.pageNum}`,
+          ).then((response) => {
+               if(response.status == 200){
+               if (response.data.status == true) {
+                    this.products = response.data.data
+                    this.total_pages = response.data.data.paginate.total_pages
+               } 
+               }
+          })
+     },
+     handlePgnation(pageNum){
+          this.pageNum = pageNum;
+          this.loadAllData();
+     },
+     showEditModal(productId){
+          this.showModal = true;
+          this.productId = productId;
+     },
+     closeEditModal(isUpdate) {
+          this.showModal = !this.showModal;
+          if (isUpdate) {
+               this.loadAllData();
+          }
+     },
      handleSubmit(){
-         if (this.product.name && this.product.price && this.product.discount && this.product.info) {
-    
-      let formData = new FormData();
+     if (this.product.name && this.product.price && this.product.discount && this.product.info) {
+          this.errorMessage = '';
+          let formData = new FormData();
           formData.set('name', this.product.name);
           formData.set('price', this.product.price);
           formData.set('discount', this.product.discount);
@@ -193,7 +292,7 @@ export default {
                formData.set('max', this.product.max);
           }
           formData.set('info', this.product.info);
-          formData.set('sub_category_id', this.product.sub_category_id);
+          if (this.product.sub_category_id) formData.set('sub_category_id', this.product.sub_category_id);
           formData.set('image', this.file);
           // formData.set('images', [this.file]);
           
@@ -215,18 +314,18 @@ export default {
       ).then((response) => {
          if(response.status == 200){
                if (response.data.status == true) {
-                this.dataAdedd = true;
+                    this.dataAdedd = true;
                     let self = this;
                     setTimeout(
                     function() {
                          self.reset();
+                         this.loadAllData();
                     }, 2000);
                } 
                else{
                     this.errorMessage = response.data.msg ;
                }
           }
-          console.log(response.data)
      })
      }
 
@@ -297,6 +396,19 @@ export default {
               return true;
          }
     },
+     deleteItem(itemId){
+          let r = confirm("Are you sure to delete this product ?");
+          if (r == true) {
+               this.axios.delete(`api/admin/products/${itemId}`,
+               ).then((response) => {
+                    if(response.status == 200){
+                         if (response.data.status == true) {
+                              this.loadAllData();
+                         } 
+                    }
+               })
+          } 
+     },
     reset(){
           this.product = {
                name:'',
@@ -315,6 +427,7 @@ export default {
           this.file = ''
           this.imageData = ""
           this.errorMessage = ''
+          this.dataAdedd = false;
     }
   },
 }

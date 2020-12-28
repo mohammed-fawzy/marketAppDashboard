@@ -64,7 +64,7 @@
                              
                          </div>
 
-                         <div class="card">
+                         <div class="card" v-if="admins.items.length">
                               <div class="card-header">
                                    <strong>All managers</strong> 
                               </div>
@@ -120,7 +120,9 @@ export default {
      components:{EditModal},
      data () {
      return {
-          admins:{},
+          admins:{
+               items:[]
+          },
           total_pages:null,
           manger:{
                name:'',
@@ -166,6 +168,7 @@ export default {
      },
     handleSubmit(){
          if (this.manger.name && this.manger.email && this.manger.password && this.manger.password_confirmation) {
+              this.errorMeg ='';
               console.log('post')
               this.axios.post('api/admin/admins',this.manger,
               ).then((response) => {
@@ -206,7 +209,7 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style>
      .border-table{
           border: 1px solid #dee2e6;
      }

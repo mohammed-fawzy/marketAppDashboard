@@ -43,16 +43,49 @@
                               </div>
                              
                          </div>
+
+                         <div class="card" v-if="subSections.length">
+                              <div class="card-header">
+                                   <strong>All sub sections</strong> 
+                              </div>
+                              <div class="card-body card-block">
+                                   <table class="table table-striped first-td-padding border-table">
+                                        <thead>
+                                             <tr>
+                                                  <td>Id</td>
+                                                  <td>Name</td>
+                                                  <td>Main section</td>
+                                                  <td>Edit</td>
+                                                  <td>Delete</td>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr v-for="sub in subSections" :key="sub.id">
+                                                  <td>{{sub.id}}</td>
+                                                  <td>{{sub.name}}</td>
+                                                  <td>{{sub.category.name}}</td>
+                                                  <td @click="showEditModal(sub.id)"><button type="button" class="btn btn-info">Edit</button></td>
+                                                  <td @click="deleteItem(sub.id)"><button type="button" class="btn btn-danger">Delete</button></td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+
                     </div>
                </div>
           </div>
+          <EditModal @closeModalEvent="closeEditModal" :subCategoryId="subCategoryId" v-if="showModal" :key="showModal"/>
      </section>
 </template>
 
 <script>
+import EditModal from './models/editSubMainSec'
 export default {
+     components:{EditModal},
      data () {
      return {
+          subSections:[],
           subSection:{
                name:'',
                category_id:null
@@ -60,14 +93,40 @@ export default {
           categories:[],
           dataAdedd:false,
           errorMeg:null,
+          showModal:false,
+          subCategoryId:null,
+          isUpdate:false
+
      }
   },
   mounted(){
      this.getCategory();
+     this.loadAllData();
   },
   methods: {
+     loadAllData() {
+          this.axios.get(`api/admin/sub-categories`,
+          ).then((response) => {
+               if(response.status == 200){
+                    if (response.data.status == true) {
+                         this.subSections = response.data.data
+                    } 
+               }
+          })
+     },
+     showEditModal(subCategoryId){
+          this.showModal = true;
+          this.subCategoryId = subCategoryId;
+     },
+     closeEditModal(isUpdate) {
+          this.showModal = !this.showModal;
+          if (isUpdate) {
+               this.loadAllData();
+          }
+     },
    handleSubmit(){
      if (this.subSection.name && this.subSection.category_id) {
+          this.errorMeg = null;
       this.axios.post('api/admin/sub-categories',this.subSection).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
@@ -82,8 +141,6 @@ export default {
                     this.errorMeg = response.data.msg 
                }
            }
-          console.log(response)
-      
      })
      }
     },
@@ -96,6 +153,19 @@ export default {
                }
           })
     },
+     deleteItem(itemId){
+          let r = confirm("Are you sure to delete this sub category ?");
+          if (r == true) {
+               this.axios.delete(`api/admin/sub-categories/${itemId}`,
+               ).then((response) => {
+                    if(response.status == 200){
+                         if (response.data.status == true) {
+                              this.loadAllData();
+                         } 
+                    }
+               })
+          } 
+     },
     reset(){
      this.subSection = {
           name:'',
