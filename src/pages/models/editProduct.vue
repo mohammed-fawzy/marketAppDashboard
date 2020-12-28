@@ -96,7 +96,7 @@
                                                        <div class="col-12 col-md-9">
                                                             <div class="row">
                                                                  <div class="col-6">
-                                                                      <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handlePoductImgUpload()" accept="image/*" required>
+                                                                      <input type="file" ref="file" id="file-input" name="file-input" class="form-control custom-file-input form-control-file" v-on:change="handlePoductImgUpload()" accept="image/*">
                                                                       <label class="custom-file-label" for="customFile">Choose photo</label>
                                                                  </div>
                                                                  <div class="col-6">
@@ -110,7 +110,7 @@
                                                   <div class="row form-group">
                                                        <div class="col col-md-3"><label for="file-input" class=" form-control-label">Product Gallery</label></div>
                                                        <div class="col-12 col-md-9">
-                                                            <vue-upload-multiple-image
+                                                            <VueUploadMultipleImage2
                                                                  markIsPrimaryText=""
                                                                  primaryText=""
                                                                  popupText=""
@@ -119,11 +119,10 @@
                                                                  @upload-success="uploadImageSuccess"
                                                                  @before-remove="beforeRemove"
                                                                  :data-images="product.images"
-                                                                 
-                                                            ></vue-upload-multiple-image>
+                                                            ></VueUploadMultipleImage2>
                                                        </div>
                                                   </div>
-                                             <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
+                                                  <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
                                              </form>
                                              <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                                   <span class="badge badge-pill badge-success">Success</span>
@@ -145,14 +144,14 @@
 </template>
 
 <script>
-import VueUploadMultipleImage from 'vue-upload-multiple-image';
+import VueUploadMultipleImage2 from 'vue-upload-multiple-image';
 import CKEditor from '@ckeditor/ckeditor5-vue2';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export default {
       components: {
-          VueUploadMultipleImage, ckeditor: CKEditor.component
+          VueUploadMultipleImage2, ckeditor: CKEditor.component
      },
-     props:['clientId'],
+     props:['productId'],
      data () {
           return {
                products:{
@@ -182,6 +181,7 @@ export default {
                imageData: "",
                errorMessage:'',
                dataAdedd:false,
+               isUpdate:false,
                editor: ClassicEditor,
                editorData: '<p>Content of the editor.</p>',
                editorConfig: {
@@ -191,19 +191,41 @@ export default {
      },
      mounted() {
           this.loadAllData();
+          this.getCategory();
      },
      methods:{
           loadAllData() {
-               if (this.clientId) {
-                    this.axios.get(`api/admin/users/${this.clientId}`,
+               if (this.productId) {
+                    this.axios.get(`api/admin/products/${this.productId}`,
                     ).then((response) => {
                          if(response.status == 200){
                               if (response.data.status == true) {
-                                   let client = response.data.data
-                                   this.client.name = client.name
-                                   this.client.email = client.email
-                                   this.client.phone = client.phone
-                                   this.imageData = client.image
+                                   let product = response.data.data
+                                        this.product.name = product.name
+                                        this.product.price = product.price
+                                        this.product.info = product.info
+                                        this.category_id = product.sub_category.category_id
+                                        if (this.category_id) this.selectMainSection();
+                                        this.product.sub_category_id = product.sub_category.id
+                                        this.imageData = product.image
+
+                                        let self = this;
+                                         product.images.forEach(element => {
+                                             self.product.images.push({
+                                                  path: element,
+                                                  default: 1,
+                                                  highlight: 1,
+                                             })
+                                         });
+                                        // this.product.images[0].path = product.images 
+                                        // this.imagesFile[0] = product.images 
+                                        this.product.discount = product.discount
+                                        if (product.sensor){
+                                             this.temperature = true;
+                                             this.product.min = product.sensor.min
+                                             this.product.max = product.sensor.max
+                                        }
+               
                               } 
                          }
                     })
@@ -225,33 +247,34 @@ export default {
                     }
                     formData.set('info', this.product.info);
                     if (this.product.sub_category_id) formData.set('sub_category_id', this.product.sub_category_id);
-                    formData.set('image', this.file);
-                    // formData.set('images', [this.file]);
-                    
-                    for (var i = 0; i < this.imagesFile.length; i++) {
-                         formData.append('images[]', this.imagesFile [i]);
+                    if (this.imageData && this.file) {
+                         formData.set('image', this.file);
                     }
-                    // formData.set('images', [this.file]);
-                    // for (var i = 0; i < this.imagesFile.length; i++) {
-                    //      console.log()
-                    //      formData.append('images', this.imagesFile[i].get('images'));
-                    // }
+                    if (this.imagesFile.length) {
+                         for (var i = 0; i < this.imagesFile.length; i++) {
+                              formData.append('images[]', this.imagesFile [i]);
+                         }
+                    }
+                    
+                  
+                    formData.append('_method', 'PUT')
                     this.formData = formData;
                     const config = {
                          headers: {
                          "Content-Type": "multipart/form-data"
                          }
                     };
-               this.axios.post('api/admin/products', this.formData, config
+               this.axios.post(`api/admin/products/${this.productId}`, this.formData, config
                ).then((response) => {
                if(response.status == 200){
                          if (response.data.status == true) {
                               this.dataAdedd = true;
+                              this.isUpdate = true;
                               let self = this;
                               setTimeout(
                               function() {
                                    self.reset();
-                                   this.loadAllData();
+                                    self.closeEditModal();
                               }, 2000);
                          } 
                          else{
@@ -278,38 +301,32 @@ export default {
                          reader.readAsDataURL(this.$refs.file.files[0]);
                     }
                },
-               uploadImageSuccess(formData, index, fileList) {
-                    console.log('formData', formData)
-                    console.log('formData', formData.values())
-                    console.log('index', index)
-                    console.log('fileList', fileList)
-                    // Display the values
-                    for (var value of formData.values()) {
-                         this.imagesFile.push(value)
-                    }
-                    
-                    // this.imagesFile = [...];
-                    // Upload image api
-                    // axios.post('http://your-url-upload', formData).then(response => {
-                    //   console.log(response)
-                    // })
+          uploadImageSuccess(formData, index, fileList) {
+               console.log('formData', formData)
+               console.log('formData', formData.values())
+               console.log('index', index)
+               console.log('fileList', fileList)
+               // Display the values
+               for (var value of formData.values()) {
+                    this.imagesFile.push(value)
+               }
           },
           beforeRemove (index, done, fileList) {
-                    console.log('index', index, fileList)
-                    var r = confirm("remove image")
-                    if (r == true) {
-                    done()
-                    } else {
-                    }
+               console.log('index', index, fileList)
+               var r = confirm("remove image")
+               if (r == true) {
+               done()
+               } else {
+               }
           },
-               getCategory(){
-                    this.axios.get('api/admin/categories').then((response) => {
-                         if(response.status == 200){
-                              if (response.data.status == true) {
-                                   this.categories = response.data.data
-                              } 
-                         }
-                    })
+          getCategory(){
+               this.axios.get('api/admin/categories').then((response) => {
+                    if(response.status == 200){
+                         if (response.data.status == true) {
+                              this.categories = response.data.data
+                         } 
+                    }
+               })
           },
           selectMainSection(){
                this.axios.get(`api/admin/categories/${this.category_id}`).then((response) => {
@@ -375,5 +392,20 @@ export default {
           overflow-x: hidden;
           overflow-y: auto;
      }
-
+     img.preview {
+          background-color: white;
+          border: 1px solid #DDD;
+          height: 200px;
+          width: auto;
+          border-radius: 5px;
+     }
+     .custom-file-label{
+          left: 14px;
+     }
+     .image-bottom-left .image-primary + span {
+          display: none
+     }
+     .ck-file-dialog-button{
+          display: none;
+     }
 </style>

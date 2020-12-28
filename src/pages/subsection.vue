@@ -75,7 +75,9 @@
                     </div>
                </div>
           </div>
-          <EditModal @closeModalEvent="closeEditModal" :subCategoryId="subCategoryId" v-if="showModal" :key="showModal"/>
+          <transition enter-active-class="animated fadeIn">
+               <EditModal @closeModalEvent="closeEditModal" :subCategoryId="subCategoryId" v-if="showModal" :key="showModal"/>
+          </transition>
      </section>
 </template>
 

@@ -105,7 +105,8 @@
                                         <div class="row form-group">
                                              <div class="col col-md-3"><label for="file-input" class=" form-control-label">Product Gallery</label></div>
                                              <div class="col-12 col-md-9">
-                                                  <vue-upload-multiple-image
+                                                  <VueUploadMultipleImage1
+                                                       v-if="!showModal"
                                                        markIsPrimaryText=""
                                                        primaryText=""
                                                        popupText=""
@@ -114,8 +115,7 @@
                                                        @upload-success="uploadImageSuccess"
                                                        @before-remove="beforeRemove"
                                                        :data-images="product.images"
-                                                       
-                                                  ></vue-upload-multiple-image>
+                                                  ></VueUploadMultipleImage1>
                                              </div>
                                         </div>
                                    <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
@@ -198,19 +198,21 @@
                     </div>
                </div>
           </div>
-          <EditModal @closeModalEvent="closeEditModal" :productId="productId" v-if="showModal" :key="showModal"/>
+          <transition enter-active-class="animated fadeIn">
+               <EditModal @closeModalEvent="closeEditModal" :productId="productId" v-if="showModal" :key="showModal"/>
+          </transition>
      </section>
 </template>
 
 <script>
 import EditModal from './models/editProduct'
-import VueUploadMultipleImage from 'vue-upload-multiple-image';
+import VueUploadMultipleImage1 from 'vue-upload-multiple-image';
 import CKEditor from '@ckeditor/ckeditor5-vue2';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default {
      components: {
-          VueUploadMultipleImage, ckeditor: CKEditor.component, EditModal
+          VueUploadMultipleImage1, ckeditor: CKEditor.component, EditModal
      },
      data () {
      return {
@@ -449,5 +451,8 @@ export default {
      }
      .ck-file-dialog-button{
           display: none;
+     }
+     .border-table{
+          border: 1px solid #dee2e6;
      }
 </style>

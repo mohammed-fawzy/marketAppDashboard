@@ -5,7 +5,7 @@
                     <div class="col-xs-12 col-md-12">
                     <card header-text="Orders">
                          <div class="table-responsive">
-                         <table class="table table-striped first-td-padding">
+                         <table class="table table-striped first-td-padding border-table">
                          <thead>
                          <tr>
                               <td>Change status</td>
@@ -21,7 +21,7 @@
                          <tbody>
                          <tr v-for="order in orders.items" :key="order.id">
                               <td>
-                                   <select name="select" id="select" class="form-control" @change="updataOrderStatus(order.id, order.status)">
+                                   <select name="select" id="select" class="form-control" @change="updataOrderStatus(order.id, order.status)" v-model="order.status">
                                         <option disabled value="null" selected>Change status</option>
                                         <option v-for="(status, index) in orderStatus" :key="index">{{status}}</option>
                                    </select>
@@ -91,23 +91,31 @@ export default {
             })
      },
      updataOrderStatus(orderId, orderStatus) {
+          console.log('orderStatus', orderStatus)
+           let formData = new FormData();
+           formData.append('_method', 'PUT')
            let status = {
                 status:orderStatus
            }
-          this.axios.put(`api/admin/orders/${orderId}`,status
+          formData.set('status',status.status);
+          this.axios.post(`api/admin/orders/${orderId}`,formData
             ).then((response) => {
                  if(response.status == 200){
-                    
+                    this.loadOrders();
                  }
             })
      },
      handlePgnation(pageNum){
           this.pageNum = pageNum;
           this.loadOrders();
-          console.log(pageNum)
      }
     
   },
 }
 </script>
 
+<style>
+     .border-table{
+          border: 1px solid #dee2e6;
+     }
+</style>

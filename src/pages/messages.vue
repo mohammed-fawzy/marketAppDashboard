@@ -5,7 +5,7 @@
                     <div class="col-xs-12 col-md-12">
                     <card header-text="Messages">
                          <div class="table-responsive">
-                         <table class="table table-striped first-td-padding">
+                         <table class="table table-striped first-td-padding border-table">
                          <thead>
                               <tr>
                                    <td>Name</td>
@@ -84,15 +84,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-     img.preview {
-          background-color: white;
-          border: 1px solid #DDD;
-          height: 200px;
-          width: auto;
-          border-radius: 5px;
-     }
-     .custom-file-label{
-          left: 14px;
+<style>
+     .border-table{
+          border: 1px solid #dee2e6;
      }
 </style>

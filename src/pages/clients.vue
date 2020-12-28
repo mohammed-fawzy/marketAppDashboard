@@ -145,7 +145,9 @@
                     </div>
                </div>
           </div>
-          <EditModal @closeModalEvent="closeEditModal" :clientId="clientId" v-if="showModal" :key="showModal"/>
+          <transition enter-active-class="animated fadeIn">
+               <EditModal @closeModalEvent="closeEditModal" :clientId="clientId" v-if="showModal" :key="showModal"/>
+          </transition>
      </section>
 </template>
 

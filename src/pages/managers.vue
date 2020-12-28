@@ -110,7 +110,9 @@
                     </div>
                </div>
           </div>
-          <EditModal @closeModalEvent="closeEditModal" :mangerId="mangerId" v-if="showModal" :key="showModal"/>
+          <transition enter-active-class="animated fadeIn">
+               <EditModal @closeModalEvent="closeEditModal" :mangerId="mangerId" v-if="showModal" :key="showModal"/>
+          </transition>
      </section>
 </template>
 
