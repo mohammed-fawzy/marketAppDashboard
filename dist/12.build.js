@@ -1,2 +1,204 @@
-webpackJsonp([12],{1072:function(t,a,v){var _=v(1073);"string"==typeof _&&(_=[[t.i,_,""]]),_.locals&&(t.exports=_.locals);v(2)("77bd8d03",_,!0,{})},1073:function(t,a,v){a=t.exports=v(1)(!1),a.push([t.i,".table thead tr{color:#007bff}.error-icon{color:#e34a4a}.success-icon{display:inline-block;color:#4ae387}.table-sm td,.table-sm th{padding:.7rem}.color-icon-label-table td:first-child{width:1rem}",""])},1074:function(t,a,v){"use strict";var _=function(){var t=this,a=t.$createElement,v=t._self._c||a;return v("div",[v("div",{staticClass:"row"},[v("div",{staticClass:"col-xs-12 col-md-12"},[v("card",{attrs:{"header-text":"Basic Table"}},[v("div",{staticClass:"table-responsive"},[v("table",{staticClass:"table table-striped first-td-padding"},[v("thead",[v("tr",[v("td",[t._v("Name")]),t._v(" "),v("td",[t._v("Email")]),t._v(" "),v("td",[t._v("City")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("Score")]),t._v(" "),v("td")])]),t._v(" "),v("tbody",[v("tr",[v("td",[t._v("Matthew McCormick")]),t._v(" "),v("td",[t._v("matthew30@mail.ol")]),t._v(" "),v("td",[t._v("Vancouver")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("93")]),t._v(" "),v("td")]),t._v(" "),v("tr",[v("td",[t._v("Nancy Bo")]),t._v(" "),v("td",[t._v("nancy@boonweb.com")]),t._v(" "),v("td",[t._v("Washington")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("280")]),t._v(" "),v("td")]),t._v(" "),v("tr",[v("td",[t._v("Frederiko Lopez")]),t._v(" "),v("td",[t._v("fr.lopez@webmail.sp")]),t._v(" "),v("td",[t._v("Barcelona")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("16")]),t._v(" "),v("td")]),t._v(" "),v("tr",[v("td",[t._v("Stanley Hummer")]),t._v(" "),v("td",[t._v("mr_winner_2999@gmail.cb")]),t._v(" "),v("td",[t._v("Manchester")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("57")]),t._v(" "),v("td")]),t._v(" "),v("tr",[v("td",[t._v("Lendley Wintz")]),t._v(" "),v("td",[t._v("9938198146@mailster.io")]),t._v(" "),v("td",[t._v("Wien")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("113")]),t._v(" "),v("td")]),t._v(" "),v("tr",[v("td",[t._v("Barbara Noz")]),t._v(" "),v("td",[t._v("barbaranoz@mailster.io")]),t._v(" "),v("td",[t._v("Brussels")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("68")]),t._v(" "),v("td")]),t._v(" "),v("tr",[v("td",[t._v("Matthew McCormick")]),t._v(" "),v("td",[t._v("matthew30@mail.ol")]),t._v(" "),v("td",[t._v("Vancouver")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("93")]),t._v(" "),v("td")]),t._v(" "),v("tr",[v("td",[t._v("Nancy Bo")]),t._v(" "),v("td",[t._v("nancy@boonweb.com")]),t._v(" "),v("td",[t._v("Washington")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("280")]),t._v(" "),v("td")])])])])])],1)]),t._v(" "),v("div",{staticClass:"row"},[v("div",{staticClass:"col-md-12"},[v("card",{attrs:{"header-text":"Colors, Icons, Labels"}},[v("div",{staticClass:"table-responsive"},[v("table",{staticClass:"table table-striped table-sm color-icon-label-table"},[v("thead",[v("tr",[v("td"),t._v(" "),v("td",[t._v("Name")]),t._v(" "),v("td",[t._v("Email")]),t._v(" "),v("td",[t._v("City")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("Score")]),t._v(" "),v("td",{attrs:{align:"middle"}})])]),t._v(" "),v("tbody",[v("tr",[v("td"),t._v(" "),v("td",[t._v("Matthew McCormick")]),t._v(" "),v("td",[t._v("matthew30@mail.ol")]),t._v(" "),v("td",[t._v("Vancouver")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("93")]),t._v(" "),v("td",{attrs:{align:"middle"}})]),t._v(" "),v("tr",[v("td"),t._v(" "),v("td",[t._v("Nancy Bo")]),t._v(" "),v("td",[t._v("nancy@boonweb.com")]),t._v(" "),v("td",[t._v("Washington")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("280")]),t._v(" "),v("td",{attrs:{align:"middle"}})]),t._v(" "),v("tr",[v("td"),t._v(" "),v("td",[t._v("Frederiko Lopez")]),t._v(" "),v("td",[t._v("fr.lopez@webmail.sp")]),t._v(" "),v("td",[t._v("Barcelona")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("16")]),t._v(" "),v("td",{attrs:{align:"middle"}})]),t._v(" "),v("tr",{staticClass:"table-danger"},[v("td",[v("span",{staticClass:"badge badge-pill badge-danger"},[t._v("DANGER")])]),t._v(" "),v("td",[t._v("Stanley Hummer")]),t._v(" "),v("td",[t._v("mr_winner_2999@gmail.cb")]),t._v(" "),v("td",[t._v("Manchester")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("57")]),t._v(" "),v("td",{attrs:{align:"middle"}},[v("i",{staticClass:"fa fa-exclamation-triangle icon-right input-icon error-icon"})])]),t._v(" "),v("tr",{staticClass:"table-success"},[v("td",[v("span",{staticClass:"badge badge-pill badge-primary"},[t._v("SUCCESS")])]),t._v(" "),v("td",[t._v("Lendley Wintz")]),t._v(" "),v("td",[t._v("9938198146@mailster.io")]),t._v(" "),v("td",[t._v("Wien")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("113")]),t._v(" "),v("td",{staticClass:"valid",attrs:{align:"middle"}},[v("i",{staticClass:"fa fa-check success-icon icon-right input-icon"})])]),t._v(" "),v("tr",{staticClass:"table-warning"},[v("td",[v("span",{staticClass:"badge badge-pill badge-warning"},[t._v("WARNING")])]),t._v(" "),v("td",[t._v("Barbara Noz")]),t._v(" "),v("td",[t._v("barbaranoz@mailster.io")]),t._v(" "),v("td",[t._v("Brussels")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("68")]),t._v(" "),v("td",{attrs:{align:"middle"}})]),t._v(" "),v("tr",[v("td"),t._v(" "),v("td",[t._v("Matthew McCormick")]),t._v(" "),v("td",[t._v("matthew30@mail.ol")]),t._v(" "),v("td",[t._v("Vancouver")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("93")]),t._v(" "),v("td",{attrs:{align:"middle"}})]),t._v(" "),v("tr",{staticClass:"table-info"},[v("td",[v("span",{staticClass:"badge badge-pill badge-info"},[t._v("INFO")])]),t._v(" "),v("td",[t._v("Nancy Bo")]),t._v(" "),v("td",[t._v("nancy@boonweb.com")]),t._v(" "),v("td",[t._v("Washington")]),t._v(" "),v("td",{attrs:{align:"right"}},[t._v("280")]),t._v(" "),v("td",{attrs:{align:"middle"}})])])])])])],1)])])},d=[],i={render:_,staticRenderFns:d};a.a=i},74:function(t,a,v){"use strict";function _(t){v(1072)}Object.defineProperty(a,"__esModule",{value:!0});var d=v(1074),i=v(0),r=_,e=i(null,d.a,!1,r,null,null);a.default=e.exports}});
+webpackJsonp([12],{
+
+/***/ 1000:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+     data() {
+          return {
+               orders: {},
+               orderStatus: ['finished', 'rejected', 'wait_for_delivery', 'accepted', 'on_deliver'],
+               selectedOrderStatus: '',
+               pageNum: 1,
+               total_pages: null
+          };
+     },
+     mounted() {
+          this.loadOrders();
+     },
+     methods: {
+          loadOrders() {
+               //   pageNum = pageNum ? pageNum : '';
+               this.axios.get(`api/admin/orders?page=${this.pageNum}`).then(response => {
+                    if (response.status == 200) {
+                         if (response.data.status == true) {
+                              this.orders = response.data.data;
+                              this.total_pages = response.data.data.paginate.total_pages;
+                         }
+                    }
+               });
+          },
+          updataOrderStatus(orderId, orderStatus) {
+               console.log('orderStatus', orderStatus);
+               let formData = new FormData();
+               formData.append('_method', 'PUT');
+               let status = {
+                    status: orderStatus
+               };
+               formData.set('status', status.status);
+               this.axios.post(`api/admin/orders/${orderId}`, formData).then(response => {
+                    if (response.status == 200) {
+                         this.loadOrders();
+                    }
+               });
+          },
+          handlePgnation(pageNum) {
+               this.pageNum = pageNum;
+               this.loadOrders();
+          }
+
+     }
+});
+
+/***/ }),
+
+/***/ 1169:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(1170);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("215a388b", content, true, {});
+
+/***/ }),
+
+/***/ 1170:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".border-table{border:1px solid #dee2e6}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 1171:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('div',{staticClass:"animated fadeIn"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-12 col-md-12"},[_c('card',{attrs:{"header-text":"Orders"}},[_c('div',{staticClass:"table-responsive"},[_c('table',{staticClass:"table table-striped first-td-padding border-table"},[_c('thead',[_c('tr',[_c('td',[_vm._v("ID")]),_vm._v(" "),_c('td',[_vm._v("Change status")]),_vm._v(" "),_c('td',[_vm._v("Address ")]),_vm._v(" "),_c('td',[_vm._v("Total ")]),_vm._v(" "),_c('td',[_vm._v("Delivery price")]),_vm._v(" "),_c('td',[_vm._v("Date")]),_vm._v(" "),_c('td',[_vm._v("User Name")]),_vm._v(" "),_c('td',[_vm._v("Phone number")]),_vm._v(" "),_c('td',[_vm._v("Status")])])]),_vm._v(" "),_c('tbody',_vm._l((_vm.orders.items),function(order){return _c('tr',{key:order.id},[_c('td',[_vm._v(_vm._s(order.id))]),_vm._v(" "),_c('td',[_c('select',{directives:[{name:"model",rawName:"v-model",value:(order.status),expression:"order.status"}],staticClass:"form-control",attrs:{"name":"select","id":"select"},on:{"change":[function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(order, "status", $event.target.multiple ? $$selectedVal : $$selectedVal[0])},function($event){return _vm.updataOrderStatus(order.id, order.status)}]}},[_c('option',{attrs:{"disabled":"","value":"null","selected":""}},[_vm._v("Change status")]),_vm._v(" "),_vm._l((_vm.orderStatus),function(status,index){return _c('option',{key:index},[_vm._v(_vm._s(status))])})],2)]),_vm._v(" "),_c('td',{staticClass:"text-capitalize"},[_vm._v(_vm._s(order.address.address))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(order.total))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(order.delivery_cost))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(order.created_at))]),_vm._v(" "),_c('td',{staticClass:"text-capitalize"},[_vm._v(_vm._s(order.user.name))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(order.user.phone))]),_vm._v(" "),_c('td',{staticClass:"text-capitalize"},[_vm._v(_vm._s(order.status))])])}),0)]),_vm._v(" "),(_vm.total_pages > 1)?_c('nav',{staticClass:"mt-4"},[_c('paginate',{attrs:{"page-count":_vm.total_pages,"margin-pages":2,"click-handler":_vm.handlePgnation,"prev-text":'Prev',"next-text":'Next',"container-class":'pagination justify-content-center',"active-class":"active","page-class":'page-item',"page-link-class":'page-link',"prev-class":'page-item',"prev-link-class":'page-link',"next-link-class":'page-link',"next-class":'page-item'}})],1):_vm._e()])])],1)])])])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+
+/***/ 62:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_orders_vue__ = __webpack_require__(1000);
+/* empty harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6ef6b81c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_orders_vue__ = __webpack_require__(1171);
+function injectStyle (ssrContext) {
+  __webpack_require__(1169)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_orders_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6ef6b81c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_orders_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ })
+
+});
 //# sourceMappingURL=12.build.js.map
