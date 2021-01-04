@@ -42,6 +42,7 @@ const Subsection = resolve => { require.ensure(['../pages/subsection.vue'], ()=>
 const Products = resolve => { require.ensure(['../pages/products.vue'], ()=>{ resolve(require('../pages/products.vue')); }); };
 const Orders = resolve => { require.ensure(['../pages/orders.vue'], ()=>{ resolve(require('../pages/orders.vue')); }); };
 const Messages = resolve => { require.ensure(['../pages/messages.vue'], ()=>{ resolve(require('../pages/messages.vue')); }); };
+const Banners = resolve => { require.ensure(['../pages/banners.vue'], ()=>{ resolve(require('../pages/banners.vue')); }); };
 
 
 const Register = resolve => { require.ensure(['../pages/register/Register.vue'], ()=>{ resolve(require('../pages/register/Register.vue')); }); };
@@ -140,7 +141,17 @@ export const routes = [
             requiresAuth: true,
         }
     },
-
+    {
+        path: '/auth/banners',
+        component: Banners,
+        name: 'banners',
+        meta: {
+            default: false,
+            title: 'banners',
+            requiresAuth: true,
+        }
+    },
+    
 
     // // UI Components
     { path : '/components/buttons', name: 'buttons', component: Buttons },

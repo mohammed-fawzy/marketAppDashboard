@@ -5,7 +5,7 @@
                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                          <div class="modal-content">
                               <div class="modal-header">
-                              <h5 class="modal-title display-5" id="exampleModalLongTitle" >Edit Client</h5>
+                              <h5 class="modal-title display-5" id="exampleModalLongTitle" >Edit Banner</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="closeEditModal">
                                    <span aria-hidden="true">&times;</span>
                               </button>
@@ -19,52 +19,20 @@
                                                             <div class="row form-group">
                                                                  <div class="col col-md-3"><label for="text-input" class=" form-control-label">Name</label></div>
                                                                  <div class="col-12 col-md-9">
-                                                                      <input v-model="client.name" type="text" id="text-input" name="text-input" placeholder="Name" class="form-control" required>
+                                                                      <input v-model="banner.name" type="text" id="text-input" name="text-input" placeholder="Name" class="form-control" required>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div class="col-12 col-md-6">
                                                             <div class="row form-group">
-                                                                 <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email</label></div>
+                                                                 <div class="col col-md-2"><label for="email-input" class=" form-control-label">Url</label></div>
                                                                  <div class="col-12 col-md-9">
-                                                                      <input v-model="client.email" type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control" required>
+                                                                      <input v-model="banner.url" type="text" id="email-input" name="email-input" placeholder="Enter Url" class="form-control" required>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                   </div>
 
-                                                  <div class="row">
-                                                       <div class="col-12 col-md-6">
-                                                            <div class="row form-group">
-                                                                 <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password</label></div>
-                                                                 <div class="col-12 col-md-9">
-                                                                      <input v-model="client.password" type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
-                                                                 </div>
-                                                            </div>
-                                                       </div>
-                                                       <div class="col-12 col-md-6">
-                                                            <div class="row form-group">
-                                                                 <div class="col col-md-3"><label for="confirm-password-input" class=" form-control-label">Password</label></div>
-                                                                 <div class="col-12 col-md-9">
-                                                                      <input v-on:blur="validate" v-model="confirmPassword" type="password" id="confirm-password-input" name="confirm-password-input" placeholder="Confirm Password" class="form-control">
-                                                                      <div class="alert alert-danger mt-2" role="alert" v-if="!validate()">
-                                                                           Passwords don't match. Please enter both fields again.
-                                                                      </div>
-                                                                 </div>
-                                                            </div>
-                                                       </div>
-                                                  </div>
-
-                                                  <div class="row">
-                                                       <div class="col-12 col-md-6">
-                                                            <div class="row form-group">
-                                                                 <div class="col col-md-3"><label for="phone-input" class=" form-control-label">Phone</label></div>
-                                                                 <div class="col-12 col-md-9">
-                                                                      <input v-model="client.phone" type="tel" id="phone-input" name="phone-input" placeholder="Phone" class="form-control" required>
-                                                                 </div>
-                                                            </div>
-                                                       </div>
-                                                  </div>
                                                   <div class="row">
                                                        <div class="col-12 col-md-9">
                                                             <div class="row form-group">
@@ -85,7 +53,7 @@
                                                             </div>
                                                        </div>
                                                   </div>
-                                             <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit">Submit <span v-if="loading"> Loading...</span></button>
+                                             <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit"> Add Banner<span v-if="loading"> Loading...</span></button>
                                              </form>
                                              <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                                   <span class="badge badge-pill badge-success">Success</span>
@@ -108,14 +76,12 @@
 
 <script>
 export default {
-     props:['clientId'],
+     props:['bannerId'],
      data () {
           return {
-               client:{
+               banner:{
                     name:'',
-                    email:'',
-                    phone:'',
-                    password:null,
+                    url:'',
                     image:''
                },
                loading:false,
@@ -133,16 +99,15 @@ export default {
      },
      methods:{
           loadAllData() {
-               if (this.clientId) {
-                    this.axios.get(`api/admin/users/${this.clientId}`,
+               if (this.bannerId) {
+                    this.axios.get(`api/admin/banners/${this.bannerId}`,
                     ).then((response) => {
                          if(response.status == 200){
                               if (response.data.status == true) {
-                                   let client = response.data.data
-                                   this.client.name = client.name
-                                   this.client.email = client.email
-                                   this.client.phone = client.phone
-                                   this.imageData = client.image
+                                   let banner = response.data.data
+                                   this.banner.name = banner.name
+                                   this.banner.url = banner.url
+                                   this.imageData = banner.image
                               } 
                          }
                     })
@@ -152,23 +117,22 @@ export default {
                this.$emit("closeModalEvent", this.isUpdate);
           },
           handleSubmit(){
-               if (this.client.name && this.client.email) {
+               if (this.banner.name && this.banner.url) {
                     this.loading = true;
                     let formData = new FormData();
-                    formData.set('name', this.client.name);
-                    formData.set('email', this.client.email);
-                    formData.set('password', this.client.password);
-                    formData.set('phone', this.client.phone);
-                     if (this.imageData && this.file) {
+                    formData.set('name', this.banner.name);
+                    formData.set('url', this.banner.url);
+                    if (this.imageData && this.file) {
                          formData.set('image', this.file);
                     }
+                    formData.append('_method', 'PUT')
                     this.formData = formData;
                     const config = {
                          headers: {
                          "Content-Type": "multipart/form-data"
                          }
                     };
-               this.axios.put(`api/admin/users/${this.clientId}`, this.formData, config,
+               this.axios.post(`api/admin/banners/${this.bannerId}`, this.formData, config,
                ).then((response) => {
                     if(response.status == 200){
                          if (response.data.status == true) {
@@ -209,25 +173,14 @@ export default {
                          reader.readAsDataURL(self.$refs.file.files[0]);
                     }
           },
-          validate: function() {
-               if (this.client.password && this.confirmPassword) {
-                    return this.client.password == this.confirmPassword ?  true : false;
-               }
-               else{
-                    return true;
-               }
-          },
           reset(){
-               this.client = {
+               this.banner = {
                     name:'',
-                    email:'',
-                    phone:'',
-                    password:null,
+                    url:'',
                     image:''
                }
                this.file =''
                this.imageData = ""
-               this.confirmPassword = null
                this.errorMessage = false
                this.dataAdedd = false;
           }

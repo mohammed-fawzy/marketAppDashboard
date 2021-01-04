@@ -27,6 +27,11 @@ export default {
       icon: 'fa fa-pencil-square-o',
     },
     {
+      name:'Banners',
+      url: '/auth/banners',
+      icon: 'fa fa-pencil-square-o',
+    },
+    {
       name:'Orders',
       url: '/auth/orders',
       icon: 'fa fa-pencil-square-o',

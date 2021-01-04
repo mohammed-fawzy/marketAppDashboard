@@ -5,7 +5,7 @@
                     <div class="col-10 mx-auto">
                          <div class="card">
                               <div class="card-header">
-                                   <strong>Clients</strong>
+                                   <strong>Banners</strong>
                               </div>
                               <div class="card-body card-block">
                                    <form class="form-horizontal" v-on:submit.prevent="handleSubmit">
@@ -14,52 +14,20 @@
                                                   <div class="row form-group">
                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Name</label></div>
                                                        <div class="col-12 col-md-9">
-                                                            <input v-model="client.name" type="text" id="text-input" name="text-input" placeholder="Name" class="form-control" required>
+                                                            <input v-model="banner.name" type="text" id="text-input" name="text-input" placeholder="Name" class="form-control" required>
                                                        </div>
                                                   </div>
                                              </div>
                                               <div class="col-12 col-md-6">
                                                   <div class="row form-group">
-                                                       <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email</label></div>
+                                                       <div class="col col-md-2"><label for="email-input" class=" form-control-label">Url</label></div>
                                                        <div class="col-12 col-md-9">
-                                                            <input v-model="client.email" type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control" required>
+                                                            <input v-model="banner.url" type="text" id="email-input" name="email-input" placeholder="Enter Url" class="form-control" required>
                                                        </div>
                                                   </div>
                                              </div>
                                         </div>
 
-                                         <div class="row">
-                                             <div class="col-12 col-md-6">
-                                                  <div class="row form-group">
-                                                       <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password</label></div>
-                                                       <div class="col-12 col-md-9">
-                                                            <input v-model="client.password" type="password" id="password-input" name="password-input" placeholder="Password" class="form-control" required>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                              <div class="col-12 col-md-6">
-                                                  <div class="row form-group">
-                                                       <div class="col col-md-3"><label for="confirm-password-input" class=" form-control-label">Password</label></div>
-                                                       <div class="col-12 col-md-9">
-                                                            <input v-on:blur="validate" v-model="confirmPassword" type="password" id="confirm-password-input" name="confirm-password-input" placeholder="Confirm Password" class="form-control" required>
-                                                            <div class="alert alert-danger mt-2" role="alert" v-if="!validate()">
-                                                                 Passwords don't match. Please enter both fields again.
-                                                            </div>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-
-                                         <div class="row">
-                                             <div class="col-12 col-md-6">
-                                                  <div class="row form-group">
-                                                       <div class="col col-md-3"><label for="phone-input" class=" form-control-label">Phone</label></div>
-                                                       <div class="col-12 col-md-9">
-                                                            <input v-model="client.phone" type="tel" id="phone-input" name="phone-input" placeholder="Phone" class="form-control" required>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
                                         <div class="row">
                                              <div class="col-12 col-md-9">
                                                   <div class="row form-group">
@@ -80,7 +48,7 @@
                                                   </div>
                                              </div>
                                         </div>
-                                   <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit"> Add Client<span v-if="loading"> Loading...</span></button>
+                                   <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit"> Add Banner<span v-if="loading"> Loading...</span></button>
                                    </form>
                                    <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                         <span class="badge badge-pill badge-success">Success</span>
@@ -94,9 +62,9 @@
                              
                          </div>
 
-                         <div class="card" v-if="clients.items.length">
+                         <div class="card" v-if="banners.items.length">
                               <div class="card-header">
-                                   <strong>All clients</strong> 
+                                   <strong>All banners</strong> 
                               </div>
                               <div class="card-body card-block">
                                    <table class="table table-striped first-td-padding border-table">
@@ -104,20 +72,20 @@
                                              <tr>
                                                   <td>Id</td>
                                                   <td>Name</td>
-                                                  <td>Email</td>
-                                                  <td>Phone</td>
-                                                  <td>Edit</td>
-                                                  <td>Delete</td>
+                                                  <td>url</td>
+                                                  <td>image</td>
+                                                  <td>edit</td>
+                                                  <td>delete</td>
                                              </tr>
                                         </thead>
                                         <tbody>
-                                             <tr v-for="client in clients.items" :key="client.id">
-                                                  <td>{{client.id}}</td>
-                                                  <td>{{client.name}}</td>
-                                                  <td>{{client.email}}</td>
-                                                  <td>{{client.phone}}</td>
-                                                  <td @click="showEditModal(client.id)"><button type="button" class="btn btn-info">Edit</button></td>
-                                                  <td @click="deleteItem(client.id)"><button type="button" class="btn btn-danger">Delete</button></td>
+                                             <tr v-for="banner in banners.items" :key="banner.id">
+                                                  <td>{{banner.id}}</td>
+                                                  <td>{{banner.name}}</td>
+                                                  <td>{{banner.url}}</td>
+                                                  <td><img :src="banner.image" class="banner-img"></td>
+                                                  <td @click="showEditModal(banner.id)"><button type="button" class="btn btn-info">Edit</button></td>
+                                                  <td @click="deleteItem(banner.id)"><button type="button" class="btn btn-danger">Delete</button></td>
                                              </tr>
                                         </tbody>
                                    </table>
@@ -146,36 +114,33 @@
                </div>
           </div>
           <transition enter-active-class="animated fadeIn">
-               <EditModal @closeModalEvent="closeEditModal" :clientId="clientId" v-if="showModal" :key="showModal"/>
+               <EditModal @closeModalEvent="closeEditModal" :bannerId="bannerId" v-if="showModal" :key="showModal"/>
           </transition>
      </section>
 </template>
 
 <script>
-import EditModal from './models/editClient'
+import EditModal from './models/editBanners'
 export default {
      components:{EditModal},
      data () {
      return {
-          clients:{
+          banners:{
                items:[]
           },
-          client:{
+          banner:{
                name:'',
-               email:'',
-               phone:'',
-               password:null,
+               url:'',
                image:''
           },
           loading:false,
           file:'',
           imageData: "",
-          confirmPassword:null,
+          bannerId:null,
           errorMessage:'',
           dataAdedd:false,
           formData:null,
           showModal:false,
-          clientId:null,
           pageNum:1,
           total_pages:null,
      }
@@ -185,11 +150,11 @@ export default {
    },
   methods: {
      loadAllData() {
-          this.axios.get(`api/admin/users?page=${this.pageNum}`,
+          this.axios.get(`api/admin/banners?page=${this.pageNum}`,
           ).then((response) => {
                if(response.status == 200){
                if (response.data.status == true) {
-                    this.clients = response.data.data
+                    this.banners = response.data.data
                     this.total_pages = response.data.data.paginate.total_pages
                } 
                }
@@ -199,9 +164,9 @@ export default {
           this.pageNum = pageNum;
           this.loadAllData();
      },
-     showEditModal(clientId){
+     showEditModal(bannerId){
           this.showModal = true;
-          this.clientId = clientId;
+          this.bannerId = bannerId;
      },
      closeEditModal(isUpdate) {
           this.showModal = !this.showModal;
@@ -211,14 +176,12 @@ export default {
           }
      },
     handleSubmit(){
-         if (this.client.name && this.client.email && this.client.password && this.file) {
+         if (this.banner.name && this.banner.url && this.file) {
           this.loading = true;
           this.errorMessage = "";
           let formData = new FormData();
-          formData.set('name', this.client.name);
-          formData.set('email', this.client.email);
-          formData.set('password', this.client.password);
-          formData.set('phone', this.client.phone);
+          formData.set('name', this.banner.name);
+          formData.set('url', this.banner.url);
           formData.set('image', this.file);
           this.formData = formData;
           const config = {
@@ -227,7 +190,7 @@ export default {
                }
           };
     
-     this.axios.post('api/admin/users', this.formData, config,
+     this.axios.post('api/admin/banners', this.formData, config,
       ).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
@@ -268,9 +231,9 @@ export default {
           }
      },
      deleteItem(itemId){
-          let r = confirm("Are you sure to delete this user ?");
+          let r = confirm("Are you sure to delete this banner ?");
           if (r == true) {
-               this.axios.delete(`api/admin/users/${itemId}`,
+               this.axios.delete(`api/admin/banners/${itemId}`,
                ).then((response) => {
                     if(response.status == 200){
                          if (response.data.status == true) {
@@ -280,25 +243,14 @@ export default {
                })
           } 
      },
-    validate: function() {
-         if (this.client.password && this.confirmPassword) {
-              return this.client.password == this.confirmPassword ?  true : false;
-         }
-         else{
-              return true;
-         }
-    },
     reset(){
-          this.client = {
+          this.banner = {
                name:'',
-               email:'',
-               phone:'',
-               password:null,
+               url:'',
                image:''
           }
           this.file =''
           this.imageData = ""
-          this.confirmPassword = null
           this.errorMessage = false
           this.dataAdedd = false;
     }
@@ -316,5 +268,9 @@ export default {
      }
      .custom-file-label{
           left: 14px;
+     }
+     .banner-img{
+          width: auto;
+          height: 60px;
      }
 </style>
