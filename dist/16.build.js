@@ -1,15 +1,55 @@
 webpackJsonp([16],{
 
-/***/ 39:
+/***/ 1055:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(1056);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("99024954", content, true, {});
+
+/***/ }),
+
+/***/ 1056:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sets-list .small-set{margin:0 0 1.5rem}.sets-list .small-set .btn{width:13.75rem;padding-left:0;padding-right:0;text-align:center}.sets-list .small-set .set-content{background-color:#eee}.sets-list .small-set .set-content>div{padding:1rem}.sets-list .small-set .set-content>div div[class^=col]{padding:0;margin:1rem 0}.sets-list .small-set .set-content>div div[class^=col] .icon{font-size:.85rem;text-align:center}.sets-list .small-set .set-content .overlay{padding:10% 0;margin:0;width:90%;position:absolute;display:flex;align-items:center;justify-content:center;z-index:2}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 1057:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sets-list "},[_c('card',{attrs:{"header-text":"Icons"}},[_c('div',{staticClass:"row"},_vm._l((_vm.sets),function(set){return _c('div',{staticClass:"small-set col-lg-6"},[_c('div',{staticClass:"set-content"},[_c('div',{staticClass:"overlay align-middle"},[_c('router-link',{attrs:{"to":{path: set.href},"append":""}},[_c('div',{staticClass:"btn btn-primary"},[_vm._v(_vm._s(set.name))])])],1),_vm._v(" "),_c('div',[_vm._l((set.filteredLists),function(filteredList){return [_c('div',{staticClass:"row"},_vm._l((filteredList),function(icon){return _c('div',{staticClass:"col-sm-2"},[_c('div',{staticClass:"icon"},[_c('i',{class:_vm.iconClass(set, icon),attrs:{"area-hidden":"true"}})])])}),0)]})],2)])])}),0)])],1)}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+
+/***/ 50:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Set_vue__ = __webpack_require__(762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_SetsList_vue__ = __webpack_require__(829);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_023b0342_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Set_vue__ = __webpack_require__(809);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c16d030e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_SetsList_vue__ = __webpack_require__(1057);
 function injectStyle (ssrContext) {
-  __webpack_require__(807)
+  __webpack_require__(1055)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -26,8 +66,8 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Set_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_023b0342_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Set_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_SetsList_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c16d030e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_SetsList_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -39,23 +79,10 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 762:
+/***/ 829:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -87,90 +114,14 @@ var Component = normalizeComponent(
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'set',
-    props: ['name', 'sets'],
+    name: 'iconsList',
+    props: ['sets'],
     methods: {
-        iconClass(icon) {
-            return this.set.prefix + ' ' + this.set.prefix + '-' + icon;
+        iconClass(set, icon) {
+            return set.prefix + ' ' + set.prefix + '-' + icon;
         }
-    },
-    computed: {
-        set() {
-            for (let set of this.sets) {
-                if (set.href === this.name) return set;
-            }
-        },
-        validatedLists() {
-            if (this.selector === '') {
-                return this.set.lists;
-            }
-            let result = [{ name: 'Icons Founded', icons: [] }];
-            this.set.lists.forEach(list => {
-                list.icons.forEach(icon => {
-                    if (icon.match(this.selector)) {
-                        result[0].icons.push(icon);
-                    }
-                });
-            });
-            return result;
-        }
-    },
-    data: function () {
-        return {
-            selector: '',
-            iconSize: 30,
-            slider: {
-                formatter: v => `${v}px`,
-                height: 2,
-                direction: 'horizontal',
-                min: 20,
-                max: 40,
-                interval: 1,
-                speed: 0.5
-            }
-        };
     }
 });
-
-/***/ }),
-
-/***/ 807:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(808);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(3)("1267f42a", content, true, {});
-
-/***/ }),
-
-/***/ 808:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".Set .header{background-color:#fff;padding:2rem 0;margin-bottom:2rem}.Set .header .header-text{text-align:left;padding-left:2.5rem}.Set .header .header-text h2{margin-bottom:0}.Set .back-to-fonts{font-size:25px;padding-right:20px}.Set .icons .icon-grid-container{padding:.5rem 0 5rem;margin:0 0 2rem;text-align:center;height:6rem;position:relative;min-height:1px;float:left;width:200px;height:80px}.Set .icons .icon-grid-container:hover{background-color:#20a8d8;color:#fff;cursor:pointer}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 809:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"Set"},[_c('card',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"header-text col-lg-4"},[_c('h2',[_vm._v(_vm._s(_vm.set.name))])]),_vm._v(" "),_c('div',{staticClass:"search col-lg-4"},[_c('div',{staticClass:"form-group with-icon-left"},[_c('div',{staticClass:"input-group"},[_c('span',{staticClass:"back-to-fonts"},[_c('router-link',{attrs:{"to":{path: '/components/icons'}}},[_c('i',{staticClass:"fa fa-hand-o-left"})])],1),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selector),expression:"selector"}],staticClass:"form-control mr-sm-2",attrs:{"type":"text","placeholder":"Search Icon","required":"","aria-label":"Search"},domProps:{"value":(_vm.selector)},on:{"input":function($event){if($event.target.composing){ return; }_vm.selector=$event.target.value}}}),_vm._v(" "),_c('button',{staticClass:"btn btn-outline-success my-2 my-sm-0",attrs:{"type":"submit"}},[_c('i',{staticClass:"fa fa fa-search"})])])])])])])]),_vm._v(" "),_vm._l((_vm.validatedLists),function(list){return [_c('card',{attrs:{"headerText":list.name}},[(list.icons.length === 0)?_c('span',[_vm._v("No icons found")]):_vm._e(),_vm._v(" "),_vm._l((Math.floor(list.icons.length/8+1)),function(i){return [_c('div',{staticClass:"icons"},_vm._l((8),function(j){return (list.icons[(i-1)*8 + j-1])?_c('div',{staticClass:"icon-grid-container"},[_c('span',{class:_vm.iconClass(list.icons[(i-1)*8 + j-1]),style:('font-size: '+_vm.iconSize+'px'),attrs:{"aria-hidden":"true"}}),_vm._v(" "),_c('div',{staticClass:"iconText"},[_vm._v(_vm._s(list.icons[(i-1)*8 + j-1]))])]):_vm._e()}),0)]})],2)]})],2)}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ })
 

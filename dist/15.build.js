@@ -1,20 +1,20 @@
 webpackJsonp([15],{
 
-/***/ 1052:
+/***/ 1091:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(1053);
+var content = __webpack_require__(1092);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("552210ba", content, true, {});
+var update = __webpack_require__(3)("5c1b5509", content, true, {});
 
 /***/ }),
 
-/***/ 1053:
+/***/ 1092:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -22,34 +22,34 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".sets-list .small-set{margin:0 0 1.5rem}.sets-list .small-set .btn{width:13.75rem;padding-left:0;padding-right:0;text-align:center}.sets-list .small-set .set-content{background-color:#eee}.sets-list .small-set .set-content>div{padding:1rem}.sets-list .small-set .set-content>div div[class^=col]{padding:0;margin:1rem 0}.sets-list .small-set .set-content>div div[class^=col] .icon{font-size:.85rem;text-align:center}.sets-list .small-set .set-content .overlay{padding:10% 0;margin:0;width:90%;position:absolute;display:flex;align-items:center;justify-content:center;z-index:2}", ""]);
+exports.push([module.i, ".card-title[data-v-1feeb49c]{padding-left:20px}.auth-layout[data-v-1feeb49c]{height:100vh;margin:0}.auth-layout .main[data-v-1feeb49c]{margin:0;height:100%}.auth-layout .main .auth-content[data-v-1feeb49c]{padding:0;display:flex;align-items:center;justify-content:center;background-color:#fff}.auth-layout .main .auth-wallpaper[data-v-1feeb49c]{background-color:#333;overflow:hidden;display:flex;align-items:center;justify-content:center}.auth-layout .main .auth-wallpaper .basix-home[data-v-1feeb49c]{z-index:2;font-size:2.625rem;color:#1ec260}.auth-layout .main .auth-wallpaper .oblique[data-v-1feeb49c]{position:absolute;background-color:#282828;left:38.5%;transform:rotate(150deg);width:27%;height:115%}.imgLogo[data-v-1feeb49c]{background:#fff;border-radius:5px;padding:3px}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 1054:
+/***/ 1093:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sets-list "},[_c('card',{attrs:{"header-text":"Icons"}},[_c('div',{staticClass:"row"},_vm._l((_vm.sets),function(set){return _c('div',{staticClass:"small-set col-lg-6"},[_c('div',{staticClass:"set-content"},[_c('div',{staticClass:"overlay align-middle"},[_c('router-link',{attrs:{"to":{path: set.href},"append":""}},[_c('div',{staticClass:"btn btn-primary"},[_vm._v(_vm._s(set.name))])])],1),_vm._v(" "),_c('div',[_vm._l((set.filteredLists),function(filteredList){return [_c('div',{staticClass:"row"},_vm._l((filteredList),function(icon){return _c('div',{staticClass:"col-sm-2"},[_c('div',{staticClass:"icon"},[_c('i',{class:_vm.iconClass(set, icon),attrs:{"area-hidden":"true"}})])])}),0)]})],2)])])}),0)])],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"auth-layout"},[_c('div',{staticClass:"main row"},[_c('div',{staticClass:"auth-content login col-md-6"},[_c('card',{attrs:{"header-text":"Welcome !"}},[_c('div',{staticClass:"card-body card-block"},[_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.handleSubmit()}}},[_c('div',{staticClass:"form-group"},[_c('div',{staticClass:"input-group"},[_c('div',{staticClass:"input-group-addon"},[_c('i',{staticClass:"fa fa-envelope"})]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.admin.email),expression:"admin.email"}],staticClass:"form-control",attrs:{"type":"email","id":"email","name":"email","placeholder":"Email","required":""},domProps:{"value":(_vm.admin.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.admin, "email", $event.target.value)}}})])]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('div',{staticClass:"input-group"},[_c('div',{staticClass:"input-group-addon"},[_c('i',{staticClass:"fa fa-asterisk"})]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.admin.password),expression:"admin.password"}],staticClass:"form-control",attrs:{"type":"password","id":"password","name":"password","placeholder":"Password","required":""},domProps:{"value":(_vm.admin.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.admin, "password", $event.target.value)}}})])]),_vm._v(" "),_c('div',{staticClass:"form-actions form-group"},[_c('button',{staticClass:"btn btn-success btn-md",attrs:{"type":"submit"}},[_vm._v("Log In")])])]),_vm._v(" "),(_vm.errorMessage)?_c('div',{staticClass:"basix-alert alert with-close alert-danger"},[_vm._v("Username or Password is incorrect")]):_vm._e()])])],1),_vm._v(" "),_c('div',{staticClass:"auth-wallpaper col-md-6 hidden-md-down"},[_c('div',{staticClass:"oblique"}),_vm._v(" "),_c('router-link',{staticClass:"basix-home",attrs:{"to":{path: '/'}}},[_c('img',{staticClass:"imgLogo",attrs:{"src":__webpack_require__(12),"alt":"Logo"}})])],1)])])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
-/***/ 50:
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_SetsList_vue__ = __webpack_require__(828);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Login_vue__ = __webpack_require__(977);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_fda346e4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_SetsList_vue__ = __webpack_require__(1054);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1feeb49c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Login_vue__ = __webpack_require__(1093);
 function injectStyle (ssrContext) {
-  __webpack_require__(1052)
+  __webpack_require__(1091)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -62,12 +62,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-1feeb49c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_SetsList_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_fda346e4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_SetsList_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Login_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1feeb49c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Login_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -79,10 +79,18 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 828:
+/***/ 977:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -114,13 +122,28 @@ var Component = normalizeComponent(
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'iconsList',
-    props: ['sets'],
-    methods: {
-        iconClass(set, icon) {
-            return set.prefix + ' ' + set.prefix + '-' + icon;
+  name: 'Login',
+  data() {
+    return {
+      admin: {
+        email: null,
+        password: null
+      },
+      errorMessage: false
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      try {
+        await this.$store.dispatch('LogIn', this.admin);
+        if (this.$store.getters["isAuthenticated"]) {
+          this.$router.push({ name: "dashboard" });
+        } else {
+          this.errorMessage = true;
         }
+      } catch (error) {}
     }
+  }
 });
 
 /***/ })
