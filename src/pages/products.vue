@@ -118,7 +118,7 @@
                                                   ></VueUploadMultipleImage1>
                                              </div>
                                         </div>
-                                   <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
+                                   <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" @click="handleSubmit">Submit <span v-if="loading"> Loading...</span> </button>
                                    </form>
                                     <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                         <span class="badge badge-pill badge-success">Success</span>
@@ -159,7 +159,7 @@
                                                   <td>{{product.price}}</td>
                                                   <td>{{product.discount}}</td>
                                                   <td v-html="product.info"></td>
-                                                  <td><img src="product.image"></td>
+                                                  <td><img :src="product.image"></td>
                                                   <td v-if="product.sensor"> Min: {{product.sensor.min}}<br>Max: {{product.sensor.max}}</td>
                                                   <td v-else> No sensor</td>
                                                   <td>
@@ -219,6 +219,7 @@ export default {
           products:{
                items:[]
           },
+          loading:false,
           pageNum:1,
           total_pages:null,
           product:{
@@ -284,6 +285,7 @@ export default {
      },
      handleSubmit(){
      if (this.product.name && this.product.price && this.product.discount && this.product.info) {
+          this.loading = true;
           this.errorMessage = '';
           let formData = new FormData();
           formData.set('name', this.product.name);
@@ -299,6 +301,7 @@ export default {
           // formData.set('images', [this.file]);
           
           for (var i = 0; i < this.imagesFile.length; i++) {
+               console.log('this.imagesFile', this.imagesFile)
                formData.append('images[]', this.imagesFile [i]);
           }
           // formData.set('images', [this.file]);
@@ -320,12 +323,14 @@ export default {
                     let self = this;
                     setTimeout(
                     function() {
+                         self.loading = false;
                          self.reset();
-                         this.loadAllData();
+                         self.loadAllData();
                     }, 2000);
                } 
                else{
                     this.errorMessage = response.data.msg ;
+                    this.loading = false;
                }
           }
      })

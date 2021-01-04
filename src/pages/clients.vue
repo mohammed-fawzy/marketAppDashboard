@@ -234,7 +234,7 @@ export default {
                     setTimeout(
                     function() {
                          self.reset();
-                         this.loadAllData();
+                         self.loadAllData();
                     }, 2000);
                } 
                else{
