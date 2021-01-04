@@ -49,7 +49,7 @@
                                                   </div>
                                              </div>
                                         </div>
-                                   <input class="btn btn-success w-50 d-block mx-auto mt-2" type="submit" value="Add manager" @click="handleSubmit">
+                                   <button class="btn btn-success w-50 d-block mx-auto mt-2" type="submit" @click="handleSubmit">Add manager <span v-if="loading"> Loading...</span></button>
                                    </form>
                                    <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                         <span class="badge badge-pill badge-success">Success</span>
@@ -125,6 +125,7 @@ export default {
           admins:{
                items:[]
           },
+          loading:false,
           total_pages:null,
           manger:{
                name:'',
@@ -170,12 +171,14 @@ export default {
      },
     handleSubmit(){
          if (this.manger.name && this.manger.email && this.manger.password && this.manger.password_confirmation) {
+              this.loading = true;
               this.errorMeg ='';
               console.log('post')
               this.axios.post('api/admin/admins',this.manger,
               ).then((response) => {
                   if(response.status == 200){
                     if (response.data.status == true) {
+                         this.loading = false;
                          this.dataAdedd = true;
                          let self = this;
                          setTimeout(
@@ -183,9 +186,10 @@ export default {
                               self.reset();
                               self.loadAllData()
                          }, 2000);
-                    } 
+                    }
                     else{
-                         this.errorMeg = response.data.msg;
+                        this.errorMeg = response.data.msg;
+                         this.loading = false;
                     }
                   }
              })

@@ -80,7 +80,7 @@
                                                   </div>
                                              </div>
                                         </div>
-                                   <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
+                                   <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" @click="handleSubmit"> Add Client<span v-if="loading"> Loading...</span></button>
                                    </form>
                                    <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                         <span class="badge badge-pill badge-success">Success</span>
@@ -167,6 +167,7 @@ export default {
                password:null,
                image:''
           },
+          loading:false,
           file:'',
           imageData: "",
           confirmPassword:null,
@@ -211,6 +212,7 @@ export default {
      },
     handleSubmit(){
          if (this.client.name && this.client.email && this.client.password && this.file) {
+          this.loading = true;
           this.errorMessage = "";
           let formData = new FormData();
           formData.set('name', this.client.name);
@@ -229,6 +231,7 @@ export default {
       ).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
+                    this.loading = false;
                     this.dataAdedd = true;
                     let self = this;
                     setTimeout(
@@ -239,6 +242,7 @@ export default {
                } 
                else{
                     this.errorMessage = response.data.msg 
+                    this.loading = false;
                }
           }
           console.log(response.data)

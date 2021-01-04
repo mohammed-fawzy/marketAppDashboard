@@ -20,7 +20,7 @@
                                                             <input v-model="mainSection.name" type="text" id="text-input" name="text-input" placeholder="Name" class="form-control" required>
                                                        </div>
                                                   </div>
-                                             <input class="btn btn-success w-50 d-block mx-auto mt-2" type="submit" value="Submit" @click="handleSubmit">
+                                             <button class="btn btn-success w-50 d-block mx-auto mt-2" type="submit" @click="handleSubmit">Submit <span v-if="loading"> Loading...</span></button>
                                              </form>
                                              <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                                   <span class="badge badge-pill badge-success">Success</span>
@@ -49,6 +49,7 @@ export default {
                 mainSection:{
                     name:'',
                },
+               loading:false,
                errorMessage:'',
                dataAdedd:false,
                isUpdate:false
@@ -66,7 +67,10 @@ export default {
                               if (response.data.status == true) {
                                    let client = response.data.data
                                    this.mainSection.name = client.name
-                              } 
+                              }
+                              else{
+                                   this.errorMessage = response.data.msg;
+                              }
                          }
                     })
                }
@@ -76,10 +80,12 @@ export default {
           },
           handleSubmit(){
                if (this.mainSection.name) {
+                    this.loading = true;
                     this.errorMeg = null;
                this.axios.put(`api/admin/categories/${this.categoryId}`,this.mainSection).then((response) => {
                     if(response.status == 200){
                          if (response.data.status == true) {
+                               this.loading = false;
                               this.dataAdedd = true;
                               this.isUpdate = true;
                               let self = this;
@@ -91,6 +97,7 @@ export default {
                          } 
                          else{
                               this.errorMeg = response.data.msg 
+                              this.loading = false;
                          }
                     }
                

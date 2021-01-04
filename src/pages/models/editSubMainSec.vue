@@ -35,7 +35,7 @@
                                                             </div>
                                                        </div>
                                              </div>
-                                             <input class="btn btn-success w-50 d-block mx-auto" type="submit" value="Submit" @click="handleSubmit">
+                                             <button class="btn btn-success w-50 d-block mx-auto" type="submit" @click="handleSubmit">Submit <span v-if="loading"> Loading...</span></button>
                                              </form>
                                              <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                                   <span class="badge badge-pill badge-success">Success</span>
@@ -65,6 +65,7 @@ export default {
                     name:'',
                     category_id:null
                },
+               loading:false,
                categories:[],
                errorMessage:'',
                dataAdedd:false,
@@ -95,10 +96,12 @@ export default {
           },
           handleSubmit(){
                if (this.subSection.name) {
+                    this.loading = true;
                     this.errorMeg = null;
                     this.axios.put(`api/admin/sub-categories/${this.subCategoryId}`,this.subSection).then((response) => {
                          if(response.status == 200){
                               if (response.data.status == true) {
+                                   this.loading = false;
                                    this.dataAdedd = true;
                                    this.isUpdate = true;
                                    let self = this;
@@ -109,6 +112,7 @@ export default {
                                    }, 2000);
                               } 
                               else{
+                                   this.loading = false;
                                    this.errorMeg = response.data.msg 
                               }
                          }

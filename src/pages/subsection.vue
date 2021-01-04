@@ -30,7 +30,7 @@
                                                   </div>
                                              </div>
                                         </div>
-                                   <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
+                                   <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" @click="handleSubmit">Submit<span v-if="loading"> Loading...</span></button>
                                    </form>
                                    <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                         <span class="badge badge-pill badge-success">Success</span>
@@ -92,6 +92,7 @@ export default {
                name:'',
                category_id:null
           },
+          loading:false,
           categories:[],
           dataAdedd:false,
           errorMeg:null,
@@ -128,10 +129,12 @@ export default {
      },
    handleSubmit(){
      if (this.subSection.name && this.subSection.category_id) {
+          this.loading = true;
           this.errorMeg = null;
       this.axios.post('api/admin/sub-categories',this.subSection).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
+                    this.loading = false;
                     this.dataAdedd = true;
                     let self = this;
                     setTimeout(
@@ -140,7 +143,8 @@ export default {
                     }, 2000);
                } 
                else{
-                    this.errorMeg = response.data.msg 
+                    this.errorMeg = response.data.msg
+                    this.loading = false;
                }
            }
      })

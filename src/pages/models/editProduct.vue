@@ -122,7 +122,7 @@
                                                             ></VueUploadMultipleImage2>
                                                        </div>
                                                   </div>
-                                                  <input class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" value="Submit" @click="handleSubmit">
+                                                  <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" @click="handleSubmit">Submit <span v-if="loading"> Loading...</span></button>
                                              </form>
                                              <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                                   <span class="badge badge-pill badge-success">Success</span>
@@ -170,6 +170,7 @@ export default {
                     min:null,
                     max:null
                },
+               loading:false,
                categories:[],
                category_id:null,
                subCategories:{
@@ -236,6 +237,7 @@ export default {
           },
           handleSubmit(){
                if (this.product.name && this.product.price && this.product.discount && this.product.info) {
+                    this.loading = true;
                     this.errorMessage = '';
                     let formData = new FormData();
                     formData.set('name', this.product.name);
@@ -268,6 +270,7 @@ export default {
                ).then((response) => {
                if(response.status == 200){
                          if (response.data.status == true) {
+                              this.loading = false;
                               this.dataAdedd = true;
                               this.isUpdate = true;
                               let self = this;
@@ -279,6 +282,7 @@ export default {
                          } 
                          else{
                               this.errorMessage = response.data.msg ;
+                              this.loading = false;
                          }
                     }
                })
