@@ -15,7 +15,7 @@
                                                   <input v-model="mainSection.name" type="text" id="text-input" name="text-input" placeholder="Name" class="form-control" required>
                                              </div>
                                         </div>
-                                   <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit" @click="handleSubmit">Add <span v-if="loading"> Loading...</span></button>
+                                   <button class="btn btn-success w-50 d-block mx-auto mt-5" type="submit">Add <span v-if="loading"> Loading...</span></button>
                                    </form>
                                     <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                         <span class="badge badge-pill badge-success">Success</span>
@@ -122,6 +122,7 @@ export default {
                          setTimeout(
                          function() {
                               self.reset();
+                              self.loadAllData();
                          }, 2000);
                     } 
                     else{

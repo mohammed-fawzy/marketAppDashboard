@@ -35,7 +35,7 @@
                                                             </div>
                                                        </div>
                                              </div>
-                                             <button class="btn btn-success w-50 d-block mx-auto" type="submit" @click="handleSubmit">Submit <span v-if="loading"> Loading...</span></button>
+                                             <button class="btn btn-success w-50 d-block mx-auto" type="submit">Submit <span v-if="loading"> Loading...</span></button>
                                              </form>
                                              <basix-alert v-if="dataAdedd" type="success" :withCloseBtn="true" class="col-6 mx-auto mt-4">
                                                   <span class="badge badge-pill badge-success">Success</span>

@@ -1,51 +1,10 @@
 <template>
+<div class="text-center mt-4 mb-3">
+    <h1 class="mb-2 mb-3">Welcome to Your dashboard</h1>
+    <p>Add edit delete all the users, products, sections, orders </p>
+    <p>Track evrything in youe website from here</p>
 
-    <div class="row">
-
-        <info
-            icon="icon-lg pe-7f-cart"
-            bgclass="bg-flat-color-1"
-            symbol="$"
-            counter=23569
-            title="Revenue"
-        >
-        </info>
-
-        <info-chart
-            icon="icon-lg pe-7f-cart"
-            symbol="%"
-            hasPercentage="yes"
-            bgclass="bg-flat-color-6"
-            counter=85
-            canvasId="flotBar1"
-            title="Sales Increase"
-        >
-        </info-chart>
-
-        <info
-            icon="icon-lg pe-7f-users"
-            bgclass="bg-flat-color-3"
-            counter=6596
-            title="Total Clients"
-        >
-        </info>
-
-        <info-chart-two
-            icon="icon-lg pe-7f-cart"
-            bgclass="bg-flat-color-2"
-            counter=1490
-            canvasId="flotLine1"
-            title="New Users"
-        >
-        </info-chart-two>
-
-        <RealTime title="Real time"/>
-        <Traffic title="Real time"/>
-        <EarningStats/>
-        <Download/>
-        <Revenue/>
-
-    </div>
+</div>
 
 </template>
 

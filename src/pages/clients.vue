@@ -231,9 +231,9 @@ export default {
       ).then((response) => {
            if(response.status == 200){
                if (response.data.status == true) {
+                    let self = this;
                     this.loading = false;
                     this.dataAdedd = true;
-                    let self = this;
                     setTimeout(
                     function() {
                          self.reset();
