@@ -17,6 +17,7 @@
                               <td>User Name</td>
                               <td>Phone number</td>
                               <td>Status</td>
+                              <td>Show</td>
                          </tr>
                          </thead>
                          <tbody>
@@ -35,6 +36,8 @@
                               <td class="text-capitalize">{{order.user.name}}</td>
                               <td>{{order.user.phone}}</td>
                               <td class="text-capitalize">{{order.status}}</td>
+                              <td @click="showEditModal(order.id)"><button type="button" class="btn btn-info">show</button></td>
+
                          </tr>
                          </tbody>
                          </table>
@@ -61,12 +64,17 @@
                     </div>
                </div>
           </div>
+           <transition enter-active-class="animated fadeIn">
+               <showModal @closeModalEvent="closeEditModal" :orderId="orderId" v-if="showModal" :key="showModal"/>
+          </transition>
      </section>
 </template>
 
 <script>
+import showModal from './models/showOrder'
 
 export default {
+     components:{showModal},
      data () {
           return {
                orders:{},
@@ -74,6 +82,8 @@ export default {
                selectedOrderStatus:'',
                pageNum:1,
                total_pages:null,
+               showModal:false,
+               orderId:null,
           }
      },
      mounted(){
@@ -106,6 +116,13 @@ export default {
                     this.loadOrders();
                  }
             })
+     },
+     showEditModal(orderId){
+          this.showModal = true;
+          this.orderId = orderId;
+     },
+     closeEditModal() {
+          this.showModal = !this.showModal;
      },
      handlePgnation(pageNum){
           this.pageNum = pageNum;

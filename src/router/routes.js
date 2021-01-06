@@ -43,6 +43,8 @@ const Products = resolve => { require.ensure(['../pages/products.vue'], ()=>{ re
 const Orders = resolve => { require.ensure(['../pages/orders.vue'], ()=>{ resolve(require('../pages/orders.vue')); }); };
 const Messages = resolve => { require.ensure(['../pages/messages.vue'], ()=>{ resolve(require('../pages/messages.vue')); }); };
 const Banners = resolve => { require.ensure(['../pages/banners.vue'], ()=>{ resolve(require('../pages/banners.vue')); }); };
+const MapPage = resolve => { require.ensure(['../pages/researcher-dashboard.vue'], ()=>{ resolve(require('../pages/researcher-dashboard.vue')); }); };
+const SingleOrder = resolve => { require.ensure(['../pages/single-order.vue'], ()=>{ resolve(require('../pages/single-order.vue')); }); };
 
 
 const Register = resolve => { require.ensure(['../pages/register/Register.vue'], ()=>{ resolve(require('../pages/register/Register.vue')); }); };
@@ -149,7 +151,28 @@ export const routes = [
             default: false,
             title: 'banners',
             requiresAuth: true,
-        }
+        },
+
+    },
+    {
+        path: '/researcher-dashboard',
+        component: MapPage,
+        name: 'researcher-dashboard',
+        meta: {
+            default: false,
+            title: 'researcher-dashboard',
+            requiresAuth: true,
+        },
+    },
+    {
+        path: '/single-order',
+        component: SingleOrder,
+        name: 'single-order',
+        meta: {
+            default: false,
+            title: 'single-order',
+            requiresAuth: true,
+        },
     },
     
 

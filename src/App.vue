@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <auth-layout v-if="isAuth"></auth-layout> -->
       <div class="admin-container">
-        <Sidebar v-if="name != 'login' && name != 'Page404'" :navItems="nav"/>
+        <Sidebar v-if="name != 'login' && name != 'Page404' && name != 'single-order' && name != 'researcher-dashboard'" :navItems="nav"/>
         <!-- {{name != 'login' && name != 'Page404'}} {{name}} -->
         <div id="right-panel" class="right-panel">
           <Header v-if="name != 'login' && name != 'Page404'" />
