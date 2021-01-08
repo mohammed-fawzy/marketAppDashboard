@@ -15,7 +15,7 @@
 
     mounted () {
       let self = this;
-      GoogleMapsLoader.KEY = this.config.googleMaps.apiKey
+      GoogleMapsLoader.KEY = 'AIzaSyA7PA38yK-eREk4fjhMtoxB7m3C9zMRxRE'
 
       GoogleMapsLoader.load((google) => {
         /* eslint-disable no-new */
