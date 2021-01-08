@@ -1,12 +1,12 @@
 webpackJsonp([2],{
 
-/***/ 1041:
+/***/ 1048:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(1042);
+var content = __webpack_require__(1049);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -14,7 +14,7 @@ var update = __webpack_require__(3)("d025dba2", content, true, {});
 
 /***/ }),
 
-/***/ 1042:
+/***/ 1049:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -29,7 +29,7 @@ exports.push([module.i, ".users[data-v-52b8b904]{.table td,.table th{padding:.7r
 
 /***/ }),
 
-/***/ 1043:
+/***/ 1050:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45,11 +45,11 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Widgets_vue__ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Widgets_vue__ = __webpack_require__(829);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_52b8b904_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Widgets_vue__ = __webpack_require__(1043);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_52b8b904_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Widgets_vue__ = __webpack_require__(1050);
 function injectStyle (ssrContext) {
-  __webpack_require__(1041)
+  __webpack_require__(1048)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -79,7 +79,7 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 682:
+/***/ 684:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global Symbol */
@@ -87,22 +87,22 @@ var Component = normalizeComponent(
 // unguarded in another place, it seems safer to define global only for this module
 
 !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(699),
-	__webpack_require__(729),
-	__webpack_require__(703),
-	__webpack_require__(730),
+	__webpack_require__(701),
 	__webpack_require__(731),
-	__webpack_require__(709),
-	__webpack_require__(704),
+	__webpack_require__(705),
 	__webpack_require__(732),
-	__webpack_require__(710),
 	__webpack_require__(733),
-	__webpack_require__(768),
-	__webpack_require__(691),
-	__webpack_require__(683),
-	__webpack_require__(700),
+	__webpack_require__(711),
+	__webpack_require__(706),
 	__webpack_require__(734),
-	__webpack_require__(694)
+	__webpack_require__(712),
+	__webpack_require__(735),
+	__webpack_require__(770),
+	__webpack_require__(693),
+	__webpack_require__(685),
+	__webpack_require__(702),
+	__webpack_require__(736),
+	__webpack_require__(696)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( arr, getProto, slice, flat, push, indexOf,
 	class2type, toString, hasOwn, fnToString, ObjectFunctionString,
 	support, isFunction, isWindow, DOMEval, toType ) {
@@ -484,11 +484,11 @@ return jQuery;
 }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(686)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(688)))
 
 /***/ }),
 
-/***/ 683:
+/***/ 685:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -509,7 +509,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 684:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -522,10 +522,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 685:
+/***/ 687:
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(769) ], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(771) ], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
 	"use strict";
 }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -533,43 +533,43 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 686:
+/***/ 688:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(685),
-	__webpack_require__(695),
-	__webpack_require__(711),
-	__webpack_require__(696),
-	__webpack_require__(773),
-	__webpack_require__(738),
-	__webpack_require__(775),
-	__webpack_require__(712),
-	__webpack_require__(776),
-	__webpack_require__(781),
+	__webpack_require__(684),
+	__webpack_require__(687),
 	__webpack_require__(697),
-	__webpack_require__(785),
-	__webpack_require__(708),
+	__webpack_require__(713),
+	__webpack_require__(698),
+	__webpack_require__(775),
+	__webpack_require__(740),
+	__webpack_require__(777),
+	__webpack_require__(714),
+	__webpack_require__(778),
+	__webpack_require__(783),
+	__webpack_require__(699),
 	__webpack_require__(787),
+	__webpack_require__(710),
 	__webpack_require__(789),
-	__webpack_require__(702),
-	__webpack_require__(790),
-	__webpack_require__(759),
-	__webpack_require__(693),
 	__webpack_require__(791),
+	__webpack_require__(704),
 	__webpack_require__(792),
+	__webpack_require__(761),
+	__webpack_require__(695),
 	__webpack_require__(793),
 	__webpack_require__(794),
-	__webpack_require__(758),
-	__webpack_require__(760),
-	__webpack_require__(713),
+	__webpack_require__(795),
 	__webpack_require__(796),
-	__webpack_require__(797),
+	__webpack_require__(760),
+	__webpack_require__(762),
+	__webpack_require__(715),
 	__webpack_require__(798),
 	__webpack_require__(799),
-	__webpack_require__(802),
-	__webpack_require__(803)
+	__webpack_require__(800),
+	__webpack_require__(801),
+	__webpack_require__(804),
+	__webpack_require__(805)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -582,17 +582,17 @@ return jQuery;
 
 /***/ }),
 
-/***/ 687:
+/***/ 689:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Initialize a jQuery object
 !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(683),
-	__webpack_require__(736),
+	__webpack_require__(686),
+	__webpack_require__(685),
+	__webpack_require__(738),
 
-	__webpack_require__(737)
+	__webpack_require__(739)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document, isFunction, rsingleTag ) {
 
 "use strict";
@@ -719,11 +719,11 @@ return init;
 
 /***/ }),
 
-/***/ 688:
+/***/ 690:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(739)
+	__webpack_require__(741)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Data ) {
 	"use strict";
 
@@ -734,7 +734,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 689:
+/***/ 691:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -755,7 +755,7 @@ return nodeName;
 
 /***/ }),
 
-/***/ 690:
+/***/ 692:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -771,7 +771,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 691:
+/***/ 693:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -785,13 +785,13 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 692:
+/***/ 694:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(694),
-	__webpack_require__(683)
+	__webpack_require__(684),
+	__webpack_require__(696),
+	__webpack_require__(685)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, toType, isFunction ) {
 
 "use strict";
@@ -865,23 +865,23 @@ return access;
 
 /***/ }),
 
-/***/ 693:
+/***/ 695:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(683),
-	__webpack_require__(690),
-	__webpack_require__(788),
-	__webpack_require__(756),
-	__webpack_require__(757),
-
-	__webpack_require__(687),
+	__webpack_require__(686),
+	__webpack_require__(685),
+	__webpack_require__(692),
+	__webpack_require__(790),
 	__webpack_require__(758),
-	__webpack_require__(721),
-	__webpack_require__(696),
-	__webpack_require__(759) // jQuery.param
+	__webpack_require__(759),
+
+	__webpack_require__(689),
+	__webpack_require__(760),
+	__webpack_require__(723),
+	__webpack_require__(698),
+	__webpack_require__(761) // jQuery.param
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document, isFunction, rnothtmlwhite, location, nonce, rquery ) {
 
 "use strict";
@@ -1746,12 +1746,12 @@ return jQuery;
 
 /***/ }),
 
-/***/ 694:
+/***/ 696:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(704),
-	__webpack_require__(732)
+	__webpack_require__(706),
+	__webpack_require__(734)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( class2type, toString ) {
 
 "use strict";
@@ -1774,21 +1774,21 @@ return toType;
 
 /***/ }),
 
-/***/ 695:
+/***/ 697:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(729),
-	__webpack_require__(709),
-	__webpack_require__(771),
-	__webpack_require__(772),
-	__webpack_require__(735),
-	__webpack_require__(689),
-
-	__webpack_require__(687),
+	__webpack_require__(684),
+	__webpack_require__(731),
+	__webpack_require__(711),
+	__webpack_require__(773),
+	__webpack_require__(774),
 	__webpack_require__(737),
-	__webpack_require__(685)
+	__webpack_require__(691),
+
+	__webpack_require__(689),
+	__webpack_require__(739),
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, getProto, indexOf, dir, siblings, rneedsContext, nodeName ) {
 
 "use strict";
@@ -1980,14 +1980,14 @@ return jQuery;
 
 /***/ }),
 
-/***/ 696:
+/***/ 698:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(683),
-	__webpack_require__(703),
-	__webpack_require__(711)
+	__webpack_require__(684),
+	__webpack_require__(685),
+	__webpack_require__(705),
+	__webpack_require__(713)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, isFunction, slice ) {
 
 "use strict";
@@ -2387,23 +2387,23 @@ return jQuery;
 
 /***/ }),
 
-/***/ 697:
+/***/ 699:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(707),
-	__webpack_require__(683),
-	__webpack_require__(690),
-	__webpack_require__(716),
-	__webpack_require__(703),
+	__webpack_require__(686),
+	__webpack_require__(709),
+	__webpack_require__(685),
+	__webpack_require__(692),
+	__webpack_require__(718),
 	__webpack_require__(705),
-	__webpack_require__(688),
-	__webpack_require__(689),
+	__webpack_require__(707),
+	__webpack_require__(690),
+	__webpack_require__(691),
 
-	__webpack_require__(687),
-	__webpack_require__(685)
+	__webpack_require__(689),
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document, documentElement, isFunction, rnothtmlwhite,
 	rcheckableType, slice, acceptData, dataPriv, nodeName ) {
 
@@ -3287,7 +3287,7 @@ return jQuery;
 
 /***/ }),
 
-/***/ 699:
+/***/ 701:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -3300,7 +3300,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 700:
+/***/ 702:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -3316,7 +3316,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 701:
+/***/ 703:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -3347,28 +3347,28 @@ return camelCase;
 
 /***/ }),
 
-/***/ 702:
+/***/ 704:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(692),
-	__webpack_require__(701),
-	__webpack_require__(689),
-	__webpack_require__(714),
+	__webpack_require__(684),
+	__webpack_require__(694),
+	__webpack_require__(703),
+	__webpack_require__(691),
+	__webpack_require__(716),
+	__webpack_require__(719),
 	__webpack_require__(717),
-	__webpack_require__(715),
-	__webpack_require__(751),
-	__webpack_require__(778),
-	__webpack_require__(752),
-	__webpack_require__(743),
 	__webpack_require__(753),
-	__webpack_require__(718),
+	__webpack_require__(780),
 	__webpack_require__(754),
+	__webpack_require__(745),
+	__webpack_require__(755),
+	__webpack_require__(720),
+	__webpack_require__(756),
 
-	__webpack_require__(687),
-	__webpack_require__(738),
-	__webpack_require__(685) // contains
+	__webpack_require__(689),
+	__webpack_require__(740),
+	__webpack_require__(687) // contains
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, access, camelCase, nodeName, rcssNum, rnumnonpx, cssExpand,
 	getStyles, swap, curCSS, adjustCSS, addGetHookIf, support, finalPropName ) {
 
@@ -3849,11 +3849,11 @@ return jQuery;
 
 /***/ }),
 
-/***/ 703:
+/***/ 705:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(699)
+	__webpack_require__(701)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( arr ) {
 	"use strict";
 
@@ -3864,7 +3864,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 704:
+/***/ 706:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -3878,7 +3878,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 705:
+/***/ 707:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -3905,13 +3905,13 @@ return function( owner ) {
 
 /***/ }),
 
-/***/ 706:
+/***/ 708:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(707),
-	__webpack_require__(685) // jQuery.contains
+	__webpack_require__(684),
+	__webpack_require__(709),
+	__webpack_require__(687) // jQuery.contains
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, documentElement ) {
 	"use strict";
 
@@ -3939,11 +3939,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 707:
+/***/ 709:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(684)
+	__webpack_require__(686)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( document ) {
 	"use strict";
 
@@ -3954,35 +3954,35 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 708:
+/***/ 710:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(706),
-	__webpack_require__(730),
-	__webpack_require__(683),
-	__webpack_require__(731),
-	__webpack_require__(716),
-	__webpack_require__(692),
-	__webpack_require__(744),
-	__webpack_require__(745),
-	__webpack_require__(746),
-	__webpack_require__(748),
-	__webpack_require__(749),
-	__webpack_require__(750),
-	__webpack_require__(747),
-
-	__webpack_require__(688),
-	__webpack_require__(740),
-	__webpack_require__(705),
-	__webpack_require__(734),
-	__webpack_require__(689),
-
-	__webpack_require__(687),
-	__webpack_require__(695),
+	__webpack_require__(684),
+	__webpack_require__(708),
+	__webpack_require__(732),
 	__webpack_require__(685),
-	__webpack_require__(697)
+	__webpack_require__(733),
+	__webpack_require__(718),
+	__webpack_require__(694),
+	__webpack_require__(746),
+	__webpack_require__(747),
+	__webpack_require__(748),
+	__webpack_require__(750),
+	__webpack_require__(751),
+	__webpack_require__(752),
+	__webpack_require__(749),
+
+	__webpack_require__(690),
+	__webpack_require__(742),
+	__webpack_require__(707),
+	__webpack_require__(736),
+	__webpack_require__(691),
+
+	__webpack_require__(689),
+	__webpack_require__(697),
+	__webpack_require__(687),
+	__webpack_require__(699)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, isAttached, flat, isFunction, push, rcheckableType,
 	access, rtagName, rscriptType,
 	wrapMap, getAll, setGlobalEval, buildFragment, support,
@@ -4442,11 +4442,11 @@ return jQuery;
 
 /***/ }),
 
-/***/ 709:
+/***/ 711:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(699)
+	__webpack_require__(701)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( arr ) {
 	"use strict";
 
@@ -4457,11 +4457,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 710:
+/***/ 712:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(704)
+	__webpack_require__(706)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( class2type ) {
 	"use strict";
 
@@ -4472,14 +4472,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 711:
+/***/ 713:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(694),
-	__webpack_require__(683),
-	__webpack_require__(690)
+	__webpack_require__(684),
+	__webpack_require__(696),
+	__webpack_require__(685),
+	__webpack_require__(692)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, toType, isFunction, rnothtmlwhite ) {
 
 "use strict";
@@ -4716,14 +4716,14 @@ return jQuery;
 
 /***/ }),
 
-/***/ 712:
+/***/ 714:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(688),
-	__webpack_require__(696),
-	__webpack_require__(711)
+	__webpack_require__(684),
+	__webpack_require__(690),
+	__webpack_require__(698),
+	__webpack_require__(713)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, dataPriv ) {
 
 "use strict";
@@ -4869,29 +4869,29 @@ return jQuery;
 
 /***/ }),
 
-/***/ 713:
+/***/ 715:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(701),
 	__webpack_require__(684),
-	__webpack_require__(683),
-	__webpack_require__(714),
+	__webpack_require__(703),
+	__webpack_require__(686),
+	__webpack_require__(685),
+	__webpack_require__(716),
+	__webpack_require__(692),
+	__webpack_require__(717),
+	__webpack_require__(744),
+	__webpack_require__(745),
 	__webpack_require__(690),
-	__webpack_require__(715),
-	__webpack_require__(742),
-	__webpack_require__(743),
-	__webpack_require__(688),
-	__webpack_require__(777),
+	__webpack_require__(779),
 
-	__webpack_require__(687),
-	__webpack_require__(712),
-	__webpack_require__(696),
-	__webpack_require__(695),
-	__webpack_require__(708),
-	__webpack_require__(702),
-	__webpack_require__(780)
+	__webpack_require__(689),
+	__webpack_require__(714),
+	__webpack_require__(698),
+	__webpack_require__(697),
+	__webpack_require__(710),
+	__webpack_require__(704),
+	__webpack_require__(782)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, camelCase, document, isFunction, rcssNum, rnothtmlwhite, cssExpand,
 	isHiddenWithinTree, adjustCSS, dataPriv, showHide ) {
 
@@ -5578,11 +5578,11 @@ return jQuery;
 
 /***/ }),
 
-/***/ 714:
+/***/ 716:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(741)
+	__webpack_require__(743)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( pnum ) {
 
 "use strict";
@@ -5595,7 +5595,7 @@ return new RegExp( "^(?:([+-])=|)(" + pnum + ")([a-z%]*)$", "i" );
 
 /***/ }),
 
-/***/ 715:
+/***/ 717:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -5608,7 +5608,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 716:
+/***/ 718:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -5621,11 +5621,11 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 717:
+/***/ 719:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(741)
+	__webpack_require__(743)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( pnum ) {
 	"use strict";
 
@@ -5636,14 +5636,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 718:
+/***/ 720:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(707),
-	__webpack_require__(691)
+	__webpack_require__(686),
+	__webpack_require__(709),
+	__webpack_require__(693)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document, documentElement, support ) {
 
 "use strict";
@@ -5777,12 +5777,12 @@ return support;
 
 /***/ }),
 
-/***/ 719:
+/***/ 721:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(684),
-	__webpack_require__(691)
+	__webpack_require__(686),
+	__webpack_require__(693)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( document, support ) {
 
 "use strict";
@@ -5818,11 +5818,11 @@ return support;
 
 /***/ }),
 
-/***/ 720:
+/***/ 722:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(690)
+	__webpack_require__(692)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( rnothtmlwhite ) {
 	"use strict";
 
@@ -5840,18 +5840,18 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 721:
+/***/ 723:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(688),
-	__webpack_require__(705),
-	__webpack_require__(710),
-	__webpack_require__(683),
-	__webpack_require__(700),
-	__webpack_require__(697)
+	__webpack_require__(686),
+	__webpack_require__(690),
+	__webpack_require__(707),
+	__webpack_require__(712),
+	__webpack_require__(685),
+	__webpack_require__(702),
+	__webpack_require__(699)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document, dataPriv, acceptData, hasOwn, isFunction, isWindow ) {
 
 "use strict";
@@ -6049,7 +6049,7 @@ return jQuery;
 
 /***/ }),
 
-/***/ 722:
+/***/ 724:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* Javascript plotting library for jQuery, version 0.8.3.
@@ -9111,11 +9111,11 @@ Licensed under the MIT license.
         return base * Math.floor(n / base);
     }
 })(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(686)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(688)))
 
 /***/ }),
 
-/***/ 723:
+/***/ 725:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* Flot plugin for rendering pie charts.
@@ -9932,11 +9932,11 @@ More detail and specific examples can be found in the included HTML file.
 		version: "1.1"
 	});
 })(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(686)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(688)))
 
 /***/ }),
 
-/***/ 724:
+/***/ 726:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/**
@@ -10161,11 +10161,11 @@ More detail and specific examples can be found in the included HTML file.
     version: '0.8.2'
   });
 })(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(686)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(688)))
 
 /***/ }),
 
-/***/ 726:
+/***/ 728:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10230,11 +10230,11 @@ More detail and specific examples can be found in the included HTML file.
 
 /***/ }),
 
-/***/ 727:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_InfoChart_vue__ = __webpack_require__(767);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_InfoChart_vue__ = __webpack_require__(769);
 //
 //
 //
@@ -10300,18 +10300,18 @@ More detail and specific examples can be found in the included HTML file.
 
 /***/ }),
 
-/***/ 728:
+/***/ 730:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(686);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(688);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js__ = __webpack_require__(722);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js__ = __webpack_require__(724);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js__ = __webpack_require__(723);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js__ = __webpack_require__(725);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js__ = __webpack_require__(724);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js__ = __webpack_require__(726);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js__);
 
 
@@ -10347,11 +10347,11 @@ More detail and specific examples can be found in the included HTML file.
     });
   }
 });
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(686)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(688)))
 
 /***/ }),
 
-/***/ 729:
+/***/ 731:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -10364,11 +10364,11 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 730:
+/***/ 732:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(699)
+	__webpack_require__(701)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( arr ) {
 
 "use strict";
@@ -10388,11 +10388,11 @@ return arr.flat ? function( array ) {
 
 /***/ }),
 
-/***/ 731:
+/***/ 733:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(699)
+	__webpack_require__(701)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( arr ) {
 	"use strict";
 
@@ -10403,11 +10403,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 732:
+/***/ 734:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(704)
+	__webpack_require__(706)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( class2type ) {
 	"use strict";
 
@@ -10418,11 +10418,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 733:
+/***/ 735:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(710)
+	__webpack_require__(712)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( hasOwn ) {
 	"use strict";
 
@@ -10433,11 +10433,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 734:
+/***/ 736:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(684)
+	__webpack_require__(686)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( document ) {
 	"use strict";
 
@@ -10484,12 +10484,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 735:
+/***/ 737:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(685)
+	__webpack_require__(684),
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 	"use strict";
 
@@ -10500,7 +10500,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 736:
+/***/ 738:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -10515,15 +10515,15 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 737:
+/***/ 739:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(709),
-	__webpack_require__(683),
-	__webpack_require__(735),
-	__webpack_require__(685)
+	__webpack_require__(684),
+	__webpack_require__(711),
+	__webpack_require__(685),
+	__webpack_require__(737),
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, indexOf, isFunction, rneedsContext ) {
 
 "use strict";
@@ -10620,14 +10620,14 @@ jQuery.fn.extend( {
 
 /***/ }),
 
-/***/ 738:
+/***/ 740:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(774),
-	__webpack_require__(696)
+	__webpack_require__(686),
+	__webpack_require__(776),
+	__webpack_require__(698)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document ) {
 
 "use strict";
@@ -10714,14 +10714,14 @@ if ( document.readyState === "complete" ||
 
 /***/ }),
 
-/***/ 739:
+/***/ 741:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(701),
-	__webpack_require__(690),
-	__webpack_require__(705)
+	__webpack_require__(684),
+	__webpack_require__(703),
+	__webpack_require__(692),
+	__webpack_require__(707)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, camelCase, rnothtmlwhite, acceptData ) {
 
 "use strict";
@@ -10884,11 +10884,11 @@ return Data;
 
 /***/ }),
 
-/***/ 740:
+/***/ 742:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(739)
+	__webpack_require__(741)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Data ) {
 	"use strict";
 
@@ -10899,7 +10899,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 741:
+/***/ 743:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -10912,12 +10912,12 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 742:
+/***/ 744:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(706)
+	__webpack_require__(684),
+	__webpack_require__(708)
 
 	// css is assumed
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, isAttached ) {
@@ -10954,12 +10954,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 743:
+/***/ 745:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(714)
+	__webpack_require__(684),
+	__webpack_require__(716)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, rcssNum ) {
 
 "use strict";
@@ -11036,7 +11036,7 @@ return adjustCSS;
 
 /***/ }),
 
-/***/ 744:
+/***/ 746:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -11052,7 +11052,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 745:
+/***/ 747:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -11065,11 +11065,11 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 746:
+/***/ 748:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(747)
+	__webpack_require__(749)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( support ) {
 
 "use strict";
@@ -11103,12 +11103,12 @@ return wrapMap;
 
 /***/ }),
 
-/***/ 747:
+/***/ 749:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(684),
-	__webpack_require__(691)
+	__webpack_require__(686),
+	__webpack_require__(693)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( document, support ) {
 
 "use strict";
@@ -11152,12 +11152,12 @@ return support;
 
 /***/ }),
 
-/***/ 748:
+/***/ 750:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(689)
+	__webpack_require__(684),
+	__webpack_require__(691)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, nodeName ) {
 
 "use strict";
@@ -11192,11 +11192,11 @@ return getAll;
 
 /***/ }),
 
-/***/ 749:
+/***/ 751:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(688)
+	__webpack_require__(690)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( dataPriv ) {
 
 "use strict";
@@ -11222,18 +11222,18 @@ return setGlobalEval;
 
 /***/ }),
 
-/***/ 750:
+/***/ 752:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(694),
-	__webpack_require__(706),
-	__webpack_require__(744),
-	__webpack_require__(745),
+	__webpack_require__(684),
+	__webpack_require__(696),
+	__webpack_require__(708),
 	__webpack_require__(746),
+	__webpack_require__(747),
 	__webpack_require__(748),
-	__webpack_require__(749)
+	__webpack_require__(750),
+	__webpack_require__(751)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, toType, isAttached, rtagName, rscriptType, wrapMap, getAll, setGlobalEval ) {
 
 "use strict";
@@ -11336,7 +11336,7 @@ return buildFragment;
 
 /***/ }),
 
-/***/ 751:
+/***/ 753:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -11361,16 +11361,16 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 752:
+/***/ 754:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(706),
-	__webpack_require__(779),
-	__webpack_require__(717),
-	__webpack_require__(751),
-	__webpack_require__(718)
+	__webpack_require__(684),
+	__webpack_require__(708),
+	__webpack_require__(781),
+	__webpack_require__(719),
+	__webpack_require__(753),
+	__webpack_require__(720)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, isAttached, rboxStyle, rnumnonpx, getStyles, support ) {
 
 "use strict";
@@ -11434,7 +11434,7 @@ return curCSS;
 
 /***/ }),
 
-/***/ 753:
+/***/ 755:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -11468,12 +11468,12 @@ return addGetHookIf;
 
 /***/ }),
 
-/***/ 754:
+/***/ 756:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(684),
-	__webpack_require__(682)
+	__webpack_require__(686),
+	__webpack_require__(684)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( document, jQuery ) {
 
 "use strict";
@@ -11518,14 +11518,14 @@ return finalPropName;
 
 /***/ }),
 
-/***/ 755:
+/***/ 757:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(692),
-	__webpack_require__(719),
-	__webpack_require__(685)
+	__webpack_require__(684),
+	__webpack_require__(694),
+	__webpack_require__(721),
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, access, support ) {
 
 "use strict";
@@ -11669,7 +11669,7 @@ jQuery.each( [
 
 /***/ }),
 
-/***/ 756:
+/***/ 758:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -11682,7 +11682,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 757:
+/***/ 759:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -11695,11 +11695,11 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 758:
+/***/ 760:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682)
+	__webpack_require__(684)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -11733,17 +11733,17 @@ return jQuery.parseXML;
 
 /***/ }),
 
-/***/ 759:
+/***/ 761:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(694),
-	__webpack_require__(716),
-	__webpack_require__(683),
-	__webpack_require__(687),
-	__webpack_require__(695), // filter
-	__webpack_require__(755)
+	__webpack_require__(684),
+	__webpack_require__(696),
+	__webpack_require__(718),
+	__webpack_require__(685),
+	__webpack_require__(689),
+	__webpack_require__(697), // filter
+	__webpack_require__(757)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, toType, rcheckableType, isFunction ) {
 
 "use strict";
@@ -11877,17 +11877,17 @@ return jQuery;
 
 /***/ }),
 
-/***/ 760:
+/***/ 762:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(736),
-	__webpack_require__(750),
+	__webpack_require__(686),
+	__webpack_require__(738),
+	__webpack_require__(752),
 
 	// This is the only module that needs core/support
-	__webpack_require__(795)
+	__webpack_require__(797)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document, rsingleTag, buildFragment, support ) {
 
 "use strict";
@@ -11950,11 +11950,11 @@ return jQuery.parseHTML;
 
 /***/ }),
 
-/***/ 761:
+/***/ 763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_InfoChart2_vue__ = __webpack_require__(806);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_InfoChart2_vue__ = __webpack_require__(808);
 //
 //
 //
@@ -12006,18 +12006,18 @@ return jQuery.parseHTML;
 
 /***/ }),
 
-/***/ 762:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(686);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(688);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js__ = __webpack_require__(722);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js__ = __webpack_require__(724);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__assets_js_lib_flot_chart_jquery_flot_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js__ = __webpack_require__(723);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js__ = __webpack_require__(725);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__assets_js_lib_flot_chart_jquery_flot_pie_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js__ = __webpack_require__(724);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js__ = __webpack_require__(726);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__assets_js_lib_flot_chart_jquery_flot_spline_js__);
 
 
@@ -12085,17 +12085,17 @@ return jQuery.parseHTML;
     });
   }
 });
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(686), __webpack_require__(686)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(688), __webpack_require__(688)))
 
 /***/ }),
 
-/***/ 764:
+/***/ 766:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoBox_vue__ = __webpack_require__(726);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoBox_vue__ = __webpack_require__(728);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4b3806ff_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InfoBox_vue__ = __webpack_require__(765);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4b3806ff_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InfoBox_vue__ = __webpack_require__(767);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -12124,7 +12124,7 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 765:
+/***/ 767:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12135,13 +12135,13 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
-/***/ 766:
+/***/ 768:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoBoxChart_vue__ = __webpack_require__(727);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoBoxChart_vue__ = __webpack_require__(729);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dc0db34_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InfoBoxChart_vue__ = __webpack_require__(804);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dc0db34_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InfoBoxChart_vue__ = __webpack_require__(806);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -12170,11 +12170,11 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 767:
+/***/ 769:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoChart_vue__ = __webpack_require__(728);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoChart_vue__ = __webpack_require__(730);
 /* unused harmony namespace reexport */
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -12204,11 +12204,11 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 768:
+/***/ 770:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(733)
+	__webpack_require__(735)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( fnToString ) {
 	"use strict";
 
@@ -12219,12 +12219,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 769:
+/***/ 771:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(770)
+	__webpack_require__(684),
+	__webpack_require__(772)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, Sizzle ) {
 
 "use strict";
@@ -12246,7 +12246,7 @@ jQuery.escapeSelector = Sizzle.escape;
 
 /***/ }),
 
-/***/ 770:
+/***/ 772:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14732,11 +14732,11 @@ if ( true ) {
 
 /***/ }),
 
-/***/ 771:
+/***/ 773:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682)
+	__webpack_require__(684)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -14762,7 +14762,7 @@ return function( elem, dir, until ) {
 
 /***/ }),
 
-/***/ 772:
+/***/ 774:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -14787,12 +14787,12 @@ return function( n, elem ) {
 
 /***/ }),
 
-/***/ 773:
+/***/ 775:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(696)
+	__webpack_require__(684),
+	__webpack_require__(698)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -14816,11 +14816,11 @@ jQuery.Deferred.exceptionHook = function( error, stack ) {
 
 /***/ }),
 
-/***/ 774:
+/***/ 776:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682)
+	__webpack_require__(684)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -14837,15 +14837,15 @@ jQuery.readyException = function( error ) {
 
 /***/ }),
 
-/***/ 775:
+/***/ 777:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(692),
-	__webpack_require__(701),
-	__webpack_require__(688),
-	__webpack_require__(740)
+	__webpack_require__(684),
+	__webpack_require__(694),
+	__webpack_require__(703),
+	__webpack_require__(690),
+	__webpack_require__(742)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, access, camelCase, dataPriv, dataUser ) {
 
 "use strict";
@@ -15025,13 +15025,13 @@ return jQuery;
 
 /***/ }),
 
-/***/ 776:
+/***/ 778:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(712),
-	__webpack_require__(713) // Delay is optional because of this dependency
+	__webpack_require__(684),
+	__webpack_require__(714),
+	__webpack_require__(715) // Delay is optional because of this dependency
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -15057,13 +15057,13 @@ return jQuery.fn.delay;
 
 /***/ }),
 
-/***/ 777:
+/***/ 779:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(688),
-	__webpack_require__(742)
+	__webpack_require__(684),
+	__webpack_require__(690),
+	__webpack_require__(744)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, dataPriv, isHiddenWithinTree ) {
 
 "use strict";
@@ -15170,7 +15170,7 @@ return showHide;
 
 /***/ }),
 
-/***/ 778:
+/***/ 780:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -15204,11 +15204,11 @@ return function( elem, options, callback ) {
 
 /***/ }),
 
-/***/ 779:
+/***/ 781:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(715)
+	__webpack_require__(717)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( cssExpand ) {
 	"use strict";
 
@@ -15219,14 +15219,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 780:
+/***/ 782:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(754),
+	__webpack_require__(684),
+	__webpack_require__(756),
 
-	__webpack_require__(702)
+	__webpack_require__(704)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, finalPropName ) {
 
 "use strict";
@@ -15352,15 +15352,15 @@ jQuery.fx.step = {};
 
 /***/ }),
 
-/***/ 781:
+/***/ 783:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(782),
-	__webpack_require__(755),
-	__webpack_require__(783),
-	__webpack_require__(784)
+	__webpack_require__(684),
+	__webpack_require__(784),
+	__webpack_require__(757),
+	__webpack_require__(785),
+	__webpack_require__(786)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -15373,16 +15373,16 @@ return jQuery;
 
 /***/ }),
 
-/***/ 782:
+/***/ 784:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
+	__webpack_require__(684),
+	__webpack_require__(694),
+	__webpack_require__(691),
+	__webpack_require__(721),
 	__webpack_require__(692),
-	__webpack_require__(689),
-	__webpack_require__(719),
-	__webpack_require__(690),
-	__webpack_require__(685)
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, access, nodeName, support, rnothtmlwhite ) {
 
 "use strict";
@@ -15522,16 +15522,16 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i, name )
 
 /***/ }),
 
-/***/ 783:
+/***/ 785:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(720),
-	__webpack_require__(683),
+	__webpack_require__(684),
+	__webpack_require__(722),
+	__webpack_require__(685),
+	__webpack_require__(692),
 	__webpack_require__(690),
-	__webpack_require__(688),
-	__webpack_require__(687)
+	__webpack_require__(689)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, stripAndCollapse, isFunction, rnothtmlwhite, dataPriv ) {
 
 "use strict";
@@ -15716,17 +15716,17 @@ jQuery.fn.extend( {
 
 /***/ }),
 
-/***/ 784:
+/***/ 786:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(720),
-	__webpack_require__(719),
-	__webpack_require__(689),
-	__webpack_require__(683),
+	__webpack_require__(684),
+	__webpack_require__(722),
+	__webpack_require__(721),
+	__webpack_require__(691),
+	__webpack_require__(685),
 
-	__webpack_require__(687)
+	__webpack_require__(689)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, stripAndCollapse, support, nodeName, isFunction ) {
 
 "use strict";
@@ -15915,16 +15915,16 @@ jQuery.each( [ "radio", "checkbox" ], function() {
 
 /***/ }),
 
-/***/ 785:
+/***/ 787:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(688),
-	__webpack_require__(786),
+	__webpack_require__(684),
+	__webpack_require__(690),
+	__webpack_require__(788),
 
-	__webpack_require__(697),
-	__webpack_require__(721)
+	__webpack_require__(699),
+	__webpack_require__(723)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, dataPriv, support ) {
 
 "use strict";
@@ -15981,11 +15981,11 @@ return jQuery;
 
 /***/ }),
 
-/***/ 786:
+/***/ 788:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(691)
+	__webpack_require__(693)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( support ) {
 
 "use strict";
@@ -16000,11 +16000,11 @@ return support;
 
 /***/ }),
 
-/***/ 787:
+/***/ 789:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(693)
+	__webpack_require__(695)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -16040,7 +16040,7 @@ return jQuery._evalUrl;
 
 /***/ }),
 
-/***/ 788:
+/***/ 790:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
@@ -16053,15 +16053,15 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() 
 
 /***/ }),
 
-/***/ 789:
+/***/ 791:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(683),
-	__webpack_require__(687),
-	__webpack_require__(708), // clone
-	__webpack_require__(695) // parent, contents
+	__webpack_require__(684),
+	__webpack_require__(685),
+	__webpack_require__(689),
+	__webpack_require__(710), // clone
+	__webpack_require__(697) // parent, contents
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, isFunction ) {
 
 "use strict";
@@ -16139,12 +16139,12 @@ return jQuery;
 
 /***/ }),
 
-/***/ 790:
+/***/ 792:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(685)
+	__webpack_require__(684),
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -16162,13 +16162,13 @@ jQuery.expr.pseudos.visible = function( elem ) {
 
 /***/ }),
 
-/***/ 791:
+/***/ 793:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(691),
-	__webpack_require__(693)
+	__webpack_require__(684),
+	__webpack_require__(693),
+	__webpack_require__(695)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, support ) {
 
 "use strict";
@@ -16340,13 +16340,13 @@ jQuery.ajaxTransport( function( options ) {
 
 /***/ }),
 
-/***/ 792:
+/***/ 794:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
 	__webpack_require__(684),
-	__webpack_require__(693)
+	__webpack_require__(686),
+	__webpack_require__(695)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, document ) {
 
 "use strict";
@@ -16422,15 +16422,15 @@ jQuery.ajaxTransport( "script", function( s ) {
 
 /***/ }),
 
-/***/ 793:
+/***/ 795:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(683),
-	__webpack_require__(756),
-	__webpack_require__(757),
-	__webpack_require__(693)
+	__webpack_require__(684),
+	__webpack_require__(685),
+	__webpack_require__(758),
+	__webpack_require__(759),
+	__webpack_require__(695)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, isFunction, nonce, rquery ) {
 
 "use strict";
@@ -16533,18 +16533,18 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 
 /***/ }),
 
-/***/ 794:
+/***/ 796:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(720),
-	__webpack_require__(683),
-	__webpack_require__(760),
-	__webpack_require__(693),
+	__webpack_require__(684),
+	__webpack_require__(722),
+	__webpack_require__(685),
+	__webpack_require__(762),
 	__webpack_require__(695),
-	__webpack_require__(708),
-	__webpack_require__(685)
+	__webpack_require__(697),
+	__webpack_require__(710),
+	__webpack_require__(687)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, stripAndCollapse, isFunction ) {
 
 "use strict";
@@ -16618,12 +16618,12 @@ jQuery.fn.load = function( url, params, callback ) {
 
 /***/ }),
 
-/***/ 795:
+/***/ 797:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(684),
-	__webpack_require__(691)
+	__webpack_require__(686),
+	__webpack_require__(693)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( document, support ) {
 
 "use strict";
@@ -16646,13 +16646,13 @@ return support;
 
 /***/ }),
 
-/***/ 796:
+/***/ 798:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(685),
-	__webpack_require__(713)
+	__webpack_require__(684),
+	__webpack_require__(687),
+	__webpack_require__(715)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -16669,22 +16669,22 @@ jQuery.expr.pseudos.animated = function( elem ) {
 
 /***/ }),
 
-/***/ 797:
+/***/ 799:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(692),
-	__webpack_require__(707),
-	__webpack_require__(683),
-	__webpack_require__(717),
-	__webpack_require__(752),
-	__webpack_require__(753),
-	__webpack_require__(718),
-	__webpack_require__(700),
-	__webpack_require__(687),
+	__webpack_require__(684),
+	__webpack_require__(694),
+	__webpack_require__(709),
+	__webpack_require__(685),
+	__webpack_require__(719),
+	__webpack_require__(754),
+	__webpack_require__(755),
+	__webpack_require__(720),
 	__webpack_require__(702),
-	__webpack_require__(685) // contains
+	__webpack_require__(689),
+	__webpack_require__(704),
+	__webpack_require__(687) // contains
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, access, documentElement, isFunction, rnumnonpx,
 	curCSS, addGetHookIf, support, isWindow ) {
 
@@ -16915,14 +16915,14 @@ return jQuery;
 
 /***/ }),
 
-/***/ 798:
+/***/ 800:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(692),
-	__webpack_require__(700),
-	__webpack_require__(702)
+	__webpack_require__(684),
+	__webpack_require__(694),
+	__webpack_require__(702),
+	__webpack_require__(704)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, access, isWindow ) {
 
 "use strict";
@@ -16980,20 +16980,20 @@ return jQuery;
 
 /***/ }),
 
-/***/ 799:
+/***/ 801:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(689),
-	__webpack_require__(701),
-	__webpack_require__(694),
-	__webpack_require__(683),
-	__webpack_require__(700),
+	__webpack_require__(684),
+	__webpack_require__(691),
 	__webpack_require__(703),
+	__webpack_require__(696),
+	__webpack_require__(685),
+	__webpack_require__(702),
+	__webpack_require__(705),
 
-	__webpack_require__(800),
-	__webpack_require__(801)
+	__webpack_require__(802),
+	__webpack_require__(803)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery, nodeName, camelCase, toType, isFunction, isWindow, slice ) {
 
 "use strict";
@@ -17075,13 +17075,13 @@ jQuery.trim = function( text ) {
 
 /***/ }),
 
-/***/ 800:
+/***/ 802:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
-	__webpack_require__(693),
-	__webpack_require__(697)
+	__webpack_require__(684),
+	__webpack_require__(695),
+	__webpack_require__(699)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -17105,14 +17105,14 @@ jQuery.each( [
 
 /***/ }),
 
-/***/ 801:
+/***/ 803:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682),
+	__webpack_require__(684),
 
-	__webpack_require__(697),
-	__webpack_require__(721)
+	__webpack_require__(699),
+	__webpack_require__(723)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -17161,11 +17161,11 @@ jQuery.each( ( "blur focus focusin focusout resize scroll click dblclick " +
 
 /***/ }),
 
-/***/ 802:
+/***/ 804:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682)
+	__webpack_require__(684)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -17196,11 +17196,11 @@ if ( true ) {
 
 /***/ }),
 
-/***/ 803:
+/***/ 805:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(682)
+	__webpack_require__(684)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( jQuery ) {
 
 "use strict";
@@ -17235,11 +17235,11 @@ if ( typeof noGlobal === "undefined" ) {
 }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(686)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(688)))
 
 /***/ }),
 
-/***/ 804:
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17250,13 +17250,13 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
-/***/ 805:
+/***/ 807:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoBoxChart2_vue__ = __webpack_require__(761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoBoxChart2_vue__ = __webpack_require__(763);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51661dab_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InfoBoxChart2_vue__ = __webpack_require__(807);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51661dab_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InfoBoxChart2_vue__ = __webpack_require__(809);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -17285,11 +17285,11 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 806:
+/***/ 808:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoChart2_vue__ = __webpack_require__(762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_InfoChart2_vue__ = __webpack_require__(764);
 /* unused harmony namespace reexport */
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -17319,7 +17319,7 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 807:
+/***/ 809:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17330,13 +17330,13 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
-/***/ 826:
+/***/ 829:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__views_dashboard_InfoBox_vue__ = __webpack_require__(764);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__views_dashboard_InfoBoxChart_vue__ = __webpack_require__(766);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_dashboard_InfoBoxChart2_vue__ = __webpack_require__(805);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__views_dashboard_InfoBox_vue__ = __webpack_require__(766);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__views_dashboard_InfoBoxChart_vue__ = __webpack_require__(768);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_dashboard_InfoBoxChart2_vue__ = __webpack_require__(807);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AnimateNumber_vue__ = __webpack_require__(47);
 //
 //

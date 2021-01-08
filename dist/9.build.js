@@ -1,20 +1,20 @@
 webpackJsonp([9],{
 
-/***/ 1108:
+/***/ 1121:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(1109);
+var content = __webpack_require__(1122);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("7aac65f5", content, true, {});
+var update = __webpack_require__(3)("5781945c", content, true, {});
 
 /***/ }),
 
-/***/ 1109:
+/***/ 1122:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -22,22 +22,22 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".border-table{border:1px solid #dee2e6}", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 1110:
+/***/ 1123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_editMainSec_vue__ = __webpack_require__(983);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_editSubMainSec_vue__ = __webpack_require__(988);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4ef05d54_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_editMainSec_vue__ = __webpack_require__(1113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1f2a3f27_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_editSubMainSec_vue__ = __webpack_require__(1126);
 function injectStyle (ssrContext) {
-  __webpack_require__(1111)
+  __webpack_require__(1124)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -54,8 +54,8 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_editMainSec_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4ef05d54_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_editMainSec_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_editSubMainSec_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1f2a3f27_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_editSubMainSec_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -67,21 +67,21 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 1111:
+/***/ 1124:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(1112);
+var content = __webpack_require__(1125);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("e59c4d08", content, true, {});
+var update = __webpack_require__(3)("4975dc63", content, true, {});
 
 /***/ }),
 
-/***/ 1112:
+/***/ 1125:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -96,38 +96,38 @@ exports.push([module.i, ".modal-mask{position:fixed;z-index:9998;top:0;left:0;wi
 
 /***/ }),
 
-/***/ 1113:
+/***/ 1126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-mask"},[_c('div',{staticClass:"modal-wrapper"},[_c('div',{staticClass:"modal fade show d-block",attrs:{"id":"exampleModalCenter","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalCenterTitle","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog modal-dialog-centered modal-lg",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title display-5",attrs:{"id":"exampleModalLongTitle"}},[_vm._v("Edit Main Section")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"},on:{"click":_vm.closeEditModal}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])]),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('div',{staticClass:"card"},[_c('div',{staticClass:"card-body card-block"},[_c('form',{staticClass:"form-horizontal",on:{"submit":function($event){$event.preventDefault();return _vm.handleSubmit($event)}}},[_c('div',{staticClass:"row form-group"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"col-12 col-md-5"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.mainSection.name),expression:"mainSection.name"}],staticClass:"form-control",attrs:{"type":"text","id":"text-input","name":"text-input","placeholder":"Name","required":""},domProps:{"value":(_vm.mainSection.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.mainSection, "name", $event.target.value)}}})])]),_vm._v(" "),_c('button',{staticClass:"btn btn-success w-50 d-block mx-auto mt-2",attrs:{"type":"submit"}},[_vm._v("Submit "),(_vm.loading)?_c('span',[_vm._v(" Loading...")]):_vm._e()])]),_vm._v(" "),(_vm.dataAdedd)?_c('basix-alert',{staticClass:"col-6 mx-auto mt-4",attrs:{"type":"success","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-success"},[_vm._v("Success")]),_vm._v("\n                                             Data Added Successfully\n                                        ")]):_vm._e(),_vm._v(" "),(_vm.errorMessage)?_c('basix-alert',{staticClass:"col-12 col-md-6 mx-auto mt-4 text-center",attrs:{"type":"danger","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-danger"},[_vm._v(_vm._s(_vm.errorMessage))])]):_vm._e()],1)])])])])])])])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col col-md-3"},[_c('label',{staticClass:" form-control-label",attrs:{"for":"text-input"}},[_vm._v("Name")])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-mask"},[_c('div',{staticClass:"modal-wrapper"},[_c('div',{staticClass:"modal fade show d-block",attrs:{"id":"exampleModalCenter","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalCenterTitle","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog modal-dialog-centered modal-lg",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title display-5",attrs:{"id":"exampleModalLongTitle"}},[_vm._v("Edit SubMain Section")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"},on:{"click":_vm.closeEditModal}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])]),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('div',{staticClass:"card"},[_c('div',{staticClass:"card-body card-block"},[_c('form',{staticClass:"form-horizontal",on:{"submit":function($event){$event.preventDefault();return _vm.handleSubmit($event)}}},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-6"},[_c('div',{staticClass:"row form-group"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"col-7"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.subSection.category_id),expression:"subSection.category_id"}],staticClass:"form-control",attrs:{"name":"select","id":"select"},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.subSection, "category_id", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"value":"0"}},[_vm._v("Please select main section")]),_vm._v(" "),_vm._l((_vm.categories),function(cat){return _c('option',{key:cat.id,domProps:{"value":cat.id}},[_vm._v(_vm._s(cat.name))])})],2)])])]),_vm._v(" "),_c('div',{staticClass:"col-6"},[_c('div',{staticClass:"row form-group"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"col-6"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.subSection.name),expression:"subSection.name"}],staticClass:"form-control",attrs:{"type":"text","id":"text-input","name":"text-input","placeholder":"Name","required":""},domProps:{"value":(_vm.subSection.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.subSection, "name", $event.target.value)}}})])])])]),_vm._v(" "),_c('button',{staticClass:"btn btn-success w-50 d-block mx-auto",attrs:{"type":"submit"}},[_vm._v("Submit "),(_vm.loading)?_c('span',[_vm._v(" Loading...")]):_vm._e()])]),_vm._v(" "),(_vm.dataAdedd)?_c('basix-alert',{staticClass:"col-6 mx-auto mt-4",attrs:{"type":"success","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-success"},[_vm._v("Success")]),_vm._v("\n                                             Data Added Successfully\n                                        ")]):_vm._e(),_vm._v(" "),(_vm.errorMessage)?_c('basix-alert',{staticClass:"col-12 col-md-6 mx-auto mt-4 text-center",attrs:{"type":"danger","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-danger"},[_vm._v(_vm._s(_vm.errorMessage))])]):_vm._e()],1)])])])])])])])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col col-md-5"},[_c('label',{staticClass:" form-control-label",attrs:{"for":"select"}},[_vm._v("Main Sections")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col col-md-6"},[_c('label',{staticClass:" form-control-label",attrs:{"for":"text-input"}},[_vm._v("Subsection Name")])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
-/***/ 1114:
+/***/ 1127:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('div',{staticClass:"animated fadeIn"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-10 mx-auto"},[_c('div',{staticClass:"card"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"card-body card-block"},[_c('form',{staticClass:"form-horizontal",on:{"submit":function($event){$event.preventDefault();return _vm.handleSubmit($event)}}},[_c('div',{staticClass:"row form-group"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"col-12 col-md-5"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.mainSection.name),expression:"mainSection.name"}],staticClass:"form-control",attrs:{"type":"text","id":"text-input","name":"text-input","placeholder":"Name","required":""},domProps:{"value":(_vm.mainSection.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.mainSection, "name", $event.target.value)}}})])]),_vm._v(" "),_c('button',{staticClass:"btn btn-success w-50 d-block mx-auto mt-5",attrs:{"type":"submit"}},[_vm._v("Add "),(_vm.loading)?_c('span',[_vm._v(" Loading...")]):_vm._e()])]),_vm._v(" "),(_vm.dataAdedd)?_c('basix-alert',{staticClass:"col-6 mx-auto mt-4",attrs:{"type":"success","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-success"},[_vm._v("Success")]),_vm._v("\n                                   Data Added Successfully\n                              ")]):_vm._e(),_vm._v(" "),(_vm.errorMeg)?_c('basix-alert',{staticClass:"col-12 col-md-6 mx-auto mt-4 text-center",attrs:{"type":"danger","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-danger"},[_vm._v(_vm._s(_vm.errorMeg))])]):_vm._e()],1)]),_vm._v(" "),(_vm.categories.length)?_c('div',{staticClass:"card"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"card-body card-block"},[_c('table',{staticClass:"table table-striped first-td-padding border-table"},[_vm._m(3),_vm._v(" "),_c('tbody',_vm._l((_vm.categories),function(cat){return _c('tr',{key:cat.id},[_c('td',[_vm._v(_vm._s(cat.id))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(cat.name))]),_vm._v(" "),_c('td',[(cat.sub_categories.length)?_c('select',{staticClass:"form-control",attrs:{"name":"select","id":"select"}},_vm._l((cat.sub_categories),function(cat){return _c('option',{key:cat.id,domProps:{"value":cat.id}},[_vm._v(_vm._s(cat.name))])}),0):_c('span',[_vm._v(" No sub categories")])]),_vm._v(" "),_c('td',{on:{"click":function($event){return _vm.showEditModal(cat.id)}}},[_c('button',{staticClass:"btn btn-info",attrs:{"type":"button"}},[_vm._v("Edit")])]),_vm._v(" "),_c('td',{on:{"click":function($event){return _vm.deleteItem(cat.id)}}},[_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button"}},[_vm._v("Delete")])])])}),0)])])]):_vm._e()])])]),_vm._v(" "),_c('transition',{attrs:{"enter-active-class":"animated fadeIn"}},[(_vm.showModal)?_c('EditModal',{key:_vm.showModal,attrs:{"categoryId":_vm.categoryId},on:{"closeModalEvent":_vm.closeEditModal}}):_vm._e()],1)],1)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card-header"},[_c('strong',[_vm._v("Add main sections")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col col-md-3"},[_c('label',{staticClass:" form-control-label",attrs:{"for":"text-input"}},[_vm._v("Name")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card-header"},[_c('strong',[_vm._v("All Main Sections")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('td',[_vm._v("Id")]),_vm._v(" "),_c('td',[_vm._v("Name")]),_vm._v(" "),_c('td',[_vm._v("Sub categories")]),_vm._v(" "),_c('td',[_vm._v("Edit")]),_vm._v(" "),_c('td',[_vm._v("Delete")])])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('div',{staticClass:"animated fadeIn"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-10 mx-auto"},[_c('div',{staticClass:"card"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"card-body card-block"},[_c('form',{staticClass:"form-horizontal",on:{"submit":function($event){$event.preventDefault();return _vm.handleSubmit($event)}}},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-6"},[_c('div',{staticClass:"row form-group"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"col-8"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.subSection.category_id),expression:"subSection.category_id"}],staticClass:"form-control",attrs:{"name":"select","id":"select"},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.subSection, "category_id", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"value":"0"}},[_vm._v("Please select main section")]),_vm._v(" "),_vm._l((_vm.categories),function(cat){return _c('option',{key:cat.id,domProps:{"value":cat.id}},[_vm._v(_vm._s(cat.name))])})],2)])])]),_vm._v(" "),_c('div',{staticClass:"col-6"},[_c('div',{staticClass:"row form-group"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"col-7"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.subSection.name),expression:"subSection.name"}],staticClass:"form-control",attrs:{"type":"text","id":"text-input","name":"text-input","placeholder":"Name","required":""},domProps:{"value":(_vm.subSection.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.subSection, "name", $event.target.value)}}})])])])]),_vm._v(" "),_c('button',{staticClass:"btn btn-success w-50 d-block mx-auto mt-5",attrs:{"type":"submit"}},[_vm._v("Submit"),(_vm.loading)?_c('span',[_vm._v(" Loading...")]):_vm._e()])]),_vm._v(" "),(_vm.dataAdedd)?_c('basix-alert',{staticClass:"col-6 mx-auto mt-4",attrs:{"type":"success","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-success"},[_vm._v("Success")]),_vm._v("\n                                   Data Added Successfully\n                              ")]):_vm._e(),_vm._v(" "),(_vm.errorMeg)?_c('basix-alert',{staticClass:"col-12 col-md-6 mx-auto mt-4 text-center",attrs:{"type":"danger","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-danger"},[_vm._v(_vm._s(_vm.errorMeg))])]):_vm._e()],1)]),_vm._v(" "),(_vm.subSections.length)?_c('div',{staticClass:"card"},[_vm._m(3),_vm._v(" "),_c('div',{staticClass:"card-body card-block"},[_c('table',{staticClass:"table table-striped first-td-padding border-table"},[_vm._m(4),_vm._v(" "),_c('tbody',_vm._l((_vm.subSections),function(sub){return _c('tr',{key:sub.id},[_c('td',[_vm._v(_vm._s(sub.id))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(sub.name))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(sub.category.name))]),_vm._v(" "),_c('td',{on:{"click":function($event){return _vm.showEditModal(sub.id)}}},[_c('button',{staticClass:"btn btn-info",attrs:{"type":"button"}},[_vm._v("Edit")])]),_vm._v(" "),_c('td',{on:{"click":function($event){return _vm.deleteItem(sub.id)}}},[_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button"}},[_vm._v("Delete")])])])}),0)])])]):_vm._e()])])]),_vm._v(" "),_c('transition',{attrs:{"enter-active-class":"animated fadeIn"}},[(_vm.showModal)?_c('EditModal',{key:_vm.showModal,attrs:{"subCategoryId":_vm.subCategoryId},on:{"closeModalEvent":_vm.closeEditModal}}):_vm._e()],1)],1)}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card-header"},[_c('strong',[_vm._v("Subsection")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col col-md-4"},[_c('label',{staticClass:" form-control-label",attrs:{"for":"select"}},[_vm._v("Main Sections")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col col-md-5"},[_c('label',{staticClass:" form-control-label",attrs:{"for":"text-input"}},[_vm._v("Subsection Name")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card-header"},[_c('strong',[_vm._v("All sub sections")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('td',[_vm._v("Id")]),_vm._v(" "),_c('td',[_vm._v("Name")]),_vm._v(" "),_c('td',[_vm._v("Main section")]),_vm._v(" "),_c('td',[_vm._v("Edit")]),_vm._v(" "),_c('td',[_vm._v("Delete")])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
-/***/ 58:
+/***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_main_sections_vue__ = __webpack_require__(982);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_subsection_vue__ = __webpack_require__(987);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b32430e6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_main_sections_vue__ = __webpack_require__(1114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5d2d92b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_subsection_vue__ = __webpack_require__(1127);
 function injectStyle (ssrContext) {
-  __webpack_require__(1108)
+  __webpack_require__(1121)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -144,8 +144,8 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_main_sections_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b32430e6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_main_sections_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_subsection_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5d2d92b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_subsection_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -157,11 +157,19 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 982:
+/***/ 987:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_editMainSec__ = __webpack_require__(1110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_editSubMainSec__ = __webpack_require__(1123);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -240,43 +248,53 @@ var Component = normalizeComponent(
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-     components: { EditModal: __WEBPACK_IMPORTED_MODULE_0__models_editMainSec__["a" /* default */] },
+     components: { EditModal: __WEBPACK_IMPORTED_MODULE_0__models_editSubMainSec__["a" /* default */] },
      data() {
           return {
-               categories: [],
-               mainSection: {
-                    name: ''
+               subSections: [],
+               subSection: {
+                    name: '',
+                    category_id: null
                },
                loading: false,
-               showModal: false,
-               categoryId: null,
+               categories: [],
                dataAdedd: false,
-               errorMeg: null
+               errorMeg: null,
+               showModal: false,
+               subCategoryId: null,
+               isUpdate: false
+
           };
      },
      mounted() {
+          this.getCategory();
           this.loadAllData();
      },
      methods: {
           loadAllData() {
-               this.axios.get(`api/admin/categories`).then(response => {
+               this.axios.get(`api/admin/sub-categories`).then(response => {
                     if (response.status == 200) {
                          if (response.data.status == true) {
-                              this.categories = response.data.data;
-                              // this.total_pages = response.data.data.paginate.total_pages
+                              this.subSections = response.data.data;
                          }
                     }
                });
           },
-          handlePgnation(pageNum) {
-               this.pageNum = pageNum;
-               this.loadAllData();
+          showEditModal(subCategoryId) {
+               this.showModal = true;
+               this.subCategoryId = subCategoryId;
+          },
+          closeEditModal(isUpdate) {
+               this.showModal = !this.showModal;
+               if (isUpdate) {
+                    this.loadAllData();
+               }
           },
           handleSubmit() {
-               if (this.mainSection.name) {
+               if (this.subSection.name && this.subSection.category_id) {
                     this.loading = true;
                     this.errorMeg = null;
-                    this.axios.post('api/admin/categories', this.mainSection).then(response => {
+                    this.axios.post('api/admin/sub-categories', this.subSection).then(response => {
                          if (response.status == 200) {
                               if (response.data.status == true) {
                                    this.loading = false;
@@ -291,25 +309,22 @@ var Component = normalizeComponent(
                                    this.loading = false;
                               }
                          }
-                         console.log(response);
                     });
                }
           },
-          showEditModal(clientId) {
-               this.showModal = true;
-               this.categoryId = clientId;
-          },
-          closeEditModal(isUpdate) {
-               this.showModal = !this.showModal;
-               if (isUpdate) {
-                    console.log('isUpdate', isUpdate);
-                    this.loadAllData();
-               }
+          getCategory() {
+               this.axios.get('api/admin/categories').then(response => {
+                    if (response.status == 200) {
+                         if (response.data.status == true) {
+                              this.categories = response.data.data;
+                         }
+                    }
+               });
           },
           deleteItem(itemId) {
-               let r = confirm("Are you sure to delete this category ?");
+               let r = confirm("Are you sure to delete this sub category ?");
                if (r == true) {
-                    this.axios.delete(`api/admin/categories/${itemId}`).then(response => {
+                    this.axios.delete(`api/admin/sub-categories/${itemId}`).then(response => {
                          if (response.status == 200) {
                               if (response.data.status == true) {
                                    this.loadAllData();
@@ -319,7 +334,7 @@ var Component = normalizeComponent(
                }
           },
           reset() {
-               this.mainSection = {
+               this.subSection = {
                     name: ''
                };
                this.dataAdedd = false;
@@ -330,7 +345,7 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 983:
+/***/ 988:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -377,33 +392,50 @@ var Component = normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-     props: ['categoryId'],
+     props: ['subCategoryId'],
      data() {
           return {
-               mainSection: {
-                    name: ''
+               subSection: {
+                    name: '',
+                    category_id: null
                },
                loading: false,
+               categories: [],
                errorMessage: '',
                dataAdedd: false,
                isUpdate: false
           };
      },
      mounted() {
+          this.getCategory();
           this.loadAllData();
      },
      methods: {
           loadAllData() {
-               if (this.categoryId) {
-                    this.axios.get(`api/admin/categories/${this.categoryId}`).then(response => {
+               if (this.subCategoryId) {
+                    this.axios.get(`api/admin/sub-categories/${this.subCategoryId}`).then(response => {
                          if (response.status == 200) {
                               if (response.data.status == true) {
                                    let client = response.data.data;
-                                   this.mainSection.name = client.name;
-                              } else {
-                                   this.errorMessage = response.data.msg;
+                                   this.subSection.name = client.name;
+                                   this.subSection.category_id = client.id;
                               }
                          }
                     });
@@ -413,10 +445,10 @@ var Component = normalizeComponent(
                this.$emit("closeModalEvent", this.isUpdate);
           },
           handleSubmit() {
-               if (this.mainSection.name) {
+               if (this.subSection.name) {
                     this.loading = true;
                     this.errorMeg = null;
-                    this.axios.put(`api/admin/categories/${this.categoryId}`, this.mainSection).then(response => {
+                    this.axios.put(`api/admin/sub-categories/${this.subCategoryId}`, this.subSection).then(response => {
                          if (response.status == 200) {
                               if (response.data.status == true) {
                                    this.loading = false;
@@ -428,15 +460,24 @@ var Component = normalizeComponent(
                                         self.closeEditModal();
                                    }, 2000);
                               } else {
-                                   this.errorMeg = response.data.msg;
                                    this.loading = false;
+                                   this.errorMeg = response.data.msg;
                               }
                          }
                     });
                }
           },
+          getCategory() {
+               this.axios.get('api/admin/categories').then(response => {
+                    if (response.status == 200) {
+                         if (response.data.status == true) {
+                              this.categories = response.data.data;
+                         }
+                    }
+               });
+          },
           reset() {
-               this.mainSection = {
+               this.subSection = {
                     name: ''
                };
                this.dataAdedd = false;

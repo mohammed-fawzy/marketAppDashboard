@@ -1,22 +1,22 @@
 webpackJsonp([24],{
 
-/***/ 1036:
+/***/ 1211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"alerts"},[_c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"col-md-6"},[_c('div',{staticClass:"card"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"card-body"},[_c('basix-alert',{attrs:{"type":"success","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-success"},[_vm._v("Success")]),_vm._v("\n                  You successfully read this important alert.\n                ")]),_vm._v(" "),_c('basix-alert',{attrs:{"type":"primary","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-primary"},[_vm._v("Success")]),_vm._v("\n                  You successfully read this important alert.\n                ")]),_vm._v(" "),_c('basix-alert',{attrs:{"type":"warning","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-warning"},[_vm._v("Warning")]),_vm._v("\n                  You successfully read this important alert.\n                ")]),_vm._v(" "),_c('basix-alert',{attrs:{"type":"danger","withCloseBtn":true}},[_c('span',{staticClass:"badge badge-pill badge-danger"},[_vm._v("Danger")]),_vm._v("\n                  You successfully read this important alert.\n                ")])],1)])])])])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-md-6"},[_c('div',{staticClass:"card"},[_c('div',{staticClass:"card-header"},[_c('strong',{staticClass:"card-title"},[_vm._v("Alerts")])]),_vm._v(" "),_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"alert alert-primary",attrs:{"role":"alert"}},[_vm._v("\n              This is a primary alert—check it out!\n            ")]),_vm._v(" "),_c('div',{staticClass:"alert alert-secondary",attrs:{"role":"alert"}},[_vm._v("\n              This is a secondary alert—check it out!\n            ")]),_vm._v(" "),_c('div',{staticClass:"alert alert-success",attrs:{"role":"alert"}},[_vm._v("\n              This is a success alert—check it out!\n            ")]),_vm._v(" "),_c('div',{staticClass:"alert alert-danger",attrs:{"role":"alert"}},[_vm._v("\n              This is a danger alert—check it out!\n            ")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card-header"},[_c('strong',{staticClass:"card-title"},[_vm._v("Dismissing Alerts")])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"page-500"},[_c('div',{staticClass:"justify-content-center"},[_c('div',{staticClass:"clearfix"},[_c('div',{staticClass:"col-sm-4"},[_c('h1',{staticClass:"float-left display-3 mr-4"},[_vm._v("500")])]),_vm._v(" "),_c('div',{staticClass:"col-sm-8"},[_c('h5',{staticClass:"pt-3"},[_vm._v("Houston, we have a problem!")]),_vm._v(" "),_c('p',{staticClass:"text-muted text-small"},[_vm._v("The page you are looking for was not found.")])])]),_vm._v(" "),_c('div',{staticClass:"input-prepend input-group"},[_c('span',{staticClass:"input-group-addon"},[_c('i',{staticClass:"fa fa-search"})]),_vm._v(" "),_c('input',{staticClass:"form-control",attrs:{"id":"prependedInput","size":"16","type":"text","placeholder":"What are you looking for?"}}),_vm._v(" "),_c('span',{staticClass:"input-group-btn"},[_c('button',{staticClass:"btn btn-info",attrs:{"type":"button"}},[_vm._v("Search")])])])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
-/***/ 43:
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_73ab2252_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Alerts_vue__ = __webpack_require__(1036);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9bb3f6b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Page500_vue__ = __webpack_require__(1211);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = null
@@ -32,7 +32,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __vue_script__,
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_73ab2252_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Alerts_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9bb3f6b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Page500_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,

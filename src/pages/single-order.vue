@@ -38,6 +38,8 @@
                                    <th scope="col">Product name</th>
                                    <th scope="col">Quantity</th>
                                    <th scope="col">Current_temp</th>
+                                   <th scope="col">Spoiled</th>
+                                   <th scope="col">Min Max</th>
                                    <th scope="col">Product Image</th>
                               </tr>
                          </thead>
@@ -51,6 +53,13 @@
                                    </td>
                                    <td v-else>
                                         no sensor
+                                   </td>
+                                   <td>
+                                        {{item.is_spoiled}}
+                                   </td>
+                                   <td v-if="item.has_sensor">
+                                        min: {{item.product.sensor.min}}<br>
+                                        max: {{item.product.sensor.max}}
                                    </td>
                                    <td><img :src="item.product.image" class="product-img"></td>
                               </tr>

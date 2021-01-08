@@ -1,12 +1,12 @@
-webpackJsonp([5,17],{
+webpackJsonp([5,19],{
 
-/***/ 1047:
+/***/ 1054:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(1048);
+var content = __webpack_require__(1055);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -14,12 +14,12 @@ var update = __webpack_require__(3)("49e5dac3", content, true, {});
 
 /***/ }),
 
-/***/ 1048:
+/***/ 1055:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
 // imports
-exports.i(__webpack_require__(1049), "");
+exports.i(__webpack_require__(1056), "");
 
 // module
 exports.push([module.i, "", ""]);
@@ -29,7 +29,7 @@ exports.push([module.i, "", ""]);
 
 /***/ }),
 
-/***/ 1049:
+/***/ 1056:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -44,7 +44,7 @@ exports.push([module.i, "[class*=brandico-]:before{font-family:brandico,sans-ser
 
 /***/ }),
 
-/***/ 1050:
+/***/ 1057:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -53,16 +53,16 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 1050;
+webpackEmptyContext.id = 1057;
 
 /***/ }),
 
-/***/ 1051:
+/***/ 1058:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./sets/brandico.json": 1052,
-	"./sets/entypo.json": 1053
+	"./sets/brandico.json": 1059,
+	"./sets/entypo.json": 1060
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -78,25 +78,25 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 1051;
+webpackContext.id = 1058;
 
 /***/ }),
 
-/***/ 1052:
+/***/ 1059:
 /***/ (function(module, exports) {
 
 module.exports = {"name":"Brandico","href":"brandico","prefix":"brandico","lists":[{"name":"Icons","icons":["facebook","facebook-rect","twitter","twitter-bird","vimeo","vimeo-rect","tumblr","tumblr-rect","googleplus-rect","github-text","github","skype","icq","yandex","yandex-rect","vkontakte-rect","odnoklassniki","odnoklassniki-rect","friendfeed","friendfeed-rect","blogger","blogger-rect","deviantart","jabber","lastfm","lastfm-rect","linkedin","linkedin-rect","picasa","wordpress","instagram","instagram-filled"]}]}
 
 /***/ }),
 
-/***/ 1053:
+/***/ 1060:
 /***/ (function(module, exports) {
 
 module.exports = {"name":"Entypo","href":"entypo","prefix":"entypo","lists":[{"name":"Main Icons","icons":["note","logo-db","music","search","flashlight","mail","heart","heart-empty","star","star-empty","user","users","user-add","video","picture","camera","layout","menu","check","cancel","cancel-circled","cancel-squared","plus","plus-circled","plus-squared","minus","minus-circled","minus-squared","help","help-circled","info","info-circled","back","home","link","attach","lock","lock-open","eye","tag","bookmark","bookmarks","flag","thumbs-up","thumbs-down","download","upload","upload-cloud","reply","reply-all","forward","quote","code","export","pencil","feather","print","retweet","keyboard","comment","chat","bell","attention","alert","vcard","address","location","map","direction","compass","cup","trash","doc","docs","doc-landscape","doc-text","doc-text-inv","newspaper","book-open","book","folder","archive","box","rss","phone","cog","tools","share","shareable","basket","bag","calendar","login","logout","mic","mute","sound","volume","clock","hourglass","lamp","light-down","light-up","adjust","block","resize-full","resize-small","popup","publish","window","arrow-combo","down-circled","left-circled","right-circled","up-circled","down-open","left-open","right-open","up-open","down-open-mini","left-open-mini","right-open-mini","up-open-mini","down-open-big","left-open-big","right-open-big","up-open-big","down","left","right","up","down-dir","left-dir","right-dir","up-dir","down-bold","left-bold","right-bold","up-bold","down-thin","left-thin","right-thin","note-beamed","ccw","cw","arrows-ccw","level-down","level-up","shuffle","loop","switch","play","stop","pause","record","to-end","to-start","fast-forward","fast-backward","progress-0","progress-1","progress-2","progress-3","target","palette","list","list-add","signal","trophy","battery","back-in-time","monitor","mobile","network","cd","inbox","install","globe","cloud","cloud-thunder","flash","moon","flight","paper-plane","leaf","lifebuoy","mouse","briefcase","suitcase","dot","dot-2","dot-3","brush","magnet","infinity","erase","chart-pie","chart-line","chart-bar","chart-area","tape","graduation-cap","language","ticket","water","droplet","air","credit-card","floppy","clipboard","megaphone","database","drive","bucket","thermometer","key","flow-cascade","flow-branch","flow-tree","flow-line","flow-parallel","rocket","gauge","traffic-cone","cc","cc-by","cc-nc","cc-nc-eu","cc-nc-jp","cc-sa","cc-nd","cc-pd","cc-zero","cc-share","cc-remix"]},{"name":"Social Icons","icons":["github","github-circled","flickr","flickr-circled","vimeo","vimeo-circled","twitter","twitter-circled","facebook","facebook-circled","facebook-squared","gplus","gplus-circled","pinterest","pinterest-circled","tumblr","tumblr-circled","linkedin","linkedin-circled","dribbble","dribbble-circled","stumbleupon","stumbleupon-circled","lastfm","lastfm-circled","rdio","rdio-circled","spotify","spotify-circled","qq","instagram","dropbox","evernote","flattr","skype","skype-circled","renren","sina-weibo","paypal","picasa","soundcloud","mixi","behance","google-circles","vkontakte","smashing","sweden","db-shape","up-thin"]}]}
 
 /***/ }),
 
-/***/ 1054:
+/***/ 1061:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -112,11 +112,11 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Set_vue__ = __webpack_require__(763);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Set_vue__ = __webpack_require__(765);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_bf5e8fea_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Set_vue__ = __webpack_require__(810);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_bf5e8fea_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Set_vue__ = __webpack_require__(812);
 function injectStyle (ssrContext) {
-  __webpack_require__(808)
+  __webpack_require__(810)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -151,11 +151,11 @@ var Component = normalizeComponent(
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Icons_vue__ = __webpack_require__(828);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Icons_vue__ = __webpack_require__(831);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f2cec4ba_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Icons_vue__ = __webpack_require__(1054);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f2cec4ba_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Icons_vue__ = __webpack_require__(1061);
 function injectStyle (ssrContext) {
-  __webpack_require__(1047)
+  __webpack_require__(1054)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -185,7 +185,7 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 763:
+/***/ 765:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -280,13 +280,13 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 808:
+/***/ 810:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(809);
+var content = __webpack_require__(811);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -294,7 +294,7 @@ var update = __webpack_require__(3)("17306936", content, true, {});
 
 /***/ }),
 
-/***/ 809:
+/***/ 811:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -309,7 +309,7 @@ exports.push([module.i, ".Set .header{background-color:#fff;padding:2rem 0;margi
 
 /***/ }),
 
-/***/ 810:
+/***/ 812:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -320,7 +320,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
-/***/ 828:
+/***/ 831:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -342,7 +342,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
         sets() {
             let sets = [];
             !(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()).forEach(name => {
-                let set = __webpack_require__(1051)(this.setsPath + name + '.json');
+                let set = __webpack_require__(1058)(this.setsPath + name + '.json');
                 this.addfilteredListsTo(set);
                 sets.push(set);
             });
