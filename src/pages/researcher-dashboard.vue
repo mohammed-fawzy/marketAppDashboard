@@ -11,7 +11,7 @@
                               <thead>
                               <tr>
                                    <td>ID</td>
-                                   <td>Change status</td>
+                                   <!-- <td>Change status</td> -->
                                    <td>Address </td>
                                    <td>Total </td>
                                    <td>Delivery price</td>
@@ -25,12 +25,12 @@
                               <tbody>
                               <tr v-for="order in orders.items" :key="order.id">
                                    <td>{{order.id}}</td>
-                                   <td>
+                                   <!-- <td>
                                         <select name="select" id="select" class="form-control" @change="updataOrderStatus(order.id, order.status)" v-model="order.status">
                                              <option disabled value="null" selected>Change status</option>
                                              <option v-for="(status, index) in orderStatus" :key="index">{{status}}</option>
                                         </select>
-                                   </td>
+                                   </td> -->
                                    <td class="text-capitalize">{{order.address.address}}</td>
                                    <td>{{order.total}}</td>
                                    <td>{{order.delivery_cost}}</td>
@@ -39,7 +39,7 @@
                                    <td>{{order.user.phone}}</td>
                                    <td class="text-capitalize">{{order.status}}</td>
                                    <td>
-                                   <router-link :to="{ name: 'single-order', params: { id: order.id }}"> <span class="btn btn-info">Show</span> </router-link>
+                                   <router-link :to="{ name: 'single-order', query: { id: order.id }}"> <span class="btn btn-info">Show</span> </router-link>
                                         
                                    </td>
 
