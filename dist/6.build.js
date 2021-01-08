@@ -197,7 +197,7 @@ webpackJsonp([6],{
 
   mounted() {
     let self = this;
-    __WEBPACK_IMPORTED_MODULE_1_google_maps__["KEY"] = this.config.googleMaps.apiKey;
+    __WEBPACK_IMPORTED_MODULE_1_google_maps__["KEY"] = 'AIzaSyA7PA38yK-eREk4fjhMtoxB7m3C9zMRxRE';
 
     __WEBPACK_IMPORTED_MODULE_1_google_maps__["load"](google => {
       /* eslint-disable no-new */
@@ -262,7 +262,7 @@ exports.push([module.i, ".product-img{width:100px;height:auto}.degree-input{widt
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_GoogleMap_vue__ = __webpack_require__(1011);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_60efc44b_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_GoogleMap_vue__ = __webpack_require__(1203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ad614230_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_GoogleMap_vue__ = __webpack_require__(1203);
 function injectStyle (ssrContext) {
   __webpack_require__(1201)
 }
@@ -282,7 +282,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_GoogleMap_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_60efc44b_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_GoogleMap_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ad614230_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_GoogleMap_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -304,7 +304,7 @@ var content = __webpack_require__(1202);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("6671b810", content, true, {});
+var update = __webpack_require__(3)("323d3f9e", content, true, {});
 
 /***/ }),
 
